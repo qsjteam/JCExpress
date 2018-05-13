@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.CustomerMapper">
+	<!-- 根据邮箱或者手机号寻找用户 -->
+	<select id="findCustomerByEmailOrTelephone" resultType="OsCustomer">
+		SELECT 
+			*
+		FROM 
+			os_customer
+		WHERE 
+			customer_email = #{customerCode}
+		OR 
+			customer_telephone = #{customerCode}
+	</select>
+	<!-- 注册用户 -->
+	<insert id="insertCustomer">
+		INSERT INTO os_customer (
+			customer_telephone,
+			nickname,
+			password,
+			customer_email,
+			create_time,
+			state
+		)
+		VALUES (
+			#{customer.customer_telephone},
+			#{customer.nickname},
+			#{customer.password},
+			#{customer.customer_email},
+			#{customer.create_time},
+			#{customer.state}
+		)
+	</insert>
+	<!-- 判断邮箱是否注册 -->
+	<select id="findeHasEmail" resultType="java.lang.Integer">
+		SELECT 
+			COUNT(*)
+		FROM 
+			os_customer
+		WHERE 
+			customer_email = #{email}
+	</select>
+	<!-- 激活用户 -->
+	<update id="activeCustomer">
+		UPDATE 
+			os_customer
+		SET 
+			state = 1
+		WHERE 
+			customer_email = #{email}
+	</update>
+	<!-- 修改密码 -->
+	<update id="modifyPassword">
+		UPDATE 
+			os_customer
+		SET 
+			PASSWORD = #{password}
+		WHERE 
+			customer_email = #{email}
+	</update>
+</mapper>

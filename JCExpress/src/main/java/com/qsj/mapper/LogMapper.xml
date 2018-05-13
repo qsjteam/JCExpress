@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.LogMapper">
+	<!-- 插入日志 -->
+	<insert id="insertLog">
+		INSERT INTO sys_log (
+			user_id,
+			create_time,
+			spend_time,
+			method,
+			user_agent,
+			user_ip,
+			opt_content,
+			url
+		)
+		VALUES (
+			#{log.user_id},
+			#{log.create_time},
+			#{log.spend_time},
+			#{log.method},
+			#{log.user_agent},
+			#{log.user_ip},
+			#{log.opt_content},
+			#{log.url}
+		)
+	</insert>
+	<!-- 查询日志分页 -->
+	<select id="findAllLogByPage" resultType="SysLog">
+		SELECT
+			*
+		FROM
+			sys_log
+		WHERE 1=1
+		<if test="search != null">
+			AND (
+			method 			LIKE '%' #{search} '%'
+			OR user_agent 	LIKE '%' #{search} '%'
+			OR user_ip 		LIKE '%' #{search} '%'
+			OR opt_content 	LIKE '%' #{search} '%'
+			OR url 			LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+</mapper>

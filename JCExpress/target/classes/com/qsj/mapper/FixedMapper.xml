@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.FixedMapper">
+	<!-- 查询所有的定区 -->
+	<select id="findAllFixedByPage" resultType="com.qsj.vo.FixedVo">
+		SELECT
+			f.id,
+			f.fixed_code,
+			f.fixed_name,
+			s.name as staffName,
+			s.telephone,
+			f.status
+		FROM 
+			sys_fixed f
+		LEFT JOIN 
+			t_staff s
+		ON 
+			f.staff_id = s.id
+		WHERE 
+			1=1
+		<if test="search != null">
+			AND (
+			f.fixed_code 	LIKE '%' #{search} '%' 
+			OR f.fixed_name LIKE '%' #{search} '%' 
+			OR s.name 		LIKE '%' #{search} '%' 
+			OR s.telephone 	LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 查询定区根据id -->
+	<select id="findFixedById" resultType="SysFixed">
+		SELECT	*
+		FROM 	sys_fixed
+		WHERE 	id = #{fixedId}
+	</select>
+	<!-- 冻结/开启定区 -->
+	<update id="updateFrozenFixed">
+		UPDATE
+			sys_fixed
+		SET
+			status = #{status}
+		WHERE 
+			id = #{fixedId}
+	</update>
+	<!-- 删除定区 -->
+	<delete id="deleteFixed">
+		DELETE FROM sys_fixed
+		WHERE id = #{fixedId}
+	</delete>
+	<!-- 查询没有关联定区的分区 -->
+	<select id="findPartitionIsNullByPage" resultType="SysPartition">
+		SELECT
+			id,
+			addresskey,
+			address
+		FROM
+			sys_partition
+		WHERE
+			status=1 
+			AND
+			fixed_id
+		IS NULL
+		<if test="search != null">
+			AND (
+			addresskey LIKE '%' #{search} '%' OR
+			address LIKE '%'
+			#{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 查询关联的定区的分区根据定区Id -->
+	<select id="findPartitionByFixedIdByPage" resultType="SysPartition">
+		SELECT
+			p.id,
+			addresskey,
+			address
+		FROM
+			sys_partition p
+		LEFT JOIN sys_fixed f
+		ON p.fixed_id = f.id
+		WHERE p.status=1 AND f.id=#{fixedId}
+		<if test="search != null">
+			AND (
+			addresskey LIKE '%' #{search} '%' OR
+			address LIKE '%'
+			#{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 添加定区 -->
+	<insert id="insertFixed">
+		insert into sys_fixed (
+		fixed_code,
+		staff_id,
+		fixed_name,
+		status
+		)
+		values
+		(
+		#{fixed.fixed_code},
+		#{fixed.staff_id},
+		#{fixed.fixed_name},
+		#{fixed.status}
+		)
+	</insert>
+	<!-- 修改定区 -->
+	<update id="updateFixed">
+		update 
+			sys_fixed 
+		set 
+			fixed_code 	= #{fixed.fixed_code},
+			staff_id	= #{fixed.staff_id},
+			fixed_name	= #{fixed.fixed_name},
+			status 		= #{fixed.status}
+		where 
+			id = #{fixed.id}
+	</update>
+	<!-- 定区关联分区 -->
+	<update id="updateRelaFixed">
+		UPDATE
+			sys_partition
+		SET
+			fixed_id = #{fixedId}
+		WHERE 
+			id IN
+		<foreach collection="partitionIds" index="index" item="partitionId"
+			open="(" separator="," close=")">
+			#{partitionId}
+		</foreach>
+	</update>
+</mapper>

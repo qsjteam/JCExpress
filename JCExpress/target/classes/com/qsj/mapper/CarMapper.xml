@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.CarMapper">
+	<select id="findAllCarByPage" resultType="com.qsj.vo.ExCarVo">
+		SELECT
+			c.id,
+			c.status,
+			c.car_number,
+			c.car_type,
+			c.car_model,
+			c.car_load,
+			d.name,
+			d.telephone,
+			c.create_time
+		FROM 
+			ex_car c
+		LEFT JOIN 
+			t_driver d
+		ON 
+			c.driver_id = d.id
+		WHERE 
+			1 = 1
+		<if test="search != null">
+			AND (
+			c.car_number	LIKE '%' #{search} '%' OR
+			c.car_type 		LIKE '%' #{search} '%' OR
+			c.car_model		LIKE '%' #{search} '%' OR
+			d.name 			LIKE '%' #{search} '%' OR
+			d.telephone 	LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 根据id查询车辆 -->
+	<select id="findCarById" resultType="ExCar">
+		SELECT 
+			*
+		FROM 
+			ex_car
+		WHERE 
+			id = #{carId}
+	</select>
+	<!-- 冻结/启用车辆 -->
+	<update id="updateFrozenCar">
+		UPDATE 
+			ex_car
+		SET 
+			STATUS = #{status}
+		WHERE 
+			id = #{carId}
+	</update>
+	<!-- 添加车辆 -->
+	<insert id="insertCar">
+		INSERT INTO ex_car (
+			car_number,
+			status,
+			car_type,
+			car_load,
+			car_model,
+			driver_id,
+			create_time
+		)
+		VALUES (
+			#{car.car_number},
+			#{car.status},
+			#{car.car_type},
+			#{car.car_load},
+			#{car.car_model},
+			#{car.driver_id},
+			#{car.create_time}
+		)
+	</insert>
+	<!-- 修改车辆 -->
+	<update id="updateCar">
+		UPDATE 
+			ex_car
+		SET
+			car_number	= #{car.car_number},
+			status		= #{car.status},
+			car_type	= #{car.car_type},
+			car_load	= #{car.car_load},
+			car_model	= #{car.car_model},
+			driver_id	= #{car.driver_id}
+		WHERE 
+			id = #{car.id}
+	</update>
+	<!-- 删除车辆 -->
+	<delete id="deleteCar">
+		delete FROM 
+			ex_car
+		WHERE 
+			id = #{carId}
+	</delete>
+</mapper>

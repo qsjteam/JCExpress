@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans      
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd      
+                        http://www.springframework.org/schema/context      
+                        http://www.springframework.org/schema/context/spring-context-3.2.xsd      
+                        http://www.springframework.org/schema/mvc      
+                        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+	<!-- 导入DAO配置 -->
+	<import resource="classpath:spring/ApplicationContext-dao.xml" />
+
+	<!-- 导入业务逻辑层配置 -->
+	<import resource="classpath:spring/ApplicationContext-service.xml" />
+
+	<!-- 导入事物配置 -->
+	<import resource="classpath:spring/ApplicationContext-trans.xml" />
+
+	<!-- 验证码KAPTCHA:配置文件引入 -->
+	<import resource="classpath:spring/ApplicationContext-kaptcha.xml" />
+
+	<!-- shiro安全配置 -->
+	<import resource="classpath:spring/ApplicationContext-shiro.xml" />
+	
+	<!-- redis安全配置 -->
+	<import resource="classpath:spring/ApplicationContext-redis.xml" />
+
+	<!-- aop安全配置 -->
+	<import resource="classpath:spring/ApplicationContext-aop.xml" />
+</beans>    

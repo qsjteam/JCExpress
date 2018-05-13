@@ -1,0 +1,17 @@
+maven添加本地jar包
+com.qsj.captcha.sdk.GeetestLib报错
+	import org.json.JSONException;
+	import org.json.JSONObject;
+因缺少java-json.jra导致报错，请将lib中的jra添加到maven本地仓库中
+
+须提前配置maven环境变量   环境变量配置参考网址：https://www.cnblogs.com/LexMoon/p/JavaMaven.html
+再将java-json.jar放到c盘下 或者 自己指定路径将下面代码中的-Dfile的路径改为你的jra包存放路径
+然后在cmd命令行窗口中输入以下代码  jar包就被复制到 Maven本地存储库中了
+
+mvn install:install-file -Dfile=c:\java-json.jar -DgroupId=orgg.javax 
+-DartifactId=java-json -Dversion=1.0.0 -Dpackaging=jar
+
+出现BUILD SUCCESS表示添加成功
+
+maven添加本地jar包参考网址：https://blog.csdn.net/bq1073100909/article/details/52478680
+

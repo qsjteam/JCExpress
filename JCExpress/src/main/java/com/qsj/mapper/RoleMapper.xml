@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.RoleMapper">
+	<!-- 根据用户id寻找角色 -->
+	<select id="findRoleNameByRoleAndUser" resultType="Role">
+		SELECT
+			r.role_id,
+			role_name,
+			role_sign
+		FROM
+			t_role r
+		INNER JOIN t_user_role ur	ON r.`role_id` 	= ur.`role_id`
+		INNER JOIN t_user u 		ON ur.`user_id` = u.u_id
+		WHERE 
+			u.`u_id` = #{userId}
+		AND 
+			r.`status` = 1
+	</select>
+	<!-- 根据角色id寻找权限 -->
+	<select id="findPermissionByRoleId" resultType="Menu">
+		SELECT
+			r.menu_id AS menuId,
+			m.permission
+		FROM
+			t_role_menu r
+		LEFT JOIN
+			t_menu m ON r.menu_id = m.menu_id
+		WHERE 
+			r.role_id IN
+		<foreach collection="roleIds" item="roleId" open="(" close=")"
+			separator=",">
+			#{roleId}
+		</foreach>
+	</select>
+	<!-- 查询所有可用的角色 -->
+	<select id="findAllRolesByStatus" resultType="Role">
+		SELECT
+		role_id,
+		role_name
+		FROM
+		t_role
+		WHERE STATUS = #{status}
+	</select>
+	<!-- 添加用户的角色 -->
+	<insert id="insetUserRole" parameterType="java.util.List">
+		INSERT INTO t_user_role(
+		role_id,
+		user_id,
+		create_time,
+		create_by
+		)
+		VALUES
+		<foreach collection="userRoles" item="userRole" separator=",">
+			(
+			#{userRole.role_id},
+			#{userRole.user_id},
+			#{userRole.create_time},
+			#{userRole.create_by}
+			)
+		</foreach>
+	</insert>
+	<!-- 删除用户的角色 -->
+	<delete id="deleteUserRole">
+		DELETE FROM
+			t_user_role
+		WHERE 
+			user_id = #{userId}
+	</delete>
+	<!-- 查询所有的角色 -->
+	<select id="findAllRolesByPage" resultType="Role">
+		SELECT
+			*
+		FROM
+			t_role
+		WHERE 
+			1 = 1
+		<if test="search != null">
+			AND (
+			   role_name 	LIKE '%' #{search} '%'
+			OR role_sign 	LIKE '%' #{search} '%'
+			OR create_by 	LIKE '%' #{search} '%'
+			OR update_by 	LIKE '%' #{search} '%'
+			OR remarks 		LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 冻结/启用 角色 -->
+	<update id="updateFrozenRole">
+		UPDATE
+			t_role
+		SET
+			STATUS = #{status}
+		WHERE
+			role_id = #{roleId}
+	</update>
+	<!-- 根据角色ID寻找角色 -->
+	<select id="findRoleById" resultType="Role">
+		SELECT
+			*
+		FROM
+			t_role
+		WHERE
+			role_id = #{roleId}
+	</select>
+	<!-- 添加角色 -->
+	<insert id="insertRole" parameterType="Role" useGeneratedKeys="true"
+		keyProperty="role_id">
+		INSERT INTO t_role (
+			role_name,
+			role_sign,
+			STATUS,
+			create_time,
+			create_by,
+			update_time,
+			update_by,
+			remarks
+		)
+		VALUES (
+			#{role_name},
+			#{role_sign},
+			#{status},
+			#{create_time},
+			#{create_by},
+			#{update_time},
+			#{update_by},
+			#{remarks}
+		)
+	</insert>
+	<!-- 添加角色菜单 -->
+	<insert id="insertRoleMenu" parameterType="java.util.List">
+		INSERT INTO
+		t_role_menu (
+			role_id,
+			menu_id,
+			create_time,
+			create_by
+		)
+		VALUES
+		<foreach collection="roleMenus" item="roleMenu" separator=",">
+			(
+			#{roleMenu.role_id},
+			#{roleMenu.menu_id},
+			#{roleMenu.create_time},
+			#{roleMenu.create_by}
+			)
+		</foreach>
+	</insert>
+	<!-- 根据角色id所有用的权限菜单 -->
+	<select id="findMenuIdByRoleId" resultType="RoleMenu">
+		SELECT
+			menu_id
+		FROM
+			t_role_menu
+		WHERE 
+			role_id = #{roleId}
+	</select>
+	<!-- 更新角色 -->
+	<update id="updateRole">
+		UPDATE
+			t_role
+		SET
+			role_name 	= #{role.role_name},
+			role_sign 	= #{role.role_sign},
+			STATUS		= #{role.status},
+			update_time	= #{role.update_time},
+			update_by 	= #{role.update_by},
+			remarks 	= #{role.remarks}
+		WHERE role_id = #{role.role_id}
+	</update>
+	<!-- 删除角色 -->
+	<delete id="deleteRole">
+		DELETE FROM
+			t_role
+		WHERE 
+			role_id =#{roleId}
+	</delete>
+	<!-- 删除角色在角色用户表中的记录 -->
+	<delete id="deleteRoleUser">
+		DELETE FROM
+			t_user_role
+		WHERE 
+			role_id = #{roleId}
+	</delete>
+</mapper>

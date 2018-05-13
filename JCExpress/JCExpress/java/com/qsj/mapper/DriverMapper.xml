@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.DriverMapper">
+	<!-- 查询所有的司机 -->
+	<select id="findAllDriverByPage" resultType="Driver">
+		SELECT
+		*
+		FROM
+		t_driver
+		<if test="search != null">
+			AND (
+			name LIKE '%' #{search} '%' OR
+			telephone LIKE '%'
+			#{search} '%' OR
+			address LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 查询司机根据id -->
+	<select id="findDriverById" resultType="Driver">
+		SELECT
+		*
+		FROM
+		t_driver
+		WHERE
+		id =#{driverId}
+	</select>
+	<!-- 冻结/启用 司机 -->
+	<update id="updateFrozenDriver">
+		UPDATE
+		t_driver
+		SET
+		STATUS = #{status}
+		WHERE id =
+		#{driverId}
+	</update>
+	<!-- 添加司机 -->
+	<insert id="insertDriver">
+		INSERT INTO t_driver (NAME, telephone, address,
+		STATUS)
+		VALUES
+		(
+		#{driver.name},
+		#{driver.telephone},
+		#{driver.address},
+		#{driver.status}
+		)
+	</insert>
+	<!-- 修改司机 -->
+	<update id="updateDriver">
+		UPDATE
+		t_driver
+		SET
+		name=#{driver.name},
+		telephone=#{driver.telephone},
+		address=#{driver.address},
+		status=#{driver.status}
+		WHERE id =
+		#{driver.id}
+	</update>
+	<!-- 删除司机 -->
+	<delete id="deleteDriver">
+		delete
+		FROM
+		t_driver
+		WHERE id
+		=#{driverId}
+	</delete>
+	<!-- 查询所有可用的司机 -->
+	<select id="findStatusDriver"  resultType="Driver">
+		SELECT
+		*
+		FROM
+		t_driver
+		WHERE STATUS = 1
+	</select>
+</mapper>

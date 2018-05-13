@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.UserMapper">
+	<sql id="Base_Column_List">
+		u_id,
+		u.organization_id,
+		o.org_name,
+		login_name,
+		user_name,
+		sex,
+		age,
+		pic_img,
+		u.status,
+		email,
+		telephone,
+		last_login_time,
+		last_login_ip,
+		u.create_time,
+		u.create_by,
+		u.update_by
+	</sql>
+	<!-- 查询用户根据用户id -->
+	<select id="findUserById" resultType="User">
+		SELECT
+			*
+		FROM
+			t_user
+		WHERE 
+			u_id = #{userId}
+	</select>
+	<!-- 查询用户登录日志根据用户id -->
+	<select id="findUserLoginLogByPage" resultType="loginLog">
+		SELECT
+			*
+		FROM
+			t_user_login_log
+		WHERE 
+			user_id = #{userId}
+		<if test="search != null">
+			AND (
+			user_ip 			LIKE '%' #{search} '%'
+			OR operating_system	LIKE '%' #{search} '%'
+			OR browser 			LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 更改个人信息 -->
+	<update id="updateUserInfo">
+		UPDATE t_user 
+		SET
+			login_name	= #{user.login_name},
+			user_name	= #{user.user_name},
+			sex			= #{user.sex},
+			age			= #{user.age},
+			telephone	= #{user.telephone},
+			email		= #{user.email}
+		WHERE u_id = #{user.u_id}
+	</update>
+	<!-- 用户更新密码 -->
+	<update id="updatePassword">
+		UPDATE
+			t_user
+		SET
+			PASSWORD = #{password}
+		WHERE 
+			u_id =#{userId}
+	</update>
+	<!-- 查询所有的用户 -->
+	<select id="findAllUserByPage" resultType="com.qsj.vo.UserVo">
+		select
+		<include refid="Base_Column_List" />
+		FROM
+			t_user u
+		LEFT JOIN 
+			t_organization o
+		ON 
+			u.organization_id = o.org_id
+		WHERE 
+			1 = 1
+		<if test="search != null">
+			AND (
+			user_name 		LIKE '%' #{search} '%'
+			OR telephone	LIKE '%' #{search} '%'
+			OR email 		LIKE '%' #{search} '%'
+			OR o.org_name 	LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 根据角色id查询用户 -->
+	<select id="findRoleUsersByPage" resultType="com.qsj.vo.UserVo">
+		SELECT
+			u.u_id,
+			u.organization_id,
+			o.org_name,
+			login_name,
+			user_name,
+			u.status,
+			email,
+			telephone,
+			last_login_time,
+			last_login_ip,
+			u.create_time,
+			u.create_by,
+			u.update_by
+		FROM
+			t_user_role ur
+		LEFT JOIN 
+			t_user u ON ur.user_id = u.u_id
+		LEFT JOIN 
+			t_organization o ON u.organization_id = o.org_id
+		WHERE 
+			ur.role_id=#{roleId}
+		<if test="search != null">
+			AND (
+			user_name 		LIKE '%' #{search} '%'
+			OR telephone 	LIKE '%' #{search} '%'
+			OR email 		LIKE '%' #{search} '%'
+			OR o.org_name	LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 冻结用户 -->
+	<update id="updateFrozenUser">
+		UPDATE
+			t_user
+		SET
+			STATUS = #{status}
+		WHERE 
+			u_id = #{userId}
+	</update>
+	<!-- 增加用户 useGeneratedKeys="true" 指明自增 keyProperty 指明主键 -->
+	<insert id="insertUser" parameterType="User" useGeneratedKeys="true"
+		keyProperty="u_id">
+		INSERT INTO t_user(
+			login_name,
+			PASSWORD,
+			organization_id,
+			user_name,
+			sex,
+			pic_img,
+			STATUS,
+			email,
+			telephone,
+			create_time,
+			create_by,
+			update_by
+		)
+		VALUES (
+			#{login_name},
+			#{password},
+			#{organization_id},
+			#{user_name},
+			#{sex},
+			#{pic_img},
+			#{status},
+			#{email},
+			#{telephone},
+			#{create_time},
+			#{create_by},
+			#{update_by}
+		)
+	</insert>
+	<!-- 更新用户 -->
+	<update id="updateUser">
+		UPDATE
+			t_user
+		SET
+			login_name 		= #{user.login_name},
+			user_name 		= #{user.user_name},
+			email 			= #{user.email},
+			telephone 		= #{user.telephone},
+			STATUS 			= #{user.status},
+			organization_id	= #{user.organization_id},
+			update_by 		= #{user.update_by}
+		WHERE 
+			u_id = #{user.u_id}
+	</update>
+	<!-- 删除用户 -->
+	<delete id="deleteUser">
+		DELETE FROM
+			t_user
+		WHERE 
+			u_id =#{userId}
+	</delete>
+	<!-- 查看是否重名 -->
+	<select id="findLoginName" resultType="java.lang.Integer">
+		SELECT
+			COUNT(*)
+		FROM
+			t_user
+		WHERE 
+			login_name = #{loginName}
+	</select>
+	<select id="findUserByOrgId" resultType="User">
+		SELECT
+			*
+		FROM
+			t_user
+		WHERE 
+			organization_id = #{organizationId}
+	</select>
+</mapper>

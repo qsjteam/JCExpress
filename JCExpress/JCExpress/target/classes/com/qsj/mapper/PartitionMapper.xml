@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.PartitionMapper">
+	<select id="findAllPartitionByPage" resultType="com.qsj.vo.PartitionVo">
+		SELECT
+			p.id,
+			p.partition_code,
+			p.addresskey,
+			p.single,
+			p.address,
+			p.status,
+			CONCAT(a.name, b.name, c.name) AS regionName
+		FROM
+			sys_partition p
+		LEFT JOIN sys_area a ON a.`area_code` = p.province
+		LEFT JOIN sys_area b ON b.`area_code` = p.city
+		LEFT JOIN sys_area c ON c.`area_code` = p.village
+		WHERE 1=1
+		<if test="search != null">
+			AND (
+			p.partition_code 	LIKE '%' #{search} '%' 
+			OR p.address		LIKE '%' #{search} '%' 
+			OR p.addresskey 	LIKE '%' #{search} '%' 
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 添加分区 -->
+	<insert id="insertPartition">
+		INSERT INTO sys_partition (
+			partition_code,
+			addresskey,
+			single,
+			address,
+			STATUS,
+			province,
+			city,
+			village
+		)
+		VALUES (
+			#{sysPartition.partition_code},
+			#{sysPartition.addresskey},
+			#{sysPartition.single},
+			#{sysPartition.address},
+			#{sysPartition.status},
+			#{sysPartition.province},
+			#{sysPartition.city},
+			#{sysPartition.village}
+		)
+	</insert>
+	<!-- 冻结启用分区 -->
+	<update id="updateFrozenPartition">
+		UPDATE
+		sys_partition
+		SET
+		STATUS =#{status}
+		WHERE id =
+		#{partitionId}
+	</update>
+	<!-- 删除分区 -->
+	<delete id="deletePartition">
+		DELETE
+		FROM
+		sys_partition
+		WHERE id =#{partitionId}
+	</delete>
+	<!-- 修改分区 -->
+	<update id="updatePartition">
+		UPDATE
+			sys_partition
+		SET
+			partition_code	= #{sysPartition.partition_code},
+			addresskey		= #{sysPartition.addresskey},
+			single			= #{sysPartition.single},
+			address			= #{sysPartition.address},
+			status			= #{sysPartition.status},
+			province		= #{sysPartition.province},
+			city			= #{sysPartition.city},
+			village			= #{sysPartition.village}
+		WHERE 
+			id = #{sysPartition.id}
+	</update>
+	<!-- 根据id查询分区 -->
+	<select id="findPartitionById" resultType="SysPartition">
+		SELECT
+			*
+		FROM
+			sys_partition
+		WHERE 
+			id = #{partitionId}
+	</select>
+</mapper>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.OrderMapper">
+	<!-- 查询所有订单分页 -->
+	<select id="findAllOrderByPage" resultType="ExOrder">
+		select
+		*
+		from
+		ex_order
+		WHERE 1=1
+		<if test="search != null">
+			AND (
+			order_id LIKE '%' #{search} '%' OR
+			send_name LIKE '%'
+			#{search} '%' OR
+			send_telephone LIKE '%' #{search} '%' OR
+			send_area
+			LIKE '%' #{search} '%' OR
+			send_address LIKE '%' #{search} '%' OR
+			receive_name LIKE '%' #{search} '%' OR
+			receive_telephone LIKE '%'
+			#{search} '%' OR
+			receive_area LIKE '%' #{search} '%' OR
+			receive_address LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 更新订单状态 -->
+	<update id="updateOrderStatus">
+		UPDATE
+		ex_order
+		SET
+		STATUS = #{status}
+		WHERE order_id
+		=#{orderId}
+	</update>
+	<!-- 查询订单根据状态 分页 -->
+	<select id="findStatusOrderByPage" resultType="ExOrder">
+		SELECT
+		*
+		FROM
+		ex_order
+		WHERE status=#{status}
+		<if test="search != null">
+			AND (
+			order_id LIKE '%' #{search} '%' OR
+			send_name LIKE '%'
+			#{search} '%' OR
+			send_telephone LIKE '%' #{search} '%' OR
+			send_area
+			LIKE '%' #{search}
+			'%' OR
+			send_address LIKE '%' #{search} '%' OR
+			receive_name LIKE '%'
+			#{search} '%' OR
+			receive_telephone LIKE '%'
+			#{search} '%' OR
+			receive_area LIKE '%' #{search} '%' OR
+			receive_address LIKE '%'
+			#{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 修改订单信息 -->
+	<update id="updateOrder">
+		UPDATE
+		ex_order
+		SET
+		send_name=#{exOrder.send_name},
+		send_telephone=#{exOrder.send_telephone},
+		send_area=#{exOrder.send_area},
+		send_address=#{exOrder.send_address},
+		receive_name=#{exOrder.receive_name},
+		receive_telephone=#{exOrder.receive_telephone},
+		receive_area=#{exOrder.receive_area},
+		receive_address=#{exOrder.receive_address},
+		update_time=#{exOrder.update_time}
+		WHERE order_id=#{exOrder.order_id}
+	</update>
+	<!-- 查询订单信息根据订单号 -->
+	<select id="findOrderById" resultType="ExOrder">
+		SELECT
+		*
+		FROM
+		ex_order
+		WHERE
+		order_id =#{orderId}
+	</select>
+	<!-- 添加订单 -->
+	<insert id="insertOrder">
+		insert into ex_order (
+		order_id,
+		send_name,
+		send_telephone,
+		send_area,
+		send_address,
+		receive_name,
+		receive_telephone,
+		receive_area,
+		receive_address,
+		create_time,
+		status,
+		customer_id
+		) values
+
+		(
+		#{order.order_id},
+		#{order.send_name},
+		#{order.send_telephone},
+		#{order.send_area},
+		#{order.send_address},
+		#{order.receive_name},
+		#{order.receive_telephone},
+		#{order.receive_area},
+		#{order.receive_address},
+		#{order.create_time},
+		#{order.status},
+		#{order.customer_id}
+		)
+	</insert>
+	<!-- 根据地区查询地区码 -->
+	<select id="findAreaCode" resultType="SysArea">
+		select
+		area_code
+		from
+		sys_area
+		where name like '%' #{search} '%'
+	</select>
+	<!-- 批量添加订单 -->
+	<insert id="insertOrders">
+		insert into ex_order (
+		order_id,
+		send_name,
+		send_telephone,
+		send_area,
+		send_address,
+		receive_name,
+		receive_telephone,
+		receive_area,
+		receive_address,
+		create_time,
+		status,
+		customer_id
+		) values
+		<foreach collection="orders" item="order" separator=",">
+			(
+			#{order.order_id},
+			#{order.send_name},
+			#{order.send_telephone},
+			#{order.send_area},
+			#{order.send_address},
+			#{order.receive_name},
+			#{order.receive_telephone},
+			#{order.receive_area},
+			#{order.receive_address},
+			#{order.create_time},
+			#{order.status},
+			#{order.customer_id}
+			)
+		</foreach>
+	</insert>
+</mapper>

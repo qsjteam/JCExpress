@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.RegionMapper">
+	<!-- 根据父id查询区域 -->
+	<select id="findReginByParentCode" resultType="SysArea">
+		SELECT
+		a.area_id,
+		a.area_code,
+		a.parent_code,
+		a.name,
+		a.layer,
+		a.order_num,
+		a.status,
+		a.remark,
+		(SELECT
+		COUNT(*)
+		FROM
+		sys_area p
+		WHERE p.parent_code =
+		a.area_code) AS size
+		FROM
+		sys_area a
+		WHERE a.parent_code =#{parentCode}
+		ORDER BY
+		a.order_num ASC
+	</select>
+	<!-- 查询区域根据 区域id -->
+	<select id="findReginByAreaCodeByPage" resultType="SysArea">
+		SELECT
+		a.area_id,
+		a.area_code,
+		a.parent_code,
+		a.name,
+		a.layer,
+		a.order_num,
+		a.status,
+		a.remark,
+		create_time,
+		update_time
+		FROM
+		sys_area a
+		WHERE
+		a.parent_code =#{areaCode}
+		ORDER BY ${page.sort} ${page.order}
+	</select>
+	<!-- 根据地区id查询地区名称 -->
+	<select id="findReginById" resultType="SysArea">
+		SELECT
+		*
+		FROM
+		sys_area
+		WHERE
+		area_code = #{areaCode}
+	</select>
+	<!-- 添加地区 -->
+	<insert id="insertRegin">
+		INSERT INTO sys_area (
+		area_code,
+		parent_code,
+		layer,
+		NAME,
+		order_num,
+		STATUS,
+		remark,
+		create_time
+		)
+		VALUES
+		(
+		#{area.area_code},
+		#{area.parent_code},
+		#{area.layer},
+		#{area.name},
+		#{area.order_num},
+		#{area.status},
+		#{area.remark},
+		#{area.create_time}
+		)
+	</insert>
+	<!-- 启用/隐藏区域 -->
+	<update id="updateFrozenRegin">
+		UPDATE
+		sys_area
+		SET
+		STATUS =#{status}
+		WHERE area_id
+		=#{areaId}
+	</update>
+	<!-- 查询区域根据主键 -->
+	<select id="findReginByAreaId" resultType="SysArea">
+		SELECT
+		*
+		FROM
+		sys_area
+		WHERE
+		area_id = #{areaId}
+	</select>
+	<!-- 更新区域 -->
+	<update id="updateRegin">
+		UPDATE
+		sys_area
+		SET
+		area_code=#{area.area_code},
+		parent_code=#{area.parent_code},
+		name=#{area.name},
+		order_num=#{area.order_num},
+		status=#{area.status},
+		remark=#{area.remark},
+		update_time=#{area.update_time}
+		WHERE
+		area_id =
+		#{area.area_id}
+	</update>
+	<!-- 删除区域 -->
+	<delete id="deleteRegin">
+		DELETE
+		FROM
+		sys_area
+		WHERE area_id =#{areaId}
+	</delete>
+	<!-- 根据父编号查询可用的区域 -->
+	<select id="findStatusReginByParentCode" resultType="SysArea">
+		SELECT
+		a.area_id,
+		a.area_code,
+		a.parent_code,
+		a.name,
+		a.layer,
+		a.order_num,
+		a.status,
+		a.remark
+		FROM
+		sys_area a
+		WHERE a.parent_code =#{parentCode}
+		AND
+		STATUS = '1'
+		ORDER BY a.order_num ASC
+	</select>
+	<!-- 查询所有不是省份的地区 -->
+	<select id="findAllReginNotIsProvince"  resultType="SysArea" >
+		SELECT
+		a.area_id,
+		a.area_code,
+		a.parent_code,
+		a.name,
+		a.layer,
+		a.order_num,
+		a.status,
+		a.remark
+		FROM
+		sys_area a
+		WHERE STATUS = '1' AND parent_code!=0
+		ORDER BY layer ASC
+	</select>
+</mapper>

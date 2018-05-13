@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.OrganizationMapper">
+	<!-- 根据组织id查询组织 -->
+	<select id="findOrganById" resultType="Organization">
+		SELECT
+		*
+		FROM
+		t_organization
+		WHERE org_id = #{organId}
+	</select>
+	<!-- 查询组织根据状态 -->
+	<select id="findAllOrgByStatus" resultType="Organization">
+		SELECT
+		org_id,
+		org_name
+		FROM
+		t_organization
+		WHERE STATUS = #{status}
+	</select>
+	<!-- 查询所有组织分页 -->
+	<select id="findAllOrgByPage" resultType="Organization">
+		SELECT
+		org_id,
+		org_name,
+		create_time,
+		create_by,
+		STATUS,
+		update_time,
+		update_by,
+		remarks
+		FROM
+		t_organization
+		WHERE 1 = 1
+		<if test="search != null">
+			AND (
+			org_name LIKE '%' #{search} '%' OR
+			create_by LIKE '%'
+			#{search} '%' OR
+			update_by LIKE '%' #{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 根据组织id查找用户分页 -->
+	<select id="findUserByOrgIdByPage" resultType="com.qsj.vo.UserVo">
+		SELECT
+		u_id,
+		login_name,
+		PASSWORD,
+		organization_id,
+		org_name,
+		user_name,
+		telephone,
+		email,
+		last_login_time,
+		u.create_time,
+		last_login_ip,
+		u.status
+		FROM
+		t_user
+		u
+		LEFT JOIN
+		t_organization o
+		ON u.organization_id =
+		o.org_id
+		WHERE o.org_id
+		=#{organizationId}
+		<if test="search != null">
+			AND (
+			user_name LIKE '%' #{search} '%'
+			OR telephone LIKE '%'
+			#{search} '%'
+			OR email LIKE '%' #{search} '%'
+			OR o.org_name LIKE '%'
+			#{search} '%'
+			)
+		</if>
+		<if test="page.sort != null">
+			ORDER BY ${page.sort} ${page.order}
+		</if>
+	</select>
+	<!-- 查询所有组织 -->
+	<select id="findAllOrg" resultType="Organization">
+		SELECT
+		*
+		FROM
+		t_organization
+	</select>
+	<!-- 根绝组织id查找用户 -->
+	<select id="findUserByOrgId" resultType="com.qsj.vo.UserVo">
+		SELECT
+		u_id,
+		pic_img,
+		login_name,
+		PASSWORD,
+		organization_id,
+		org_name,
+		sex,
+		age,
+		user_name,
+		telephone,
+		email,
+		last_login_time,
+		u.create_time,
+		last_login_ip
+		FROM
+		t_user
+		u
+		LEFT JOIN
+		t_organization o
+		ON u.organization_id
+		=
+		o.org_id
+		WHERE o.org_id
+		=#{organizationId}
+	</select>
+	<!-- 添加组织 -->
+	<insert id="insertOrg">
+		INSERT INTO t_organization (
+		org_name,
+		STATUS,
+		create_by,
+		create_time,
+		update_by,
+		update_time,
+		remarks
+		)
+		VALUES
+		(
+		#{organization.org_name},
+		#{organization.status},
+		#{organization.create_by},
+		#{organization.create_time},
+		#{organization.update_by},
+		#{organization.update_time},
+		#{organization.remarks}
+		)
+	</insert>
+	<!-- 更新组织 -->
+	<update id="updateOrg">
+		UPDATE
+		t_organization
+		SET
+		org_name
+		=#{organization.org_name},
+		STATUS = #{organization.status},
+		update_by =
+		#{organization.update_by},
+		update_time = #{organization.update_time},
+		remarks = #{organization.remarks}
+		WHERE org_id = #{organization.org_id}
+	</update>
+	<!-- 删除组织 -->
+	<delete id="deleteOrg">
+		DELETE
+		FROM
+		t_organization
+		WHERE org_id
+		=#{organizationId}
+	</delete>
+	<!-- 删除组织后清除关联的用户 -->
+	<delete id="deleteUserOrg">
+		UPDATE
+		t_user
+		SET
+		organization_id = NULL
+		WHERE
+		organization_id = #{organizationId}
+	</delete>
+	<!-- 冻结 /启用组织 -->
+	<update id="updateFrozenOrg">
+		UPDATE
+		t_organization
+		SET
+		STATUS =#{status}
+		WHERE org_id
+		= #{organizationId}
+	</update>
+</mapper>

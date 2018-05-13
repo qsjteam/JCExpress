@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.OrderDetailMapper">
+	<!-- 根据订单号查询订单详细信息 -->
+	<select id="findOrderDetail" resultType="ExOrderDetail">
+		SELECT
+		*
+		FROM
+		ex_order_detail
+		WHERE order_id =#{orderId}
+	</select>
+	<!-- 更改订单详细信息 -->
+	<update id="updateOrderDetail">
+		UPDATE
+		ex_order_detail
+		SET
+		order_weight
+		=#{exOrderDetail.order_weight},
+		order_type
+		=#{exOrderDetail.order_type},
+		order_remark
+		=#{exOrderDetail.order_remark},
+		update_time
+		=#{exOrderDetail.update_time}
+		WHERE order_id=#{exOrderDetail.order_id}
+	</update>
+	<!-- 添加订单明细 -->
+	<insert id="insertOrderDetail">
+		insert into ex_order_detail (
+		id,
+		order_id,
+		order_weight,
+		order_type,
+		order_remark,
+		order_img,
+		create_time,
+		update_time
+		) values
+		(
+		#{orderDetail.id},
+		#{orderDetail.order_id},
+		#{orderDetail.order_weight},
+		#{orderDetail.order_type},
+		#{orderDetail.order_remark},
+		#{orderDetail.order_img},
+		#{orderDetail.create_time},
+		#{orderDetail.update_time}
+		)
+	</insert>
+	<!-- 批量添加订单明细 -->
+	<insert id="insertOrderDetails">
+		insert into ex_order_detail (
+		id,
+		order_id,
+		order_weight,
+		order_type,
+		order_remark,
+		order_img,
+		create_time,
+		update_time
+		) values
+		<foreach collection="orderDetails" item="orderDetail" separator=",">
+			(
+			#{orderDetail.id},
+			#{orderDetail.order_id},
+			#{orderDetail.order_weight},
+			#{orderDetail.order_type},
+			#{orderDetail.order_remark},
+			#{orderDetail.order_img},
+			#{orderDetail.create_time},
+			#{orderDetail.update_time}
+			)
+		</foreach>
+	</insert>
+</mapper>

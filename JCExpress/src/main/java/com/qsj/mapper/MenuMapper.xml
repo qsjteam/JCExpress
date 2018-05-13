@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.MenuMapper">
+	<sql id="Base_Column_List">
+		menu_id,
+		parent_id,
+		menu_code,
+		menu_type,
+		sort,
+		menu_name,
+		href,
+		icon,
+		STATUS,
+		permission,
+		create_time,
+		create_by,
+		update_time,
+		update_by,
+		remarks
+	</sql>
+	<!-- 查询所有菜单根据类型 -->
+	<select id="findMenuByType" resultType="Menu">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		t_menu
+		WHERE menu_type = #{menuType}
+		ORDER BY sort ASC
+	</select>
+	<!-- 根据角色查询拥有的菜单 DISTINCT去重 -->
+	<select id="findMenuByRole" resultType="Menu">
+		SELECT
+		DISTINCT
+		m.menu_id ,
+		parent_id ,
+		menu_name ,
+		href,
+		icon
+		FROM
+		t_menu m
+		LEFT JOIN
+		t_role_menu r
+		ON r.menu_id = m.menu_id
+		WHERE STATUS =1
+		AND
+		menu_type = #{menuType}
+		AND r.role_id IN
+		<foreach collection="roleIds" item="roleId" open="(" close=")"
+			separator=",">
+			#{roleId}
+		</foreach>
+		ORDER BY sort ASC
+	</select>
+	<!-- 查询所有可用的菜单 -->
+	<select id="findMenuByStatus" resultType="com.qsj.dto.MenuDTO">
+		SELECT
+		menu_id,
+		menu_type,
+		parent_id,
+		menu_name,
+		permission,
+		href,
+		icon
+		FROM
+		t_menu
+		WHERE
+		STATUS = #{status}
+		ORDER BY sort ASC
+	</select>
+	<!-- 删除角色拥有的菜单根据角色id -->
+	<delete id="deleteRoleMenu">
+		DELETE
+		FROM
+		t_role_menu
+		WHERE role_id =#{roleId}
+	</delete>
+	<!-- 启用 冻结菜单 -->
+	<update id="updateFrozenMenu">
+		UPDATE
+		t_menu
+		SET
+		STATUS = #{status}
+		WHERE menu_id = #{menuId}
+	</update>
+	<!-- 查询菜单信息根据菜单id -->
+	<select id="findMenuById" resultType="Menu">
+		SELECT
+		*
+		FROM
+		t_menu
+		WHERE
+		menu_id = #{menuId}
+	</select>
+	<!-- 添加菜单 -->
+	<insert id="insertMenu">
+		INSERT INTO t_menu (
+			parent_id,
+			menu_type,
+			menu_code,
+			menu_name,
+			sort,
+			href,
+			icon,
+			STATUS,
+			permission,
+			create_by,
+			create_time,
+			update_by,
+			update_time,
+			remarks
+		)
+		VALUES (
+			#{menu.parent_id},
+			#{menu.menu_type},
+			#{menu.menu_code},
+			#{menu.menu_name},
+			#{menu.sort},
+			#{menu.href},
+			#{menu.icon},
+			#{menu.status},
+			#{menu.permission},
+			#{menu.create_by},
+			#{menu.create_time},
+			#{menu.update_by},
+			#{menu.update_time},
+			#{menu.remarks}
+		)
+	</insert>
+	<!-- 删除菜单 -->
+	<delete id="deleteMenu">
+		DELETE
+		FROM
+		t_menu
+		WHERE menu_id =#{menuId}
+	</delete>
+	<!-- 清除RoleMenu表中的冗余数据 -->
+	<delete id="deleteMenuRole">
+		DELETE FROM t_role_menu
+		WHERE menu_id = #{menuId}
+	</delete>
+	<!-- 更新菜单 -->
+	<update id="updateMenu">
+		UPDATE t_menu
+		SET
+			menu_code	= #{menu.menu_code},
+			menu_name 	= #{menu.menu_name},
+			sort		= #{menu.sort},
+			href 		= #{menu.href},
+			icon		= #{menu.icon},
+			STATUS 		= #{menu.status},
+			permission	= #{menu.permission},
+			update_by	= #{menu.update_by},
+			update_time	= #{menu.update_time},
+			remarks		= #{menu.remarks}
+		WHERE menu_id=#{menu.menu_id}
+	</update>
+</mapper>
