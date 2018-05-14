@@ -217,12 +217,19 @@ public class OrderController {
 	@ResponseBody
 	public BaseResult selectOrder(String id) {
 		BaseResult bb;
-		if(id.length()==11) {
+		/*if(id.length()==11) {
 			bb=orderService.selectOrderByTel(id);
 			return bb;
-		}else {
+		}else {*/
 			bb=orderService.selectOrderById(id);
 			return bb;
-		}
+		
+	}
+	@RequestMapping("/selectOrderB")
+	@ResponseBody
+	public BaseResult selectOrderB(String id) {
+		BaseResult bb;
+		bb=orderService.selectOrderByTel(id);
+		return bb;
 	}
 }
