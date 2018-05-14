@@ -72,11 +72,11 @@
       <div class="am-offcanvas-bar am-offcanvas-bar-flip">
         <nav class="am-offcanvas-content">
             <a href="/" rel="nofollow"><span class="logo"></span></a>
-            <p><i class="am-icon-home"></i> <a href="./index" rel="nofollow">网站首页</a></p>
-            <p><i class="am-icon-cogs"></i> <a href="/fuwu" rel="nofollow">服务内容</a></p>
-            <p><i class="am-icon-credit-card"></i> <a href="/zixun" rel="nofollow">最新动态</a></p>
-            <p><i class="am-icon-user"></i> <a href="/about" rel="nofollow">关于我们</a></p>
-            <p><i class="am-icon-qq"></i> <a href="/contact" rel="nofollow">联系我们</a></p>
+            <p><i class="am-icon-home"></i> <a href="${mao}/index" rel="nofollow">网站首页</a></p>
+            <p><i class="am-icon-cogs"></i> <a href="${mao}/fuwu" rel="nofollow">服务内容</a></p>
+            <p><i class="am-icon-credit-card"></i> <a href="${mao}/zixun" rel="nofollow">最新动态</a></p>
+            <p><i class="am-icon-user"></i> <a href="${mao}/about" rel="nofollow">关于我们</a></p>
+            <p><i class="am-icon-qq"></i> <a href="${mao}/contact" rel="nofollow">联系我们</a></p>
         </nav>
       </div>
     </div>
@@ -94,7 +94,7 @@
                 <li ><a href="${mao}/about"><i class="icon-chevron-right"></i>关于锦程</a></li>
                 <li class="am-active" ><a href="/fuwu"><i class="icon-chevron-right"></i>服务内容</a></li>
                 <li ><a href="${mao}/xiadan"><i class="icon-chevron-right"></i>在线下单</a></li>
-                <li ><a href="${mao}/contact"><i class="icon-chevron-right"></i>在线查单</a></li>
+                <li ><a href="${mao}/chadan"><i class="icon-chevron-right"></i>在线查单</a></li>
             </ul>
 </nav>
 <section class="am-container m-service-page">

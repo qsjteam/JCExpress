@@ -2,6 +2,7 @@ package com.qsj.service.impl;
 
 import java.util.List;
 
+import com.qsj.base.result.BaseResult;
 import com.qsj.mapper.FixedMapper;
 import com.qsj.pojo.SysFixed;
 import com.qsj.pojo.SysPartition;
@@ -155,6 +156,13 @@ public class FixedServiceImpl implements FixedService {
 		} else {
 			return fixedMapper.updateRelaFixed(fixedId, partitionIds);
 		}
+	}
+
+	@Override
+	public BaseResult findFixedByName(String name) {
+		BaseResult bb=new BaseResult(null);
+		bb.setData(fixedMapper.findFixedByName(name));
+		return bb;
 	}
 
 }

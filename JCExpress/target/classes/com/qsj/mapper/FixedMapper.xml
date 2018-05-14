@@ -139,4 +139,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{partitionId}
 		</foreach>
 	</update>
+	
+	<select id="findFixedByName" resultType="com.qsj.pojo.Fixed">
+		select * from sys_fixed where fixed_name=#{name}
+	</select>
 </mapper>

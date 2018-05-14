@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qsj.mapper.YunfeiMapper">
+	
+	<select id="yunfei" resultType="com.qsj.pojo.Prices">
+		SELECT 
+			*
+		FROM 
+			ex_prices
+		where 
+			in_province=#{in_province}
+		and
+			weight=#{weight}
+		and
+			timer=#{timer}
+	</select>
+
+</mapper>

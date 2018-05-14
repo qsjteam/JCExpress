@@ -83,6 +83,8 @@
 				/chadan=anon
 				/showView=anon
 				/order/*=anon
+				/fixed/list/findFixed=anon
+				/yunfei=anon
 				/logout=logout
 				/partition/list/regionSelect=anon
 				/order/createOrder=anon

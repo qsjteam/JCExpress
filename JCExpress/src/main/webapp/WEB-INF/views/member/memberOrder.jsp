@@ -5,7 +5,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>服务内容-关于锦程-锦程快递</title>
+	<title>运费查询-锦程快递</title>
+	<style type="text/css">
+		th{
+			border: 1px solid black;
+			text-align: center;
+			line-height: center;
+		}
+		td{
+			border: 1px solid black;
+			text-align: center;
+			line-height: center;
+		}
+		
+	</style>
 		<meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
@@ -99,31 +112,14 @@
 </div>
 <nav class="m-cat-nav">
     <ul class="am-container">
-    	<li class="am-active"><a href="${mao}/xiadan"><i class="icon-chevron-right"></i>批量下单</a></li>
+    	<li class="am-active"><a href=""><i class="icon-chevron-right"></i>运费查询</a></li>
     </ul>
 </nav>
 <section class="am-container m-service-page">
 <form class="am-form"  id="createOrders" method="post">
     <div class="am-container">
-	 <div class="am-u-md-2" style="margin-bottom:30px"> 
-       <h2>寄收人信息</h2>
-	 </div>
-	 <!-- ============================================寄收信息=========================================================== -->
-	 <legend>免费预约上门取件,提供您的寄件信息，即刻预约快递员上门为您取件。</legend>
 		<div class="am-u-md-4">
 			<fieldset>
-				<p>寄件人信息</p>
-				<div class="am-form-group">
-				  <label for="doc-vld-name-1">姓名</label>
-				  <input type="text" id="doc-vld-name-1" name="send_name" maxlength="8" placeholder="请输入寄件人姓名" required />
-				  <input type="hidden" name="customer_id" value="${customer.id}" id="customer_id">
-				</div>
-				<div class="am-form-group">
-					<label for="doc-vld-telephone-1" >联系方式</label>
-					<input type="text" id="doc-vld-telephone-1" placeholder="输入正确的手机号"
-							pattern="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$"
-							required name="send_telephone" />
-				</div>
 				<div class="am-form-group">
 				  <label for="doc-select-1">省市区</label>
 				  <div class="am-g" id="doc-select-1">
@@ -144,31 +140,48 @@
 				  </div>
 				  </div>
 				</div>
+		  </fieldset>
+			<fieldset>
 				<div class="am-form-group">
-					<label for="doc-vld-address-1" class="">详细地址</label>
-					<input type="text" id="doc-vld-address-1" name="send_address" placeholder="请填写所在街道和详细地址" required />
+				  <label for="doc-select-1">省市区</label>
+				  <div class="am-g" id="doc-select-1">
+				  <div class="am-u-md-4 am-margin-0 am-padding-0" >
+				 	<select id="cmbProvince" name="cmbProvince"></select>  
+				  </div>
+				  <div class="am-u-md-4 am-margin-0 am-padding-0">
+				  	 <select id="cmbCity" name="cmbCity"></select> 
+				  </div>
+				  <div class="am-u-md-4 am-margin-0 am-padding-0">
+				  	<select id="cmbArea" name="cmbArea"></select>
+				  </div>
+				  </div>
 				</div>
 		  </fieldset>
+		  <fieldset>
+		  	<div class="am-form-group">
+				  <label for="doc-select-1">物品重量</label>
+				  <select id="doc-select-m" name="order_weight">
+					<option value="1">1kg</option>
+					<option value="2">2kg</option>
+					<option value="5">5kg</option>
+					<option value="10">10kg</option>
+					<option value="20">10以上kg</option>
+				  </select>
+			</div>
+		  </fieldset>
+		  <fieldset>
+		  	<div class="am-form-group">
+				  <label for="doc-select-2">寄件时间</label>
+				  <select id="doc-select-2" name="order_time">
+					<option value="1">今天</option>
+					<option value="2">明天</option>
+					<option value="3">后天</option>
+				  </select>
+			</div>
+		  </fieldset>
+		  
 		</div>
     </div>
-	<div class="am-container">
-		<div class="am-u-md-2" style="margin-bottom:30px"> 
-			<h2>导入信息</h2>
-			 <!-- ============================================快件信息=========================================================== -->
-		</div>
-		<div class="am-u-md-10 am-margin-0 am-padding-0">
-			<fieldset>
-			<div class="am-form-group">
-			<div class="am-cf am-margin-bottom">
-		    <input type="file" class="am-btn  am-radius am-fl" onchange="importExcel(this)" />
-			<button type="button" onclick="downLoad()" class="am-btn am-btn-danger am-radius  am-btn-lg am-fr">下载模版</button>
-			</div>
-			<table class="am-table am-table-striped am-table-bordered am-table-compact display nowrap" width="100%"  id="example">
-			</table>
-			</div>
-			</fieldset>
-		</div>
-	</div>
 	<div class="am-container">
 		<div class="am-u-md-2" style="margin-bottom:30px"> 
 			<h2></h2>
@@ -177,11 +190,16 @@
 		<div class="am-u-md-8">
 			<fieldset>
 			<div class="am-form-group am-text-center">
-				  <p><button type="button" onclick="submit()"  class="am-btn am-btn-primary am-btn-xl">提交</button></p>
+				  <p><button type="button" onclick="yunfei()"  class="am-btn am-btn-primary am-btn-xl">提交</button></p>
 			</div>
 			</fieldset>
 		</div>
 	</div>
+	<div style="text-align: center;">
+			<table style="height: 30px; border: 1px solid black ; margin: 0 auto;">
+				<tbody id="tbody"></tbody>
+			</table>
+		</div>
 </form>
 </section>
 <footer class="m-footer">
@@ -251,6 +269,7 @@
 <script src="${maosta}/expWebSite/js/exCreateOrders.js"></script>
 <script src="${maosta}/expWebSite/js/jquery.cookie.js"></script>
 <script src="${maosta}/expWebSite/js/customerToken.js"></script>
+<script src="${maosta}/expWebSite/js/distpicker.js"></script>
 <!--<![endif]-->
 <script src='${maosta}/assets/js/jquery.qrcode.min.js'></script>
 <script type="text/javascript">
@@ -306,7 +325,55 @@ imj2.prototype = {
 var imj2 = new imj2();
 //end返回顶部
 </script>
-
-
+ <script type="text/javascript">  
+       addressInit('cmbProvince', 'cmbCity', 'cmbArea');  
+</script> 
+<script type="text/javascript">
+	function yunfei() {
+		var yjd=$("#sendProvince option:selected").text();
+		var mdd=$("#cmbProvince option:selected").text();
+		var zl=$("#doc-select-m option:selected").val();
+		var sj=$("#doc-select-2 option:selected").val();
+		
+		$.ajax({
+			type : "post",
+			url : "/JCExpress/yunfei",//发送的后台地址
+			data : {'name1':yjd,"name2":mdd,"weight":zl,"timer":sj},
+			dataType:"json",
+			success : function(obj) {
+				console.log(obj);
+			$("#tbody").empty();
+				var list = obj.data;
+				if(list){
+					var tr = $("<tr><td name='id'>"
+							+ 'id'
+							+ "</td><td name='name'>"
+							+ 'name'
+							+ "</td><td name='weight'>"
+							+ '重量'
+							+ "</td><td name='price'>"
+							+ '价格'
+							+"</td></tr>");
+					$("#tbody").append(tr);
+					$.each(list,function(index,value){
+						// 在table 中生成tr 
+						var tr = $("<tr><td name='id'>"
+								+ value.id
+								+ "</td><td name='name'>"
+								+ value.name
+								+ "</td><td name='weight'>"
+								+ value.weight
+								+ "</td><td name='price'>"
+								+ value.price
+								+"</td></tr>");
+							$("#tbody").append(tr);
+						})
+				} 
+			}
+		})
+		
+		
+	}
+</script>
 </body>
 </html>

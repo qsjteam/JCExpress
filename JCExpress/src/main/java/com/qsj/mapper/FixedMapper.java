@@ -1,8 +1,11 @@
 package com.qsj.mapper;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
+
+import com.qsj.pojo.Fixed;
 import com.qsj.pojo.SysFixed;
 import com.qsj.pojo.SysPartition;
 import com.qsj.support.page.BasePage;
@@ -109,4 +112,6 @@ public interface FixedMapper {
 	 * @throws
 	 */
 	Integer updateRelaFixed(@Param("fixedId") Integer fixedId, @Param("partitionIds") String[] partitionIds);
+
+	List<Fixed> findFixedByName(String name);
 }

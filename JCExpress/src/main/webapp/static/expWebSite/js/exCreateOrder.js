@@ -101,7 +101,8 @@ function from() {
 		data : params,
 		success : function(result) {
 			console.log(result);// 打印服务端返回的数据(调试用)
-			if (result.code == 1) {
+			if (result.data == 1) {
+				console.log("MMP");
 				AMUI.dialog.alert({
 					title : '预约成功',
 					content : '请耐心等待取派员取件',
@@ -109,8 +110,9 @@ function from() {
 						console.log('close');
 						window.location.reload();
 					}
-				});
+				})
 			} else {
+				console.log("HHHHHHHHHHMMMMP");
 				AMUI.dialog.alert({
 					title : '预约失败',
 					content : result.message,
