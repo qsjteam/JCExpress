@@ -186,18 +186,16 @@
 						</div>
 					</div>
 				</div>
-			  </div>
-			  </div>
 		  </div>
 		</div>
 		</form>
 		</div>
 	</div>
-    <div>
+    <div style="text-align: center;">
 		  	<table style="height: 30px; border: 1px solid black ;" >
 		  		<tbody id="tbody"></tbody>
 		  	</table>
-		  </div>
+	</div>
     </div>
 </section>
 <footer class="m-footer">
@@ -324,6 +322,7 @@ var imj2 = new imj2();
 	
 	function chadan() {
 		var mytt=$("#Num").val();
+		console.log(mytt);
 		$.ajax({
 			type : "post",
 			url : "/JCExpress/order/selectOrder",//发送的后台地址
@@ -424,7 +423,52 @@ var imj2 = new imj2();
 </script>
 <script type="text/javascript">
 	function wangdian() {
-		
+		console.log("-----------------------11")
+		var myare=$("#receiveVillage option:selected").text();
+		$.ajax({
+			type : "post",
+			url : "/JCExpress/fixed/list/findFixed",//发送的后台地址
+			data : {'name':myare},
+			dataType:"json",
+			success : function(obj) {
+				console.log(obj);
+				$("#tbody").empty();
+				var list = obj.data;
+				if(list){
+					var tr = $("<tr><td name='id'>"
+							+ 'id'
+							+ "</td><td name='fixed_code'>"
+							+ '网点编号'
+							+ "</td><td name='staff_id'>"
+							+ '备注id'
+							+ "</td><td name='fixed_name'>"
+							+ '网点名'
+							+ "</td><td name='fixed_adress'>"
+							+ '网点地址'
+							+ "</td><td name='status'>"
+							+ '状态'
+							+"</td></tr>");
+					$("#tbody").append(tr);
+					$.each(list,function(index,value){
+						// 在table 中生成tr 
+						var tr = $("<tr><td name='id'>"
+								+ value.id
+								+ "</td><td name='fixed_code'>"
+								+ value.fixed_code
+								+ "</td><td name='staff_id'>"
+								+ value.staff_id
+								+ "</td><td name='fixed_name'>"
+								+ value.fixed_name
+								+ "</td><td name='fixed_adress'>"
+								+ value.fixed_adress
+								+ "</td><td name='status'>"
+								+ value.status
+								+"</td></tr>");
+							$("#tbody").append(tr);
+						})
+				}
+			}
+		})
 	}
 </script>
 

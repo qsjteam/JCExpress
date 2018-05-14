@@ -285,4 +285,14 @@ public class FixedController {
 		}
 		return new BaseResult("没有登录");
 	}
+	
+	@RequestMapping("/findFixed")
+	@ResponseBody
+	public BaseResult findFixedByName(String name) {
+		System.out.println("————————————————-开始找网点");
+		BaseResult bb= new BaseResult(null);
+		bb=fixedService.findFixedByName(name);
+		return bb;
+		
+	}
 }

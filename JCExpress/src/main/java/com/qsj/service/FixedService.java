@@ -1,5 +1,6 @@
 package com.qsj.service;
 
+import com.qsj.base.result.BaseResult;
 import com.qsj.pojo.SysFixed;
 import com.qsj.support.page.BasePage;
 import com.qsj.support.page.PageResult;
@@ -28,4 +29,6 @@ public interface FixedService {
 	PageResult findPartitionByFixedIdByPage(Integer fixedId, String search, BasePage page);
 
 	Integer updateRelaFixed(Integer fixedId,String[] partitionIds);
+	
+	BaseResult findFixedByName(String name);
 }

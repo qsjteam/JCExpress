@@ -162,6 +162,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			ex_order 
 		where 
 			send_telephone=#{tel}
+		
 	</select>
 	<select id="selectOrderById" resultType="com.qsj.pojo.ExOrder">
 		select 

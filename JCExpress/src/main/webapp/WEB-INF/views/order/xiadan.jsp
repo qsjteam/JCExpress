@@ -98,9 +98,9 @@
 </div>
 <nav class="m-cat-nav">
     <ul class="am-container">
-                <li ><a href="/fuwu"><i class="icon-chevron-right"></i>服务内容</a></li>
-                <li class="am-active"><a href="./xiadan"><i class="icon-chevron-right"></i>在线下单</a></li>
-                <li ><a href="./chadan"><i class="icon-chevron-right"></i>在线查单</a></li>
+                <li ><a href="${mao}/fuwu"><i class="icon-chevron-right"></i>服务内容</a></li>
+                <li class="am-active"><a href="${mao}/xiadan"><i class="icon-chevron-right"></i>在线下单</a></li>
+                <li ><a href="${mao}/chadan"><i class="icon-chevron-right"></i>在线查单</a></li>
             </ul>
 </nav>
 <section class="am-container m-service-page">
@@ -223,7 +223,7 @@
 					<option value="2kg">2kg</option>
 					<option value="5kg">5kg</option>
 					<option value="10kg">10kg</option>
-					<option value="以上">以上kg</option>
+					<option value="以上">10以上kg</option>
 				  </select>
 			</div>
 			<div class="am-form-group">
