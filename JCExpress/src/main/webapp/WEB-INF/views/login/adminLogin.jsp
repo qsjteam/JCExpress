@@ -12,10 +12,8 @@
 <!-- <form action="" method="post"> -->
 <dl class="admin_login">
   <dt> <strong>锦程物流管理系统</strong> <em>
-  	<marquee direction='up' scrollamount="1" loop="infinite" id="notice">
-		<a herf="${mao}/index">fads11111</a></br>
-		<a herf="${mao}/index">fadsf22222</a></br>
-		<a herf="${mao}/index">fads33333</a>
+  	<marquee direction='up' scrollamount="1" loop="infinite" id="notice" 
+  		onmouseover=this.stop() onmouseout=this.start() text-align="center">
 	</marquee>
 	</em> </dt>
   <dd class="user_icon">

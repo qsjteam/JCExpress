@@ -1,6 +1,7 @@
 /**
  * 行政区域js
  */
+var baselocation = "/JCExpress";
 var setting = {
 	async : {
 		enable : true,
@@ -303,7 +304,7 @@ function region_delete(index, value) {
 		})
 	});
 }
-var baselocation = "/JCExpress";
+
 function Format(now,mask)
 {
     var d = now;

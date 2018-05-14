@@ -1,6 +1,7 @@
 /**
  * 进行格式转换
  */
+var baselocation = "/JCExpress/";
 function statusFormatter(value) {
 	if (value == 1) {
 		return '<span class="label label-primary">正常</span>'

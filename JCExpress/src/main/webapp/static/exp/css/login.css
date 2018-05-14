@@ -109,7 +109,7 @@ button, input, select, textarea {
 	line-height: inherit
 }
 a {
-	color: #06c1ae;
+	color: white/* #06c1ae */;
 	text-decoration: none;
 	outline: 0
 }

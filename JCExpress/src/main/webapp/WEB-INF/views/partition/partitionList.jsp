@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
 <%@ include file="/WEB-INF/base/base.jsp"%>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -23,7 +24,7 @@
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
                       <button type="button" class="btn btn-default"  title="创建网点" onclick="layer_show('创建网点','${mao}/partition/list/createPartition','900','650')"> <i class="glyphicon glyphicon-plus"></i> </button>
-                  </div>
+                  </div> 
                   <table id="table"
                          data-toggle="table"
                          data-height="600"
@@ -72,6 +73,15 @@
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/systemPartitionList.js"></script> 
+	<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script>
+	<script src="${maosta}/common/metismenu/metisMenu.min.js"></script>
+	<script src="${maosta}/common/slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- layer弹出框js -->
+    <script src="${maosta}/common/layer/layer.js"></script>
+    <!-- iCheck --> 
+  	<script src="${maosta}/common/icheck/icheck.min.js"></script> 
+  	<!-- bootstrapvalidator-master前端验证框架 --> 
+  	<script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
 </myfooter>
 </body>
 </html>

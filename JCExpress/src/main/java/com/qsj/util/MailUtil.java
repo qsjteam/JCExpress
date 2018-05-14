@@ -43,10 +43,10 @@ public class MailUtil implements Runnable {
  
         try {
             //QQ邮箱需要下面这段代码，163邮箱不需要
-            MailSSLSocketFactory sf = new MailSSLSocketFactory();
-            sf.setTrustAllHosts(true);
-            properties.put("mail.smtp.ssl.enable", "true");
-            properties.put("mail.smtp.ssl.socketFactory", sf);
+//            MailSSLSocketFactory sf = new MailSSLSocketFactory();
+//            sf.setTrustAllHosts(true);
+//            properties.put("mail.smtp.ssl.enable", "true");
+//            properties.put("mail.smtp.ssl.socketFactory", sf);
  
  
             // 1.获取默认session对象
