@@ -60,7 +60,7 @@
 			<li><a href="${mao}/zixun" rel="nofollow">会员专区</a></li>
             <li><a href="${mao}/about" rel="nofollow">关于我们</a></li>
             <li><a href="${mao}/contact" rel="nofollow">联系我们</a></li>
-			<li><a href="${mao}/login."  class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
+			<li><a href="${mao}/login"  class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
 			<li><a href="${mao}/regist"  class="am-btn am-btn-success" rel="nofollow">注册</a></li>
           </ul>
         </nav>
@@ -153,7 +153,7 @@
 					<div class="am-u-md am-margin-top-lg">
 						<div class="am-u-md" >
 							<button class="am-btn am-btn-secondary" type="button"
-								id="NumButton" onclick="chadan()">查询</button>
+								id="NumButton" onclick="chadanTel()">查询</button>
 						</div>
 					</div>
 				</div>
@@ -320,166 +320,10 @@ var imj2 = new imj2();
 <script type="text/javascript">
 	function chadan() {
 		var mytt=$("#Num").val();
-		var tel=$("#Tel").val();
+
 		console.log(mytt);
-		console.log(tel);
-		console.log(mytt!="" && (tel== "" || tel!= "" ));
-		if(mytt!="" && (tel== "" || tel!= "" )){
-			$.ajax({
-				type : "post",
-				url : "/JCExpress/order/selectOrder",//发送的后台地址
-				data : {'id':mytt},
-				dataType:"json",
-				success : function(obj) {
-					console.log(obj);
-					$("#tbody").empty();
-					var list = obj.data;
-					if(list){
-						var tr = $("<tr><td name='order_id'>"
-								+ '单号'
-								+ "</td><td name='send_name'>"
-								+ '寄件人'
-								+ "</td><td name='send_telephone'>"
-								+ '寄件人电话'
-								+ "</td><td name='send_area'>"
-								+ '原寄地区'
-								+ "</td><td name='send_address'>"
-								+ '原寄件人地址'
-								+ "</td><td name='receive_name'>"
-								+ '收货人名字'
-								+ "</td><td name='receive_telephone'>"
-								+ '收货人电话'
-								+ "</td><td name='receive_area'>"
-								+'收货人区域'
-								+"</td><td name='receive_address'>"
-								+'收货人地址'
-								+"</td><td name='update_time'>"
-								+'修改时间'
-								+"</td><td name='create_time'>"
-								+ '创建时间'
-								+"</td><td name='status'>"
-								+'现状'
-								+"</td><td name='customer_id'>"
-								+'customer_id'
-								+"</td></tr>");
-						$("#tbody").append(tr);
-						$.each(list,function(index,value){
-							// 在table 中生成tr 
-							var tr = $("<tr><td name='order_id'>"
-									+ value.order_id
-									+ "</td><td name='send_name'>"
-									+ value.send_name
-									+ "</td><td name='send_telephone'>"
-									+ value.send_telephone
-									+ "</td><td name='send_area'>"
-									+ value.send_area
-									+ "</td><td name='send_address'>"
-									+ value.send_address
-									+ "</td><td name='receive_name'>"
-									+ value.receive_name
-									+ "</td><td name='receive_telephone'>"
-									+ value.receive_telephone
-									+ "</td><td name='receive_area'>"
-									+value.receive_area
-									+"</td><td name='receive_address'>"
-									+value.receive_address
-									+"</td><td name='update_time'>"
-									+(new Date(value.update_time)).Format("yyyy-MM-dd")
-									+"</td><td name='create_time'>"
-									+ (new Date(value.create_time)).Format("yyyy-MM-dd")
-									+"</td><td name='status'>"
-									+value.status
-									+"</td><td name='customer_id'>"
-									+value.customer_id
-									+"</td></tr>");
-								$("#tbody").append(tr);
-							})
-					}else{
-						$("#tbody").css("margin","auto");
-						$("#tbody").append("<tr><td>"+obj.message+"</td></tr>")
-					}
-					$("#Tel").val()
-				}
-			})
-		}else{
-			$.ajax({
-				type : "post",
-				url : "/JCExpress/order/selectOrderB",//发送的后台地址
-				data : {'id':tel},
-				dataType:"json",
-				success : function(obj) {
-					console.log(obj);
-					$("#tbody").empty();
-					var list = obj.data;
-					if(list){
-						var tr = $("<tr><td name='order_id'>"
-								+ '单号'
-								+ "</td><td name='send_name'>"
-								+ '寄件人'
-								+ "</td><td name='send_telephone'>"
-								+ '寄件人电话'
-								+ "</td><td name='send_area'>"
-								+ '原寄地区'
-								+ "</td><td name='send_address'>"
-								+ '原寄件人地址'
-								+ "</td><td name='receive_name'>"
-								+ '收货人名字'
-								+ "</td><td name='receive_telephone'>"
-								+ '收货人电话'
-								+ "</td><td name='receive_area'>"
-								+'收货人区域'
-								+"</td><td name='receive_address'>"
-								+'收货人地址'
-								+"</td><td name='update_time'>"
-								+'修改时间'
-								+"</td><td name='create_time'>"
-								+ '创建时间'
-								+"</td><td name='status'>"
-								+'现状'
-								+"</td><td name='customer_id'>"
-								+'customer_id'
-								+"</td></tr>");
-						$("#tbody").append(tr);
-						$.each(list,function(index,value){
-							// 在table 中生成tr 
-							var tr = $("<tr><td name='order_id'>"
-									+ value.order_id
-									+ "</td><td name='send_name'>"
-									+ value.send_name
-									+ "</td><td name='send_telephone'>"
-									+ value.send_telephone
-									+ "</td><td name='send_area'>"
-									+ value.send_area
-									+ "</td><td name='send_address'>"
-									+ value.send_address
-									+ "</td><td name='receive_name'>"
-									+ value.receive_name
-									+ "</td><td name='receive_telephone'>"
-									+ value.receive_telephone
-									+ "</td><td name='receive_area'>"
-									+value.receive_area
-									+"</td><td name='receive_address'>"
-									+value.receive_address
-									+"</td><td name='update_time'>"
-									+(new Date(value.update_time)).Format("yyyy-MM-dd")
-									+"</td><td name='create_time'>"
-									+ (new Date(value.create_time)).Format("yyyy-MM-dd")
-									+"</td><td name='status'>"
-									+value.status
-									+"</td><td name='customer_id'>"
-									+value.customer_id
-									+"</td></tr>");
-								$("#tbody").append(tr);
-							})
-					}else{
-						$("#tbody").css("margin","auto");
-						$("#tbody").append("<tr><td>"+obj.message+"</td></tr>")
-					}
-					$("#Num").val();
-				}
-			})
-		}
-/* 		$.ajax({
+		$("#Tel").text('');
+		$.ajax({
 			type : "post",
 			url : "/JCExpress/order/selectOrder",//发送的后台地址
 			data : {'id':mytt},
@@ -552,9 +396,91 @@ var imj2 = new imj2();
 					$("#tbody").css("margin","auto");
 					$("#tbody").append("<tr><td>"+obj.message+"</td></tr>")
 				}
-				var mytt='';
 			}
-		}) */
+		})
+		
+
+	}
+	
+	function chadanTel(){
+		var tel=$("#Tel").val();
+		$("#Num").text('');
+		$.ajax({
+			type : "post",
+			url : "/JCExpress/order/selectOrderB",//发送的后台地址
+			data : {'id':tel},
+			dataType:"json",
+			success : function(obj) {
+				console.log(obj);
+				$("#tbody").empty();
+				var list = obj.data;
+				if(list){
+					var tr = $("<tr><td name='order_id'>"
+							+ '单号'
+							+ "</td><td name='send_name'>"
+							+ '寄件人'
+							+ "</td><td name='send_telephone'>"
+							+ '寄件人电话'
+							+ "</td><td name='send_area'>"
+							+ '原寄地区'
+							+ "</td><td name='send_address'>"
+							+ '原寄件人地址'
+							+ "</td><td name='receive_name'>"
+							+ '收货人名字'
+							+ "</td><td name='receive_telephone'>"
+							+ '收货人电话'
+							+ "</td><td name='receive_area'>"
+							+'收货人区域'
+							+"</td><td name='receive_address'>"
+							+'收货人地址'
+							+"</td><td name='update_time'>"
+							+'修改时间'
+							+"</td><td name='create_time'>"
+							+ '创建时间'
+							+"</td><td name='status'>"
+							+'现状'
+							+"</td><td name='customer_id'>"
+							+'customer_id'
+							+"</td></tr>");
+					$("#tbody").append(tr);
+					$.each(list,function(index,value){
+						// 在table 中生成tr 
+						var tr = $("<tr><td name='order_id'>"
+								+ value.order_id
+								+ "</td><td name='send_name'>"
+								+ value.send_name
+								+ "</td><td name='send_telephone'>"
+								+ value.send_telephone
+								+ "</td><td name='send_area'>"
+								+ value.send_area
+								+ "</td><td name='send_address'>"
+								+ value.send_address
+								+ "</td><td name='receive_name'>"
+								+ value.receive_name
+								+ "</td><td name='receive_telephone'>"
+								+ value.receive_telephone
+								+ "</td><td name='receive_area'>"
+								+value.receive_area
+								+"</td><td name='receive_address'>"
+								+value.receive_address
+								+"</td><td name='update_time'>"
+								+(new Date(value.update_time)).Format("yyyy-MM-dd")
+								+"</td><td name='create_time'>"
+								+ (new Date(value.create_time)).Format("yyyy-MM-dd")
+								+"</td><td name='status'>"
+								+value.status
+								+"</td><td name='customer_id'>"
+								+value.customer_id
+								+"</td></tr>");
+							$("#tbody").append(tr);
+						})
+				}else{
+					$("#tbody").css("margin","auto");
+					$("#tbody").append("<tr><td>"+obj.message+"</td></tr>")
+				}
+			}
+		})
+		
 	}
 	
 	Date.prototype.Format = function(fmt)     

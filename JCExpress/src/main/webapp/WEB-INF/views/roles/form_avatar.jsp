@@ -2,6 +2,6 @@
 <html>
 	<head></head>
 	<body style="font-size: 30px;">
-	
+	头像页面待开发
 	</body>
 </html>

@@ -22,7 +22,7 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                      <button type="button" class="btn btn-default"  title="创建订单" onclick="layer_show('创建订单','${mao}/car/list/createCar','800','520')"> <i class="glyphicon glyphicon-plus"></i> </button>
+                      <button type="button" class="btn btn-default"  title="创建订单" onclick="layer_show('创建订单','${mao}/car/list/createCar','800','520')"> 创建订单 <i class="glyphicon glyphicon-plus"></i> </button>
                   </div>
                   <table id="table"
                          data-toggle="table"

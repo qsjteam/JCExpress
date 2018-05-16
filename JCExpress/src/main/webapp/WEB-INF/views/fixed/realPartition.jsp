@@ -21,7 +21,7 @@
               <div class="example-wrap">
                 <div class="example">
                 	<div id="toolbar" class="btn-group">
-                     <button type="button" class="btn btn-default"  title="取消关连" onclick="noRela_fixed()"> <i class="glyphicon glyphicon-remove">取关分区</i> </button>
+                     <button type="button" class="btn btn-default"  title="取消关连" onclick="noRela_fixed()"> <i class="glyphicon glyphicon-remove">取消关连</i> </button>
               		</div>
                   <table id="table">
                   </table>

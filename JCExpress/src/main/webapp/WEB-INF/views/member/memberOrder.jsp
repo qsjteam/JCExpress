@@ -50,7 +50,7 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="./index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
+        <a href="/index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>
@@ -77,7 +77,7 @@
         </a>
       </div>
       <h1 class="am-header-title">
-        <a href="./index" rel="nofollow">拉德速递</a>
+        <a href="./index" rel="nofollow">锦程速递</a>
       </h1>
       <div class="am-header-right am-header-nav">
         <a href="#right-link" class="" data-am-offcanvas="{target: '#r-nav'}">
@@ -207,7 +207,7 @@
 	<section class="am-g m-footer-container">
 		<section class="am-u-sm-12 am-u-md-12 am-u-lg-6">
 			<h2>关于我们</h2>
-			<p>拉德速递成立于2010年，专注高端网站建设、视觉设计、平面设计、广告拍摄、产品摄影、营销策划和品牌网络推广为一体的创新高端公司，拥有超过8年行业经验的资深团队及设计、开发、摄影、营销、开发经验，强悍创新的视觉执行力<a href="/about.html" rel="nofollow">更多</a></p>
+			<p>锦程快递成立于2010年，专注高端网站建设、视觉设计、平面设计、广告拍摄、产品摄影、营销策划和品牌网络推广为一体的创新高端公司，拥有超过8年行业经验的资深团队及设计、开发、摄影、营销、开发经验，强悍创新的视觉执行力<a href="/about" rel="nofollow">更多</a></p>
 		</section>
 		<section  class="am-u-sm-12 am-u-md-6 am-u-lg-3">
             	<h2>最新资讯</h2>
@@ -219,7 +219,7 @@
 		</section>
 		<section class="am-u-sm-12 am-u-md-6 am-u-lg-3 subnav">
 			<h2>其他</h2>
-			<a href="" rel="nofollow">网站欣赏</a> <a href="/sitemap.html">网站地图</a> <a href="" rel="nofollow">合作流程</a> <a href="" rel="nofollow">帮助中心</a> <a href="/contact.html" rel="nofollow">联系我们</a>
+			<a href="" rel="nofollow">网站欣赏</a> <a href="/sitemap">网站地图</a> <a href="" rel="nofollow">合作流程</a> <a href="" rel="nofollow">帮助中心</a> <a href="/contact" rel="nofollow">联系我们</a>
 		</section>
 	</section>
 	</div>

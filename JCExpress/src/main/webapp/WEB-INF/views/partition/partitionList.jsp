@@ -23,7 +23,7 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                      <button type="button" class="btn btn-default"  title="创建网点" onclick="layer_show('创建网点','${mao}/partition/list/createPartition','900','650')"> <i class="glyphicon glyphicon-plus"></i> </button>
+                      <button type="button" class="btn btn-default"  title="创建网点" onclick="layer_show('创建网点','${mao}/partition/list/createPartition','900','650')"> 创建网点 <i class="glyphicon glyphicon-plus"></i> </button>
                   </div> 
                   <table id="table"
                          data-toggle="table"

@@ -31,7 +31,7 @@
 <div class="header">
   <div class="am-g">
     <h1>锦程快递</h1>
-    <p>JC Express<br/>安全放心便捷</p>
+    <p>JCExpress<br/>安全放心便捷</p>
   </div>
   <hr />
 </div>

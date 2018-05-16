@@ -22,7 +22,7 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                      <button type="button" class="btn btn-default"  title="创建司机" onclick="layer_show('创建司机','${mao}/driver/list/createDriver','800','520')"> <i class="glyphicon glyphicon-plus"></i> </button>
+                      <button type="button" class="btn btn-default"  title="创建司机" onclick="layer_show('创建司机','${mao}/driver/list/createDriver','800','520')"> 创建司机 <i class="glyphicon glyphicon-plus"></i> </button>
                   </div>
                   <table id="table"
                          data-toggle="table"
@@ -69,6 +69,7 @@
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
+  <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/adminDriverList.js"></script> 
 </myfooter>

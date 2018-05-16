@@ -73,6 +73,8 @@
 				/activeSuccess=anon
 				/customerRegist=anon
 				/customerLogin=anon
+				/customer/token/*=anon
+				/customer/logout/*=anon
 				/index=anon
 				/fuwu=anon
 				/zixun=anon

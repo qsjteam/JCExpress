@@ -63,7 +63,6 @@ public class CustomerLoginController {
 	@ResponseBody
 	public Object CustomerLogin(HttpServletRequest request, HttpServletResponse response, String username,
 			String password) {
-		System.out.println("username==="+username+"  password==="+password);//TODO log
 		GeetestLib gtSdk = new GeetestLib(GeetestConfig.getCaptcha_id(),
 				 GeetestConfig.getPrivate_key(), GeetestConfig.isnewfailback());
 		String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);

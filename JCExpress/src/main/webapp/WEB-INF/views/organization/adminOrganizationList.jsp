@@ -21,8 +21,8 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                    <button type="button" class="btn btn-default"  title="创建组织" onclick="layer_show('创建组织','${mao}/organization/list/createOrganization','900','600')"> <i class="glyphicon glyphicon-plus"></i> </button>
-                 	<button type="button" class="btn btn-default"  title="查看详情" onclick="javascript:window.location.href='${mao}/organization/list/organizationDetail'"> <i class="glyphicon glyphicon-th-list"></i> </button>
+                    <button type="button" class="btn btn-default"  title="创建组织" onclick="layer_show('创建组织','${mao}/organization/list/createOrganization','900','600')"> 创建组织 <i class="glyphicon glyphicon-plus"></i> </button>
+                 	<button type="button" class="btn btn-default"  title="查看详情" onclick="javascript:window.location.href='${mao}/organization/list/organizationDetail'"> 查看详情 <i class="glyphicon glyphicon-th-list"></i> </button>
                   </div>
                   <table id="table"
                          data-toggle="table"

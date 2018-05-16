@@ -13,24 +13,24 @@ function actionFormatter(value, row, index) {
 	if (row.status == 1) {
 		return [
 				'<a class="freeze m-r-sm text-info" href="javascript:void(0)" title="冻结">',
-				'<i class="glyphicon glyphicon-pause"></i>',
+				'<i class="glyphicon glyphicon-pause"></i>冻结',
 				'</a>',
 				'<a class="edit m-r-sm text-warning" href="javascript:void(0)" title="编辑">',
-				'<i class="glyphicon glyphicon-edit"></i>',
+				'<i class="glyphicon glyphicon-edit"></i>编辑',
 				'</a>',
 				'<a class="remove m-r-sm text-danger" href="javascript:void(0)" title="删除">',
-				'<i class="glyphicon glyphicon-remove"></i>', '</a>', ]
+				'<i class="glyphicon glyphicon-remove"></i>删除', '</a>', ]
 				.join('');
 	} else {
 		return [
 				'<a class="normal m-r-sm text-info" href="javascript:void(0)" title="启用">',
-				'<i class="glyphicon glyphicon-play"></i>',
+				'<i class="glyphicon glyphicon-play"></i>启用',
 				'</a>',
 				'<a class="edit m-r-sm text-warning" href="javascript:void(0)" title="编辑">',
-				'<i class="glyphicon glyphicon-edit"></i>',
+				'<i class="glyphicon glyphicon-edit"></i>编辑',
 				'</a>',
 				'<a class="remove m-r-sm text-danger" href="javascript:void(0)" title="删除">',
-				'<i class="glyphicon glyphicon-remove"></i>', '</a>', ]
+				'<i class="glyphicon glyphicon-remove"></i>删除', '</a>', ]
 				.join('');
 	}
 }

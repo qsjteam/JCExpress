@@ -36,7 +36,7 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="./index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
+        <a href="/index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>
@@ -77,13 +77,13 @@
       <div class="am-offcanvas-bar am-offcanvas-bar-flip">
         <nav class="am-offcanvas-content">
             <a href="/" rel="nofollow"><span class="logo"></span></a>
-            <p><i class="am-icon-home"></i> <a href="./index.html" rel="nofollow">网站首页</a></p>
-            <p><i class="am-icon-cogs"></i> <a href="/fuwu.html" rel="nofollow">服务内容</a></p>
-            <p><i class="am-icon-credit-card"></i> <a href="/zixun.html" rel="nofollow">最新动态</a></p>
-            <p><i class="am-icon-user"></i> <a href="/about.html" rel="nofollow">关于我们</a></p>
-            <p><i class="am-icon-qq"></i><a href="/contact.html" rel="nofollow">联系我们</a></p>
-			<p><i class="am-icon-user"></i> <a href="/about.html" rel="nofollow">登录</a></p>
-            <p><i class="am-icon-user"></i><a href="/contact.html" rel="nofollow">注册</a></p>
+            <p><i class="am-icon-home"></i> <a href="/index" rel="nofollow">网站首页</a></p>
+            <p><i class="am-icon-cogs"></i> <a href="/fuwu" rel="nofollow">服务内容</a></p>
+            <p><i class="am-icon-credit-card"></i> <a href="/zixun" rel="nofollow">最新动态</a></p>
+            <p><i class="am-icon-user"></i> <a href="/about" rel="nofollow">关于我们</a></p>
+            <p><i class="am-icon-qq"></i><a href="/contact" rel="nofollow">联系我们</a></p>
+			<p><i class="am-icon-user"></i> <a href="/login" rel="nofollow">登录</a></p>
+            <p><i class="am-icon-user"></i><a href="/regist" rel="nofollow">注册</a></p>
         </nav>
       </div>
     </div>
@@ -223,7 +223,7 @@
 					<option value="2kg">2kg</option>
 					<option value="5kg">5kg</option>
 					<option value="10kg">10kg</option>
-					<option value="以上">10以上kg</option>
+					<option value="以上">10kg以上</option>
 				  </select>
 			</div>
 			<div class="am-form-group">

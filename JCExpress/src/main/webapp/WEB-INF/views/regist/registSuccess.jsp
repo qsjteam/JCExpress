@@ -4,7 +4,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Login | JC Express</title>
+  <title>Regist | JC Express</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -48,7 +48,7 @@
       	<a  href="${mao}/modify" class="am-btn am-btn-default am-btn-sm am-fr">忘记密码 ^_^? </a>
       </div>
 	  <br>
-	  <a href="${mao}/regist">没有账号哦?注册点击这里</a>
+	  <a href="${mao}/regist">没注册上哦?重新注册点击这里</a>
     <hr>
  </div>
   <div class="am-u-lg-4 am-u-md-5">

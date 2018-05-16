@@ -4,7 +4,7 @@ $(function() {
 });
 
 function checkLogin() {
-	var ticket = $.cookie("Ladd");
+	var ticket = $.cookie("JCExpress");
 	if (ticket == "true") {
 		return;
 	}
@@ -14,14 +14,14 @@ function checkLogin() {
 		url : baselocation + "/customer/token/" + ticket ,// url
 		data : $('#login_form').serialize(),
 		success : function(result) {
-			console.log(result);// 打印服务端返回的数据(调试用)
+			//console.log(result);// 打印服务端返回的数据(调试用)
 			if (result.code == 200) {
 				var username = result.data.nickname;
 				$("#login").text("欢迎:" + username);
 				$("#login").attr("class", "");
 				$("#regist").attr("id", "logout");
 				$("#logout").text("退出");
-				$("#logout").attr("href", baselocation + "/customer/logout/");
+				$("#logout").attr("href", baselocation + "/customer/logout/1");
 			}
 			if (result.code == 403) {
 			}

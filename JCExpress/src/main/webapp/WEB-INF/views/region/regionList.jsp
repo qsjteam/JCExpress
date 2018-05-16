@@ -32,7 +32,7 @@
               <div class="example-wrap">
                 <div class="example">
               		<div id="toolbar" class="btn-group">
-                     <button type="button" class="btn btn-default"  title="创建区域" onclick=" add_region();"> <i class="glyphicon glyphicon-plus"></i> </button>
+                     <button type="button" class="btn btn-default"  title="创建区域" onclick=" add_region();"> 创建区域 <i class="glyphicon glyphicon-plus"></i> </button>
               		</div>
                   <table id="table" data-toolbar="#toolbar">
                   </table>

@@ -20,8 +20,8 @@
           <div class="row row-lg">
             <div class="col-sm-12">
               <div class="btn-group m-t-sm">
-                  <button type="button" class="btn btn-default"  title="创建菜单" onclick="layer_show('创建菜单','${mao}/system/menu/1/createMenu','900','700')"> <i class="glyphicon glyphicon-plus"></i> </button>
-                <button type="button" class="btn btn-default"  title="刷新列表" onclick="javascript:window.location.reload()"> <i class="glyphicon glyphicon-refresh"></i> </button>
+                  <button type="button" class="btn btn-default"  title="创建菜单" onclick="layer_show('创建菜单','${mao}/system/menu/1/createMenu','900','700')"> 创建菜单  <i class="glyphicon glyphicon-plus"></i> </button>
+                <button type="button" class="btn btn-default"  title="刷新列表" onclick="javascript:window.location.reload()"> 刷新列表  <i class="glyphicon glyphicon-refresh"></i> </button>
               </div>
               <table id="treeTable" class="table table-bordered table-striped">
                 <thead>
@@ -77,6 +77,7 @@
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
   <script src="${maosta}/common/treeTable/jquery.treeTable.min.js"></script> 
   <script src="${maosta}/exp/js/systemMenuList.js"></script> 
+  <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
 </myfooter>
 </body>
 </html>
