@@ -14,7 +14,6 @@ function checkLogin() {
 		url : baselocation + "/customer/token/" + ticket ,// url
 		data : $('#login_form').serialize(),
 		success : function(result) {
-			//console.log(result);// 打印服务端返回的数据(调试用)
 			if (result.code == 200) {
 				var username = result.data.nickname;
 				$("#login").text("欢迎:" + username);

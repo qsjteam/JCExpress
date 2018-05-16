@@ -1067,6 +1067,7 @@
                     sprintf(' btn-%s', this.options.buttonsClass) +
                     sprintf(' btn-%s', this.options.iconSize) +
                     '" type="button" name="paginationSwitch" aria-label="pagination Switch" title="%s">',
+                    '" type="button" name="paginationSwitch" aria-label="pagination Switch" title="%s">隐藏/显示分页',
                     this.options.formatPaginationSwitch()),
                 sprintf('<i class="%s %s"></i>', this.options.iconsPrefix, this.options.icons.paginationSwitchDown),
                 '</button>');
