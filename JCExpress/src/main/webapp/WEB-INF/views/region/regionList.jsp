@@ -59,6 +59,7 @@
   <script src="${maosta}/common/particleground/js/jquery.particleground.min.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/systemRegionList.js"></script> 
+  <script src="${maosta}/exp/js/content.js"></script> 
 </myfooter>
 </body>
 </html>

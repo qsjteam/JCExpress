@@ -41,6 +41,7 @@
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
   <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
+  <script src="${maosta}/exp/js/content.js"></script> 
   <script>
 var baselocation = "/JCExpress";
 var $table = $('#table');

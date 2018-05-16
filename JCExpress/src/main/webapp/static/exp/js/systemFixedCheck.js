@@ -1,5 +1,5 @@
 
-
+var baselocation = "/JCExpress";
 function getIds(json)
 {
 	var ids = [];

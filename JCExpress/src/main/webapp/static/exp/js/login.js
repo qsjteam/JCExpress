@@ -1,3 +1,4 @@
+var baselocation = "/JCExpress";
 $(function() {
 	//粒子背景特效
 	$('body').particleground({

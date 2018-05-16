@@ -181,6 +181,7 @@ function change_Password() {
 						$("input[name='confirmPwd']").val("");
 						$("input[name='newPassword']").val("");
 						$("input[name='nowPassword']").val("");
+						window.location.reload();
 					} else {
 						layer.alert(result.message, {
 							title : '提示框',

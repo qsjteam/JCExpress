@@ -30,6 +30,7 @@ $('.collapse-link').click(function() {
 });
 
 //关闭ibox
+var baselocation = "/JCExpress";
 $('.close-link').click(function() {
 	var content = $(this).closest('div.ibox');
 	content.remove();

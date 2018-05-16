@@ -182,6 +182,7 @@
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
   <!-- iCheck --> 
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
+     <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/adminUserInfo.js"></script> 
 </myfooter>

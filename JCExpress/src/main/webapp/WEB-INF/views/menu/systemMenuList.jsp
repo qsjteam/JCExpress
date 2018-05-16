@@ -78,6 +78,7 @@
   <script src="${maosta}/common/treeTable/jquery.treeTable.min.js"></script> 
   <script src="${maosta}/exp/js/systemMenuList.js"></script> 
   <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
+  <script src="${maosta}/exp/js/content.js"></script> 
 </myfooter>
 </body>
 </html>

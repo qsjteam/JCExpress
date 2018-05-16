@@ -1,6 +1,7 @@
 /**
  * 进行格式转换
  */
+var baselocation = "/JCExperss";
 function statusFormatter(value) {
 	if (value == 1) {
 		return '<span class="label label-primary">正常</span>'
@@ -51,6 +52,15 @@ window.actionEvents = {
 	},
 };
 
+/*
+ * 修改司机
+ */
+function layer_show(name, url, row, index){
+	layer.confirm('', {}, function() {
+		window.location.replace(url);
+	});
+}
+
 /**
  * 冻结司机
  */
@@ -74,6 +84,7 @@ function status_stop(index, value) {
 						icon : 5,
 						time : 1000
 					});
+					window.location.reload();
 				} else {
 					layer.alert(result.message, {
 						icon : 2
@@ -107,6 +118,7 @@ function status_start(index, value) {
 						icon : 6,
 						time : 1000
 					});
+					window.location.reload();
 				} else {
 					layer.alert(result.message, {
 						icon : 2
@@ -137,6 +149,7 @@ function admin_delete(index, value) {
 						icon : 1,
 						time : 1000
 					});
+					window.location.reload();
 				} else {
 					layer.alert(result.message, {
 						icon : 2

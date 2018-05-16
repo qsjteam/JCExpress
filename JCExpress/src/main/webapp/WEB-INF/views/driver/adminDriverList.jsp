@@ -72,6 +72,7 @@
   <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/adminDriverList.js"></script> 
+  <script src="${maosta}/exp/js/content.js"></script> 
 </myfooter>
 </body>
 </html>

@@ -1,6 +1,8 @@
 /**
+
  * 进行格式转换
  */
+var baselocation = "/JCExpress";
 function timeFormatter(value) {
 	return Format(new Date(value),"yyyy-MM-dd HH:mm:ss");
 }
@@ -167,7 +169,6 @@ function admin_delete(index, value) {
 	});
 }
 
-var baselocation = "/JCExpress";
 function Format(now,mask)
 {
     var d = now;

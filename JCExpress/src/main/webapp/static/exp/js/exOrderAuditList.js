@@ -1,6 +1,7 @@
 /**
  * 进行格式转换
  */
+var baselocation = "/JCExpress";
 function timeFormatter(value) {
 	return new Date(value).Format("yyyy-MM-dd HH:mm:ss");
 }

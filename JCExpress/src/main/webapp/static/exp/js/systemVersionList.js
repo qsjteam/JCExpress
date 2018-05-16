@@ -1,6 +1,7 @@
 /**
  * 样式转换
  */
+var baselocation = "/JCExpress";
 $(document).ready(function() {
 	// Local script for demo purpose only
 	$('#lightVersion').click(function(event) {

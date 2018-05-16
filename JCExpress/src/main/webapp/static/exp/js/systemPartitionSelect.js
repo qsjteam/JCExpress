@@ -1,3 +1,4 @@
+var baselocation = "/JCExpress";
 $(function() {
 	// 默认绑定省
 	ProviceBind();

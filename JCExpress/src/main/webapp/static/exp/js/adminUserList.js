@@ -94,6 +94,7 @@ function status_stop(index, value) {
 						icon : 5,
 						time : 1000
 					});
+					window.location.reload();
 				} else {
 					layer.alert(result.message, {
 						icon : 2
@@ -126,6 +127,7 @@ function status_start(index, value) {
 						icon : 6,
 						time : 1000
 					});
+					window.location.reload();
 				} else {
 					layer.alert(result.message, {
 						icon : 2
