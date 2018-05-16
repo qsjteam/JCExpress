@@ -24,6 +24,7 @@ public class TokenController {
 	@ResponseBody
 	public Object getCustomerToken(@PathVariable("token") String token) {
 		ExOsResult exOsResult = tokenService.getCustomerToken(token);
+		System.out.println("Controller::::::::::::"+exOsResult);
 		return exOsResult;
 	}
 }

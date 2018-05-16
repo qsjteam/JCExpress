@@ -22,7 +22,7 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                      <button type="button" class="btn btn-default"  title="创建管理员" onclick="layer_show('创建管理员','${mao}/user/list/createUser','800','550')"> <i class="glyphicon glyphicon-plus"></i> </button>
+                      <button type="button" class="btn btn-default" title="创建管理员" onclick="layer_show('创建管理员','${mao}/user/list/createUser','800','550')"> 创建管理员<i class="glyphicon glyphicon-plus"></i> </button>
                   </div>
                   <table id="table"
                          data-toggle="table"

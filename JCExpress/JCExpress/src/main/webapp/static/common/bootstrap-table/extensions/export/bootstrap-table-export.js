@@ -61,7 +61,7 @@
                             sprintf(' btn-%s', this.options.iconSize) +
                             ' dropdown-toggle" aria-label="export type" ' +
                             'title="' + this.options.formatExport() + '" ' +
-                            'data-toggle="dropdown" type="button">',
+                            'data-toggle="dropdown" type="button">导出数据',
                             sprintf('<i class="%s %s"></i> ', this.options.iconsPrefix, this.options.icons.export),
                             '<span class="caret"></span>',
                         '</button>',
