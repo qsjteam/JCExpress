@@ -48,14 +48,14 @@
 <myfooter> 
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
   <!-- Bootstrap table --> 
+  <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/bootstrap-table.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 
-  <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
+  <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+  <script src="${maosta}/common/layer/layer.js"></script>  
   <!-- ztree --> 
   <script src="${maosta}/common/ztree/js/jquery.ztree.all.min.js"></script> 
-  
-  <script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/common/particleground/js/jquery.particleground.min.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/systemRegionList.js"></script> 

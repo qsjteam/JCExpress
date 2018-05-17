@@ -58,6 +58,8 @@
 </div>
 <myfooter> 
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
+	<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/common/layer/layer.js"></script> 
   <!-- iCheck --> 
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
   <!-- bootstrapvalidator-master前端验证框架 --> 

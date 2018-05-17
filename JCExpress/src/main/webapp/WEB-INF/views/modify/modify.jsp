@@ -78,6 +78,8 @@
 </div>
 </div>
 <script src="${maosta}/assets/js/jquery.min.js"></script>
+<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
 <script src="${maosta}/assets/js/amazeui.min.js"></script>
 <script src="${maosta}/expWebSite/js/modify.js"></script>
 </body>

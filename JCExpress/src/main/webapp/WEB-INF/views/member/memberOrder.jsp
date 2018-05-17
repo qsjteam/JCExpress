@@ -258,6 +258,8 @@
   </script>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="${maosta}/assets/js/jquery.min.js"></script>
+<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/common/layer/layer.js"></script> 
 <script src="${maosta}/assets/js/amazeui.min.js"></script>
 <script src="${maosta}/assets/js/amazeui.datatables.min.js"></script>
 <script src="${maosta}/assets/js/amazeui.dialog.min.js"></script>

@@ -311,6 +311,8 @@
   </script>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="${maosta}/assets/js/jquery.min.js"></script>
+<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
 <script src="${maosta}/assets/js/amazeui.min.js"></script>
 <script src="${maosta}/webuploader/webuploader.js"></script>
 <script src="${maosta}/expWebSite/js/exCreateOrder.js"></script>

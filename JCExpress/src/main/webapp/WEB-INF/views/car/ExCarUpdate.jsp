@@ -86,6 +86,8 @@
   <!-- iCheck --> 
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
   <!-- bootstrapvalidator前端验证框架 --> 
+    <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/exCar.js"></script> 

@@ -72,7 +72,7 @@
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
-  <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
+<script src="${maosta}/common/layer/layer.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/exCarList.js"></script> 
   <script src="${maosta}/exp/js/content.js"></script> 

@@ -67,13 +67,14 @@
   <!-- iCheck --> 
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
   <!-- Bootstrap table --> 
+      <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/bootstrap-table.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
   <!-- bootstrapvalidator前端验证框架 --> 
   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
-    <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
+  <script src="${maosta}/common/layer/layer.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/adminDriver.js"></script> 
 </myfooter>

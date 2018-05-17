@@ -71,14 +71,16 @@
 <myfooter> 
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
   <!-- Bootstrap table --> 
+  
+  <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/bootstrap-table.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
   <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
-  <script src="${maosta}/exp/js/exOrderList.js"></script> 
   <script src="${maosta}/exp/js/content.js"></script> 
+  <script src="${maosta}/exp/js/exOrderList.js"></script> 
 </myfooter>
 </body>
 </html>

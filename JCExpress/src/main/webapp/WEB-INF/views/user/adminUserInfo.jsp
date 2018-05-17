@@ -174,6 +174,8 @@
 <myfooter> 
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
   <!-- bootstrapvalidator-master前端验证框架 --> 
+  <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
   <!-- Bootstrap table --> 
   <script src="${maosta}/common/bootstrap-table/bootstrap-table.min.js"></script> 

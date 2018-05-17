@@ -33,20 +33,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findMenuByRole" resultType="Menu">
 		SELECT
 		DISTINCT
-		m.menu_id ,
-		parent_id ,
-		menu_name ,
-		href,
-		icon
+			m.menu_id ,
+			parent_id ,
+			menu_name ,
+			href,
+			icon
 		FROM
-		t_menu m
+			t_menu m
 		LEFT JOIN
-		t_role_menu r
+			t_role_menu r
 		ON r.menu_id = m.menu_id
-		WHERE STATUS =1
+		WHERE 
+			STATUS =1
 		AND
-		menu_type = #{menuType}
-		AND r.role_id IN
+			menu_type = #{menuType}
+		AND 
+			r.role_id IN
 		<foreach collection="roleIds" item="roleId" open="(" close=")"
 			separator=",">
 			#{roleId}

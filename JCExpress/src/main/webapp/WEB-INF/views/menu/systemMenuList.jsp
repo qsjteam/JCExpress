@@ -75,9 +75,10 @@
 </div>
 <myfooter> 
 	<script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
+	<script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
   <script src="${maosta}/common/treeTable/jquery.treeTable.min.js"></script> 
+  <script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/exp/js/systemMenuList.js"></script> 
-  <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <script src="${maosta}/exp/js/content.js"></script> 
 </myfooter>
 </body>

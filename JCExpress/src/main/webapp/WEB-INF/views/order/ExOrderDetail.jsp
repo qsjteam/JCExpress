@@ -75,6 +75,8 @@
   <!-- iCheck --> 
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
   <!-- bootstrapvalidator前端验证框架 --> 
+  <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
+<script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
   <!-- jquery  step插件 -->
   <script src="${maosta}/common/step/js/jquery.step.min.js"></script> 
