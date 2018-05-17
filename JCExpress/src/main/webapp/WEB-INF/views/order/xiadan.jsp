@@ -36,7 +36,6 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="/index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>
@@ -46,11 +45,11 @@
             <li><a href="${mao}/index" rel="nofollow">网站首页</a></li>
             <li><a href="${mao}/fuwu" rel="nofollow">服务内容</a></li>
             <li><a href="${mao}/zixun" rel="nofollow">最新动态</a></li>
-			<li><a href="${mao}/zixun" rel="nofollow">会员专区</a></li>
+			<li><a href="${mao}/piliang" rel="nofollow">会员专区</a></li>
             <li><a href="${mao}/about" rel="nofollow">关于我们</a></li>
             <li><a href="${mao}/contact" rel="nofollow">联系我们</a></li>
-			<li><a href="${mao}/login"  class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
-			<li><a href="${mao}/regist"  class="am-btn am-btn-success" rel="nofollow">注册</a></li>
+			<li><a href="${mao}/login"  id="login" class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
+         	<li><a href="${mao}/regist"  id="regist" class="am-btn am-btn-success" rel="nofollow">注册</a></li>
           </ul>
         </nav>
     </section>
@@ -259,7 +258,7 @@
 	<section class="am-g m-footer-container">
 		<section class="am-u-sm-12 am-u-md-12 am-u-lg-6">
 			<h2>关于我们</h2>
-			<p>锦程速递成立于2018年，专注高端网站建设、视觉设计、平面设计、广告拍摄、产品摄影、营销策划和品牌网络推广为一体的创新高端公司，拥有超过8年行业经验的资深团队及设计、开发、摄影、营销、开发经验，强悍创新的视觉执行力<a href="/about" rel="nofollow">更多</a></p>
+			<p>锦程快递成立于2018年，专注高端网站建设、视觉设计、平面设计、广告拍摄、产品摄影、营销策划和品牌网络推广为一体的创新高端公司，拥有超过8年行业经验的资深团队及设计、开发、摄影、营销、开发经验，强悍创新的视觉执行力<a href="/about" rel="nofollow">更多</a></p>
 		</section>
 		<section class="am-u-sm-12 am-u-md-6 am-u-lg-3">
             	<h2>最新资讯</h2>
@@ -319,58 +318,8 @@
 <script src="${maosta}/assets/js/amazeui.dialog.min.js"></script>
 <!--<![endif]-->
 <script src='${maosta}/assets/js/jquery.qrcode.min.js'></script>
-<script type="text/javascript">
-$(function(){
-	var str = "http://www.imj2.com/fuwu/";
-		$("#code").qrcode({
-			render: "table",
-			width: 100,
-			height:100,
-			text: str
-		});
-})
-// 二维码生成
-//返回顶部
-function imj2(){
-	this.init();
-}
-imj2.prototype = {
-	constructor: imj2,
-	init: function(){
-		this._initBackTop();
-	},
-	_initBackTop: function(){
-		var $backTop = this.$backTop = $('<div class="m-top-cbbfixed">'+
-						'<a class="m-top-weixin m-top-cbbtn"">'+
-							'<span class="m-top-weixin-icon"></span><div></div>'+
-						'</a>'+
-						'<a class="m-top-go m-top-cbbtn">'+
-							'<span class="m-top-goicon"></span>'+
-						'</a>'+
-					'</div>');
-		$('body').append($backTop);
+<script src="${maosta}/expWebSite/js/jquery.cookie.js"></script>
+<script src="${maosta}/expWebSite/js/customerToken.js"></script>
 
-		$backTop.click(function(){
-			$("html, body").animate({
-				scrollTop: 0
-			}, 120);
-		});
-
-		var timmer = null;
-		$(window).bind("scroll",function() {
-            var d = $(document).scrollTop(),
-            e = $(window).height();
-            0 < d ? $backTop.css("bottom", "10px") : $backTop.css("bottom", "-90px");
-			clearTimeout(timmer);
-			timmer = setTimeout(function() {
-                clearTimeout(timmer)
-            },100);
-	   });
-	}
-
-}
-var imj2 = new imj2();
-//end返回顶部
-</script>
 </body>
 </html>

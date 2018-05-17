@@ -35,7 +35,6 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="./index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
         <nav>
          <ul class="m-nav am-nav am-nav-pills am-fr">
             <li><a href="${mao}/index" rel="nofollow">网站首页</a></li>

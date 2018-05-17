@@ -36,7 +36,6 @@
 <header class="m-hd">
     <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="/" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>

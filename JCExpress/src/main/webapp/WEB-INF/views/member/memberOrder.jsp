@@ -50,7 +50,6 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="/index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>
@@ -161,11 +160,11 @@
 		  	<div class="am-form-group">
 				  <label for="doc-select-1">物品重量</label>
 				  <select id="doc-select-m" name="order_weight">
-					<option value="1">1kg</option>
-					<option value="2">2kg</option>
-					<option value="5">5kg</option>
-					<option value="10">10kg</option>
-					<option value="20">10以上kg</option>
+					<option value="1">标准(1kg)</option>
+					<option value="2">超重1kg</option>
+					<option value="3">超重2kg</option>
+					<option value="6">超重5kg</option>
+					<option value="11">超重10kg</option>
 				  </select>
 			</div>
 		  </fieldset>
@@ -272,59 +271,7 @@
 <script src="${maosta}/expWebSite/js/distpicker.js"></script>
 <!--<![endif]-->
 <script src='${maosta}/assets/js/jquery.qrcode.min.js'></script>
-<script type="text/javascript">
-$(function(){
-	var str = "http://www.imj2.com/fuwu/";
-		$("#code").qrcode({
-			render: "table",
-			width: 100,
-			height:100,
-			text: str
-		});
-})
-// 二维码生成
-//返回顶部
-function imj2(){
-	this.init();
-}
-imj2.prototype = {
-	constructor: imj2,
-	init: function(){
-		this._initBackTop();
-	},
-	_initBackTop: function(){
-		var $backTop = this.$backTop = $('<div class="m-top-cbbfixed">'+
-						'<a class="m-top-weixin m-top-cbbtn"">'+
-							'<span class="m-top-weixin-icon"></span><div></div>'+
-						'</a>'+
-						'<a class="m-top-go m-top-cbbtn">'+
-							'<span class="m-top-goicon"></span>'+
-						'</a>'+
-					'</div>');
-		$('body').append($backTop);
 
-		$backTop.click(function(){
-			$("html, body").animate({
-				scrollTop: 0
-			}, 120);
-		});
-
-		var timmer = null;
-		$(window).bind("scroll",function() {
-            var d = $(document).scrollTop(),
-            e = $(window).height();
-            0 < d ? $backTop.css("bottom", "10px") : $backTop.css("bottom", "-90px");
-			clearTimeout(timmer);
-			timmer = setTimeout(function() {
-                clearTimeout(timmer)
-            },100);
-	   });
-	}
-
-}
-var imj2 = new imj2();
-//end返回顶部
-</script>
  <script type="text/javascript">  
        addressInit('cmbProvince', 'cmbCity', 'cmbArea');  
 </script> 
@@ -367,8 +314,10 @@ var imj2 = new imj2();
 								+ value.price
 								+"</td></tr>");
 							$("#tbody").append(tr);
-						})
-				} 
+					})
+				}else{
+					alert(obj.message);
+				}
 			}
 		})
 		

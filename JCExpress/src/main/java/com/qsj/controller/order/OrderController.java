@@ -192,10 +192,7 @@ public class OrderController {
 	@RequestMapping(value = "/createOrder", method = RequestMethod.POST)
 	@ResponseBody
 	public Object createOrder(ExOrder exOrder, ExOrderDetail exOrderDetail) {
-		System.out.println("exOrder========"+exOrder+">>>>>>>>>>>>>>exOrderDetail"+exOrderDetail);
-		System.out.println("-----------------------"+orderService);
 		String orderId = orderService.insetOrder(exOrder, exOrderDetail);
-		System.out.println("hahhahah");
 		if (orderId != null) {
 			return new BaseResult("预约成功", 1);
 		}
@@ -217,12 +214,8 @@ public class OrderController {
 	@ResponseBody
 	public BaseResult selectOrder(String id) {
 		BaseResult bb;
-		/*if(id.length()==11) {
-			bb=orderService.selectOrderByTel(id);
-			return bb;
-		}else {*/
-			bb=orderService.selectOrderById(id);
-			return bb;
+		bb=orderService.selectOrderById(id);
+		return bb;
 		
 	}
 	@RequestMapping("/selectOrderB")

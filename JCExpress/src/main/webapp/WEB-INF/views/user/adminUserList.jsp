@@ -76,8 +76,12 @@
   <script src="${maosta}/common/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script> 
    <script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
   <!-- 自定义js --> 
+  <script src="${maosta}/hplus/js/content.min.js"></script> 
+   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
+   <script src="${maosta}/hplus/js/plugins/summernote/summernote.min.js"></script> 
+   <script src="${maosta}/common/sitelogo/sitelogo.js"></script> 
+   static/common/sitelogo.sitelogo.js
   <script src="${maosta}/exp/js/adminUserList.js"></script> 
-  <script src="${maosta}/exp/js/content.js"></script> 
 </myfooter>
 </body>
 </html>

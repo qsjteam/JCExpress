@@ -16,7 +16,6 @@ public class viewController {
 	@RequestMapping("/showView")
 	@ResponseBody
 	public BaseResult showView() {
-		System.out.println("——————————————————————开始");
 		BaseResult bb= new BaseResult(null);
 		bb=viewservice.showView();
 		return bb;

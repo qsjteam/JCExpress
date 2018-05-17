@@ -279,7 +279,7 @@
 <script src="${maosta}/expWebSite/js/customerToken.js"></script>
 <!--<![endif]-->
 <script src='${maosta}/assets/js/jquery.qrcode.min.js'></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(function(){
 	var str = "http://www.imj2.com";
 		$("#code").qrcode({
@@ -331,7 +331,7 @@ imj2.prototype = {
 }
 var imj2 = new imj2();
 //end返回顶部
-</script>
+</script> -->
 <script type="text/javascript">
 $(function () {
 		$.ajax({

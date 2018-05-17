@@ -263,8 +263,6 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public BaseResult selectOrderById(String id) {
 		List<ExOrder> list = orderMapper.selectOrderById(id);
-		System.out.println("id:::::::::::::::::::"+id);
-		System.out.println("list:::::::::::::::::"+list);
 		if(list.size() == 0) {
 			return new BaseResult(198,"未查到相关记录");
 		}

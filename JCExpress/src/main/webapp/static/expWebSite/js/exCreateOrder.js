@@ -80,12 +80,10 @@ uploader.on('uploadError', function(file, str) {
 });
 // 点击上传
 function up() {
-	console.log("<_______________________>")
 	uploader.upload();
 	from();
 }
 function from() {
-	console.log("--------------------->");
 	var send=$("#sendProvince").find("option:selected").text()+
 	$("#sendCity").find("option:selected").text()+$("#sendVillage").find("option:selected").text();
 	var receive=$("#receiveProvince").find("option:selected").text()+
@@ -102,7 +100,6 @@ function from() {
 		success : function(result) {
 			console.log(result);// 打印服务端返回的数据(调试用)
 			if (result.data == 1) {
-				console.log("MMP");
 				AMUI.dialog.alert({
 					title : '预约成功',
 					content : '请耐心等待取派员取件',
@@ -112,7 +109,6 @@ function from() {
 					}
 				})
 			} else {
-				console.log("HHHHHHHHHHMMMMP");
 				AMUI.dialog.alert({
 					title : '预约失败',
 					content : result.message,

@@ -47,7 +47,6 @@
 <header class="m-hd">
    <section data-am-sticky class="am-show-md-up">
     <div class="am-container">
-        <a href="./index" rel="nofollow" class="m-logo"><i class="am-icon-spinner"></i> J2 Network</a>
 		<!--<ul class="am-fr m-about">
                 <li><a href="/about/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">关于我们</a></li>
                 <li><a href="/contact/" class="am-btn am-btn-danger am-btn-sm am-radius" rel="nofollow">联系我们</a></li>
@@ -57,11 +56,11 @@
             <li><a href="${mao}/index" rel="nofollow">网站首页</a></li>
             <li><a href="${mao}/fuwu" rel="nofollow">服务内容</a></li>
             <li><a href="${mao}/zixun" rel="nofollow">最新动态</a></li>
-			<li><a href="${mao}/zixun" rel="nofollow">会员专区</a></li>
+			<li><a href="${mao}/piliang" rel="nofollow">会员专区</a></li>
             <li><a href="${mao}/about" rel="nofollow">关于我们</a></li>
             <li><a href="${mao}/contact" rel="nofollow">联系我们</a></li>
-			<li><a href="${mao}/login"  class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
-			<li><a href="${mao}/regist"  class="am-btn am-btn-success" rel="nofollow">注册</a></li>
+			<li><a href="${mao}/login"  id="login" class="am-btn am-btn-primary" rel="nofollow">登录</a></li>
+         	<li><a href="${mao}/regist"  id="regist" class="am-btn am-btn-success" rel="nofollow">注册</a></li>
           </ul>
         </nav>
     </section>
@@ -243,6 +242,7 @@
 <script src="${maosta}/assets/js/amazeui.legacy.js"></script>
 <![endif]-->
 <script src="${maosta}/assets/js/jquery.min.js"></script>
+
 <script src="${maosta}/webuploader/webuploader.js"></script>
 <script src="${maosta}/expWebSite/js/exCreateOrder.js"></script>
 <script src="${maosta}/expWebSite/js/exOrderSelect.js"></script>
@@ -259,63 +259,12 @@
   // 图片赖加载
   </script>
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="${maosta}/assets/js/jquery.min.js"></script>
 <script src="${maosta}/assets/js/amazeui.min.js"></script>
 <!--<![endif]-->
 <script src='${maosta}/assets/js/jquery.qrcode.min.js'></script>
-<script type="text/javascript">
-$(function(){
-	var str = "http://www.imj2.com/fuwu/";
-		$("#code").qrcode({
-			render: "table",
-			width: 100,
-			height:100,
-			text: str
-		});
-})
-// 二维码生成
-//返回顶部
-function imj2(){
-	this.init();
-}
-imj2.prototype = {
-	constructor: imj2,
-	init: function(){
-		this._initBackTop();
-	},
-	_initBackTop: function(){
-		var $backTop = this.$backTop = $('<div class="m-top-cbbfixed">'+
-						'<a class="m-top-weixin m-top-cbbtn"">'+
-							'<span class="m-top-weixin-icon"></span><div></div>'+
-						'</a>'+
-						'<a class="m-top-go m-top-cbbtn">'+
-							'<span class="m-top-goicon"></span>'+
-						'</a>'+
-					'</div>');
-		$('body').append($backTop);
+<script src="${maosta}/expWebSite/js/jquery.cookie.js"></script>
+<script src="${maosta}/expWebSite/js/customerToken.js"></script>
 
-		$backTop.click(function(){
-			$("html, body").animate({
-				scrollTop: 0
-			}, 120);
-		});
-
-		var timmer = null;
-		$(window).bind("scroll",function() {
-            var d = $(document).scrollTop(),
-            e = $(window).height();
-            0 < d ? $backTop.css("bottom", "10px") : $backTop.css("bottom", "-90px");
-			clearTimeout(timmer);
-			timmer = setTimeout(function() {
-                clearTimeout(timmer)
-            },100);
-	   });
-	}
-
-}
-var imj2 = new imj2();
-//end返回顶部
-</script>
 
 <script type="text/javascript">
 	function chadan() {
@@ -329,8 +278,8 @@ var imj2 = new imj2();
 			data : {'id':mytt},
 			dataType:"json",
 			success : function(obj) {
-				console.log(obj);
 				$("#tbody").empty();
+				
 				var list = obj.data;
 				if(list){
 					var tr = $("<tr><td name='order_id'>"
@@ -411,8 +360,8 @@ var imj2 = new imj2();
 			data : {'id':tel},
 			dataType:"json",
 			success : function(obj) {
-				console.log(obj);
 				$("#tbody").empty();
+				
 				var list = obj.data;
 				if(list){
 					var tr = $("<tr><td name='order_id'>"

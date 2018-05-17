@@ -56,7 +56,7 @@
 	</ul>
   </div>
   <div class="am-u-lg-4 am-u-md-6 ">
-    <h3>拉德快递会员登录</h3>
+    <h3>锦程快递会员登录</h3>
     <hr>
   	<p>${message}</p>
   	<p>点击重新登录</p>
