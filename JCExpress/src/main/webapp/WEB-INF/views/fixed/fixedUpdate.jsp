@@ -19,6 +19,7 @@
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/fixed/list/${sysFixed.id}" data-method="put">
+            <input type="hidden" name="_method" value="put" />
             <div class="form-group m-t">
               <label class="col-sm-2 col-xs-offset-1 control-label">定区编号：</label>
               <div class="col-sm-7">

@@ -22,9 +22,7 @@ function actionFormatter(value, row, index) {
 			'<a class="freeze m-r-sm text-info" href="javascript:void(0)" title="冻结">冻结',
 			'<i class="glyphicon glyphicon-pause"></i>',
 			'</a>',
-			'<a class="edit m-r-sm text-warning" href="javascript:void(0)" title="编辑">编辑',
-			'<i class="glyphicon glyphicon-edit"></i>',
-			'</a>',
+			
 			'<a class="remove m-r-sm text-danger" href="javascript:void(0)" title="删除">删除',
 			'<i class="glyphicon glyphicon-remove"></i>',
 			'</a>',
@@ -37,9 +35,7 @@ function actionFormatter(value, row, index) {
 			'<a class="normal m-r-sm text-info" href="javascript:void(0)" title="启用">启用',
 			'<i class="glyphicon glyphicon-play"></i>',
 			'</a>',
-			'<a class="edit m-r-sm text-warning" href="javascript:void(0)" title="编辑">编辑',
-			'<i class="glyphicon glyphicon-edit"></i>',
-			'</a>',
+			
 			'<a class="remove m-r-sm text-danger" href="javascript:void(0)" title="删除">删除',
 			'<i class="glyphicon glyphicon-remove"></i>',
 			'</a>',

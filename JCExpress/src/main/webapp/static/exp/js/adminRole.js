@@ -108,7 +108,7 @@ $(function() {
 				$.ajax({
 					data : params,
 					dataType : 'json',
-					type : 'put',
+					type : 'post',
 					url : $form.attr('action'),
 					success : function(result) {
 						if (result.code == 1) {

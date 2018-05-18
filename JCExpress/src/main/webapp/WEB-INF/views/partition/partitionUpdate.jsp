@@ -14,11 +14,12 @@
     <div class="col-sm-12">
       <div class="ibox float-e-margins">
         <div class="ibox-title">
-         <h5>创建分区<small><b>用户个人信息时应当遵循合法、正当、必要的原则，明示目的、方式和范围，并经用户同意<big>♂</big></b></small></h5>
+         <h5>修改分区<small><b>用户个人信息时应当遵循合法、正当、必要的原则，明示目的、方式和范围，并经用户同意<big>♂</big></b></small></h5>
           <div class="ibox-tools"> <a class="collapse-link"><i class="fa fa-chevron-up"></i></a> <a class="close-link"><i class="fa fa-times"></i></a> </div>
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/partition/list/${sysPartition.id}" data-method="put">
+            <input type="hidden" name="_method" value="put" />
             <div class="form-group m-t">
               <label class="col-sm-2 col-xs-offset-1 control-label">分区编号：</label>
               <div class="col-sm-7">

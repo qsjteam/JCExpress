@@ -209,7 +209,15 @@ public class OrderController {
 		return new BaseResult("创建失败,请联系管理员");
 	}
 	
-	
+	/**
+	 * 根据单号查询订单
+	 * @Title: selectOrder  
+	 * @Description: TODO(创建订单/单个/开放接口)  
+	 * @param @param id
+	 * @param @return    设定文件  
+	 * @return Object    返回类型  
+	 * @throws
+	 */
 	@RequestMapping("/selectOrder")
 	@ResponseBody
 	public BaseResult selectOrder(String id) {
@@ -218,6 +226,16 @@ public class OrderController {
 		return bb;
 		
 	}
+	
+	/**
+	 * 根据电话号查询订单
+	 * @Title: selectOrder  
+	 * @Description: TODO(创建订单/单个/开放接口)  
+	 * @param @param id
+	 * @param @return    设定文件  
+	 * @return Object    返回类型  
+	 * @throws
+	 */
 	@RequestMapping("/selectOrderB")
 	@ResponseBody
 	public BaseResult selectOrderB(String id) {

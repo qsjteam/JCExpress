@@ -18,6 +18,7 @@
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/organization/list/${organization.org_id}" data-method="put">
+            <input type="hidden" name="_method" value="put" />
             <div class="form-group m-t">
               <label class="col-sm-2 col-xs-offset-1 control-label">组织名称：</label>
               <div class="col-sm-7">

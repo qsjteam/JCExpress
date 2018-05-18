@@ -22,7 +22,6 @@
               <div class="example-wrap">
                 <div class="example">
                   <div id="toolbar" class="btn-group m-t-sm">
-                      <button type="button" class="btn btn-default"  title="创建订单" onclick="layer_show('创建订单','${mao}/car/list/createCar','800','520')"> 创建订单 <i class="glyphicon glyphicon-plus"></i> </button>
                   </div>
                   <table id="table"
                          data-toggle="table"
@@ -70,7 +69,7 @@
   <script src="${maosta}/common/jquery/jquery-3.2.0.min.js"></script> 
   <!-- Bootstrap table --> 
   <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
-<script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
+<script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/common/bootstrap-table/bootstrap-table.min.js"></script> 
   <script src="${maosta}/common/bootstrap-table/extensions/export/bootstrap-table-export.js"></script> 
   <script src="${maosta}/common/bootstrap-table/tableExport.js"></script> 

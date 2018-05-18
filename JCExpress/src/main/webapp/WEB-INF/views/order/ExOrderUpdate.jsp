@@ -17,6 +17,7 @@
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/order/updateOrder/${order.order_id}" data-method="put">
+            <input type="hidden" name="_method" value="put" />
             <p>寄件人信息</p>
             <div class="hr-line-dashed"></div>
             <div class="form-group m-t">
@@ -115,7 +116,7 @@
   <script src="${maosta}/common/icheck/icheck.min.js"></script> 
   <!-- bootstrapvalidator前端验证框架 --> 
   <script src="${maosta}/common/bootstrap/js/bootstrap.min.js"></script> 
-<script src="${maosta}/hplus/js/plugins/layer/layer.min.js"></script>
+<script src="${maosta}/common/layer/layer.js"></script> 
   <script src="${maosta}/common/bootstrapvalidator/js/bootstrapValidator.min.js"></script> 
   <!-- 自定义js --> 
   <script src="${maosta}/exp/js/exOrderAudit.js"></script> 

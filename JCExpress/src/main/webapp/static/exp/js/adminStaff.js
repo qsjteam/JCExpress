@@ -54,7 +54,7 @@ $(function() {
 				$.ajax({
 					data : $form.serialize(),
 					dataType : 'json',
-					type : 'put',
+					type : 'post',
 					url : $form.attr('action'),
 					success : function(result) {
 						if (result.code == 1) {

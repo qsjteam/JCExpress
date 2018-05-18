@@ -17,6 +17,7 @@
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/region/list/${area.area_id}" data-method="put">
+            <input type="hidden" name="_method" value="put" />
             <div class="form-group m-t">
               <label class="col-sm-2 col-xs-offset-1 control-label">区域代码：</label>
               <div class="col-sm-5">

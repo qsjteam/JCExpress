@@ -18,6 +18,7 @@
         </div>
         <div class="ibox-content">
           <form id="form" class="form-horizontal" action="${mao}/user/list/${user.u_id}" data-method="put">
+          <input type="hidden" name="_method" value="put" />
             <div class="form-group">
               <label class="col-sm-2 col-xs-offset-1 control-label">用户名：</label>
               <div class="col-sm-6">
