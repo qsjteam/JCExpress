@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-05-14 20:19:10
+Date: 2018-05-18 12:55:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,13 +29,15 @@ CREATE TABLE `ex_car` (
   `driver_id` int(11) DEFAULT NULL COMMENT '司机id',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ex_car
 -- ----------------------------
-INSERT INTO `ex_car` VALUES ('1', '豫R88888', '轻型货车', '12', 'HQ', '1', '1', '2018-02-11 15:40:36');
-INSERT INTO `ex_car` VALUES ('2', '豫R66666', '重型货车', '100', 'GP', '1', '2', '2018-02-11 15:41:26');
+INSERT INTO `ex_car` VALUES ('1', '豫R88888', '轻型货车', '12', 'HQ', '1', '5', '2018-02-11 15:40:36');
+INSERT INTO `ex_car` VALUES ('2', '豫R66666', '重型货车', '100', 'GP', '0', '2', '2018-02-11 15:41:26');
+INSERT INTO `ex_car` VALUES ('3', '川A11111', '大型挂车', '1000', 'HQ', '1', '2', '2018-05-17 15:20:20');
+INSERT INTO `ex_car` VALUES ('4', '粤B12345', '面包车', '2', '五菱之光', '1', '4', '2018-05-17 20:03:49');
 
 -- ----------------------------
 -- Table structure for `ex_order`
@@ -63,16 +65,18 @@ CREATE TABLE `ex_order` (
 -- ----------------------------
 INSERT INTO `ex_order` VALUES ('Ex19980614', '付林', '13103779727', '河南省南阳市方城县', '新建街13号', '雪晴', '13283889545', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', '2018-02-17 17:15:31', '2018-02-16 11:29:29', '2', null);
 INSERT INTO `ex_order` VALUES ('Ex19980616', '信息系', '13103779727', '河南省南阳市方城县', '新建街13号', '信息系', '13103779727', '河南省南阳市方城县', '花园路幸福小区A区六楼132号', '2018-02-23 18:43:30', '2018-02-19 19:43:00', '2', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980619', 'asd', '12312312322', '内蒙古自治区通辽市科尔沁左翼中旗', '撒打算', 'qwe', '12312312311', '辽宁省抚顺市望花区', '额外权威', null, '2018-05-14 19:47:48', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980661', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林1', '1303779727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980662', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林2', '1303779728', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980663', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林3', '1303779729', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980664', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林4', '1303779730', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980665', 'FULIN', '131037709727', '河南省南阳市方城县', '新建街13号', 'FUFU', '131037709727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 15:47:06', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980666', 'fulin', '13103779727', '河南省南阳市方城县', '新建街13号', 'ffff', '13103779727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 15:51:54', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980667', 'fulin', '13937737784', '河南省南阳市方城县', '新建街13号', '图图', '1303779727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 16:01:26', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980668', '付林', '13937737784', '江西省鹰潭市市辖区', '13号', '附用', '13937737784', '河南省南阳市淅川县', '22号', null, '2018-02-23 20:18:40', '1', '0');
-INSERT INTO `ex_order` VALUES ('Ex19980669', '付付', '13103779727', '河南省南阳市方城县', '文苑大院', '图图', '1303779727', '河南省南阳市方城县', '图图', null, '2018-02-23 20:20:01', '1', '1');
+INSERT INTO `ex_order` VALUES ('Ex19980619', 'asd', '12312312322', '内蒙古自治区通辽市科尔沁左翼中旗', '撒打算', 'qwe', '12312312311', '辽宁省抚顺市望花区', '额外权威', null, '2018-05-14 19:47:48', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980628', null, null, null, null, null, null, null, null, '2018-05-17 16:24:06', '2018-05-17 16:23:18', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980629', '小猪猪', '13400002222', '浙江省嘉兴市嘉善县', '一条大路', '小喵喵', '17822223333', '福建省三明市清流县', '一条小路', '2018-05-17 20:01:31', '2018-05-17 19:38:55', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980661', null, null, null, null, null, null, null, null, '2018-05-17 16:15:08', '2018-02-23 11:13:08', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980662', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林2', '1303779728', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980663', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林3', '1303779729', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980664', '付林林', '13103779727', '河南省南阳市方城县', '新建街13号', '付林4', '1303779730', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 11:13:08', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980665', 'FULIN', '131037709727', '河南省南阳市方城县', '新建街13号', 'FUFU', '131037709727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 15:47:06', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980666', 'fulin', '13103779727', '河南省南阳市方城县', '新建街13号', 'ffff', '13103779727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 15:51:54', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980667', 'fulin', '13937737784', '河南省南阳市方城县', '新建街13号', '图图', '1303779727', '河南省南阳市卧龙区', '花园路幸福小区A区六楼132号', null, '2018-02-23 16:01:26', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980668', '付林', '13937737784', '江西省鹰潭市市辖区', '13号', '附用', '13937737784', '河南省南阳市淅川县', '22号', null, '2018-02-23 20:18:40', '2', '0');
+INSERT INTO `ex_order` VALUES ('Ex19980669', '付付', '13103779727', '河南省南阳市方城县', '文苑大院', '图图', '1303779727', '河南省南阳市方城县', '图图', null, '2018-02-23 20:20:01', '2', '1');
 
 -- ----------------------------
 -- Table structure for `ex_order_detail`
@@ -94,10 +98,12 @@ CREATE TABLE `ex_order_detail` (
 -- Records of ex_order_detail
 -- ----------------------------
 INSERT INTO `ex_order_detail` VALUES ('1', 'Ex19980614', '10', '被子', '可能有点大，麻烦您操劳一下', 'group1/M00/00/00/wKhQZVp1eaCAeFFkAAA37LMavuI781.png', '2018-02-16 11:30:53', '2018-02-16 11:30:55');
+INSERT INTO `ex_order_detail` VALUES ('13', 'Ex19980628', null, null, null, '', '2018-05-17 16:23:18', '2018-05-17 16:24:06');
+INSERT INTO `ex_order_detail` VALUES ('14', 'Ex19980629', '2kg', '服饰', null, '', '2018-05-17 19:38:55', '2018-05-17 20:01:31');
 INSERT INTO `ex_order_detail` VALUES ('2', 'Ex19980617', '1kg', '文件', '', '', '2018-05-13 18:01:02', null);
 INSERT INTO `ex_order_detail` VALUES ('3', 'Ex19980618', '1kg', '文件', '', '', '2018-05-13 18:02:26', null);
 INSERT INTO `ex_order_detail` VALUES ('4', 'Ex19980619', '1kg', '文件', '', '', '2018-05-14 19:47:48', null);
-INSERT INTO `ex_order_detail` VALUES ('52', 'Ex19980661', '5kg', '其他', '轻拿轻放', 'group1/M00/00/00/wKhQZVqPxvmAVD55AAC-NfCAaSQ358.jpg', '2018-02-23 11:13:08', null);
+INSERT INTO `ex_order_detail` VALUES ('52', 'Ex19980661', null, null, null, 'group1/M00/00/00/wKhQZVqPxvmAVD55AAC-NfCAaSQ358.jpg', '2018-02-23 11:13:08', '2018-05-17 16:15:08');
 INSERT INTO `ex_order_detail` VALUES ('53', 'Ex19980662', '6kg', '其他', '轻拿轻放', 'group1/M00/00/00/wKhQZVqPxvmAVD55AAC-NfCAaSQ358.jpg', '2018-02-23 11:13:08', null);
 INSERT INTO `ex_order_detail` VALUES ('54', 'Ex19980663', '7kg', '其他', '轻拿轻放', 'group1/M00/00/00/wKhQZVqPxvmAVD55AAC-NfCAaSQ358.jpg', '2018-02-23 11:13:08', null);
 INSERT INTO `ex_order_detail` VALUES ('55', 'Ex19980664', '8kg', '其他', '轻拿轻放', 'group1/M00/00/00/wKhQZVqPxvmAVD55AAC-NfCAaSQ358.jpg', '2018-02-23 11:13:08', null);
@@ -126,7 +132,22 @@ CREATE TABLE `ex_order_records` (
 -- Records of ex_order_records
 -- ----------------------------
 INSERT INTO `ex_order_records` VALUES ('1', 'Ex19980614', '1', '2018-02-16 11:32:07', '付林', null);
+INSERT INTO `ex_order_records` VALUES ('13', 'Ex19980661', '2', '2018-05-17 16:12:55', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('14', 'Ex19980667', '2', '2018-05-17 16:16:25', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('15', 'Ex19980619', '2', '2018-05-17 16:16:33', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('16', 'Ex19980668', '2', '2018-05-17 16:17:10', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('17', 'Ex19980669', '2', '2018-05-17 16:17:15', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('18', 'Ex19980668', '2', '2018-05-17 16:17:18', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('19', 'Ex19980662', '2', '2018-05-17 16:17:23', 'qsj', '0');
 INSERT INTO `ex_order_records` VALUES ('2', 'Ex19980614', '2', '2018-02-17 21:54:34', '付林', '0');
+INSERT INTO `ex_order_records` VALUES ('20', 'Ex19980663', '2', '2018-05-17 16:17:26', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('21', 'Ex19980664', '2', '2018-05-17 16:17:29', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('22', 'Ex19980665', '2', '2018-05-17 16:17:34', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('23', 'Ex19980666', '2', '2018-05-17 16:17:37', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('24', 'Ex19980628', '1', '2018-05-17 16:23:18', null, '0');
+INSERT INTO `ex_order_records` VALUES ('25', 'Ex19980628', '2', '2018-05-17 16:24:21', 'qsj', '0');
+INSERT INTO `ex_order_records` VALUES ('26', 'Ex19980629', '1', '2018-05-17 19:38:55', null, '0');
+INSERT INTO `ex_order_records` VALUES ('27', 'Ex19980629', '2', '2018-05-17 20:01:53', 'qsj', '0');
 INSERT INTO `ex_order_records` VALUES ('3', 'Ex19980618', '1', '2018-05-13 18:02:26', null, '0');
 INSERT INTO `ex_order_records` VALUES ('4', 'Ex19980619', '1', '2018-05-14 19:47:48', null, '0');
 INSERT INTO `ex_order_records` VALUES ('53', 'Ex19980661', '1', '2018-02-23 11:13:08', null, '0');
@@ -155,7 +176,7 @@ CREATE TABLE `ex_prices` (
   `create_by` varchar(50) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ex_prices
@@ -170,6 +191,26 @@ INSERT INTO `ex_prices` VALUES ('7', '省内超5', '0', '6', '1', '20.00', 'admi
 INSERT INTO `ex_prices` VALUES ('8', '省外超5', '1', '6', '1', '28.00', 'admin', '2018-05-13 19:47:15');
 INSERT INTO `ex_prices` VALUES ('9', '省内超10', '0', '11', '1', '30.00', 'admin', '2018-05-13 19:48:15');
 INSERT INTO `ex_prices` VALUES ('10', '省外超10', '1', '11', '1', '38.00', 'admin', '2018-05-13 19:48:57');
+INSERT INTO `ex_prices` VALUES ('11', '省内标准', '0', '1', '2', '15.00', 'admin', '2018-05-13 19:38:30');
+INSERT INTO `ex_prices` VALUES ('12', '省外标准', '1', '1', '2', '23.00', 'admin', '2018-05-13 19:41:14');
+INSERT INTO `ex_prices` VALUES ('13', '省内超1', '0', '2', '2', '17.00', 'admin', '2018-05-13 19:42:04');
+INSERT INTO `ex_prices` VALUES ('14', '省外超1', '1', '2', '2', '25.00', 'admin', '2018-05-13 19:42:48');
+INSERT INTO `ex_prices` VALUES ('15', '省内超2', '0', '3', '2', '19.00', 'admin', '2018-05-13 19:43:44');
+INSERT INTO `ex_prices` VALUES ('16', '省外超2', '1', '3', '2', '27.00', 'admin', '2018-05-13 19:44:17');
+INSERT INTO `ex_prices` VALUES ('17', '省内超5', '0', '6', '2', '25.00', 'admin', '2018-05-13 19:46:26');
+INSERT INTO `ex_prices` VALUES ('18', '省外超5', '1', '6', '2', '33.00', 'admin', '2018-05-13 19:47:15');
+INSERT INTO `ex_prices` VALUES ('19', '省内超10', '0', '11', '2', '35.00', 'admin', '2018-05-13 19:48:15');
+INSERT INTO `ex_prices` VALUES ('20', '省外超10', '1', '11', '2', '43.00', 'admin', '2018-05-13 19:48:57');
+INSERT INTO `ex_prices` VALUES ('21', '省内标准', '0', '1', '3', '20.00', 'admin', '2018-05-13 19:38:30');
+INSERT INTO `ex_prices` VALUES ('22', '省外标准', '1', '1', '3', '28.00', 'admin', '2018-05-13 19:41:14');
+INSERT INTO `ex_prices` VALUES ('23', '省内超1', '0', '2', '3', '22.00', 'admin', '2018-05-13 19:42:04');
+INSERT INTO `ex_prices` VALUES ('24', '省外超1', '1', '2', '3', '30.00', 'admin', '2018-05-13 19:42:48');
+INSERT INTO `ex_prices` VALUES ('25', '省内超2', '0', '3', '3', '24.00', 'admin', '2018-05-13 19:43:44');
+INSERT INTO `ex_prices` VALUES ('26', '省外超2', '1', '3', '3', '32.00', 'admin', '2018-05-13 19:44:17');
+INSERT INTO `ex_prices` VALUES ('27', '省内超5', '0', '6', '3', '30.00', 'admin', '2018-05-13 19:46:26');
+INSERT INTO `ex_prices` VALUES ('28', '省外超5', '1', '6', '3', '38.00', 'admin', '2018-05-13 19:47:15');
+INSERT INTO `ex_prices` VALUES ('29', '省内超10', '0', '11', '3', '40.00', 'admin', '2018-05-13 19:48:15');
+INSERT INTO `ex_prices` VALUES ('30', '省外超10', '1', '11', '3', '48.00', 'admin', '2018-05-13 19:48:57');
 
 -- ----------------------------
 -- Table structure for `os_customer`
@@ -184,7 +225,7 @@ CREATE TABLE `os_customer` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `state` varchar(1) DEFAULT NULL COMMENT '激活状态',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_customer
@@ -192,7 +233,7 @@ CREATE TABLE `os_customer` (
 INSERT INTO `os_customer` VALUES ('1', '13103779727', 'd91e91cd1ce8b1d739b19d6f4cd1142c', '付linlin', '13103779727@163.com', '2018-02-28 21:12:35', '1');
 INSERT INTO `os_customer` VALUES ('2', '15138573118', '202cb962ac59075b964b07152d234b70', '绵bo', '928822677@qq.com', '2018-02-28 21:19:07', '1');
 INSERT INTO `os_customer` VALUES ('3', '13103779727', 'e10adc3949ba59abbe56e057f20f883e', '测试', '250835146@qq.com', '2018-03-05 09:03:59', '1');
-INSERT INTO `os_customer` VALUES ('4', '12312312322', '21232f297a57a5a743894a0e4a801fc3', 'admin', '1102480980@qq.com', '2018-05-10 10:09:06', '1');
+INSERT INTO `os_customer` VALUES ('7', '13400001111', '21232f297a57a5a743894a0e4a801fc3', 'admin', '1102480980@qq.com', '2018-05-17 19:35:24', '1');
 
 -- ----------------------------
 -- Table structure for `sys_area`
@@ -215,7 +256,7 @@ CREATE TABLE `sys_area` (
 -- ----------------------------
 -- Records of sys_area
 -- ----------------------------
-INSERT INTO `sys_area` VALUES ('1', '110000', '0', '北京市', '1', '1', '1', '', '2017-04-24 15:54:31', '2017-08-19 00:29:54');
+INSERT INTO `sys_area` VALUES ('1', '110000', '0', '北京市', '1', '1', '0', '', '2017-04-24 15:54:31', '2017-08-19 00:29:54');
 INSERT INTO `sys_area` VALUES ('2', '110100', '110000', '市辖区', '2', '1', '1', null, '2017-04-24 15:54:31', '2017-08-19 00:03:43');
 INSERT INTO `sys_area` VALUES ('3', '110101', '110100', '东城区', '3', '1', '1', null, '2017-04-24 15:54:31', null);
 INSERT INTO `sys_area` VALUES ('4', '110102', '110100', '西城区', '3', '2', '1', null, '2017-04-24 15:54:31', null);
@@ -3736,20 +3777,20 @@ CREATE TABLE `sys_fixed` (
   `fixed_adress` varchar(100) DEFAULT NULL,
   `status` varchar(1) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_fixed
 -- ----------------------------
-INSERT INTO `sys_fixed` VALUES ('1', 'DQ001', '1', '城关镇区', '城关镇区1街5号', '1');
 INSERT INTO `sys_fixed` VALUES ('2', 'DQ002', '2', '凤瑞路区', '凤瑞路区3街8号', '1');
 INSERT INTO `sys_fixed` VALUES ('3', 'DQ003', '1', '营房区', '营房区嘎嘎街34号', '1');
-INSERT INTO `sys_fixed` VALUES ('4', 'DQ004', '2', '东城区', '东城区高兴街5号', '1');
+INSERT INTO `sys_fixed` VALUES ('4', 'DQ004', '2', '东城区', '东城区高兴街5号', '0');
 INSERT INTO `sys_fixed` VALUES ('5', 'DQ005', '1', '东城区', '东城区啊啊街5号', '1');
 INSERT INTO `sys_fixed` VALUES ('6', 'DQ006', '2', '东城区', '东城区宝宝街5号', '1');
 INSERT INTO `sys_fixed` VALUES ('7', 'DQ007', '1', '东城区', '东城区天台街5号', '1');
 INSERT INTO `sys_fixed` VALUES ('8', 'DQ008', '2', '西城区', '西城区旺旺街5号', '1');
 INSERT INTO `sys_fixed` VALUES ('9', 'DQ009', '1', '西城区', '西城区揉揉街5号', '1');
+INSERT INTO `sys_fixed` VALUES ('10', 'DQ110', '2', '华南大区', null, '1');
 
 -- ----------------------------
 -- Table structure for `sys_log`
@@ -3766,7 +3807,7 @@ CREATE TABLE `sys_log` (
   `opt_content` text COMMENT '请求内容',
   `url` varchar(255) DEFAULT NULL COMMENT '请求地址',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4387 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4889 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_log
@@ -8157,6 +8198,508 @@ INSERT INTO `sys_log` VALUES ('4383', '4', '2018-05-14 19:46:14', '18', 'GET', '
 INSERT INTO `sys_log` VALUES ('4384', '4', '2018-05-14 19:46:14', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.101', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
 INSERT INTO `sys_log` VALUES ('4385', '4', '2018-05-14 20:16:27', '183', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.101', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=nync&', '/JCExpress/loginh');
 INSERT INTO `sys_log` VALUES ('4386', '4', '2018-05-14 20:16:27', '93', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.101', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4387', '4', '2018-05-17 11:13:43', '109', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=y5d4&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4388', '4', '2018-05-17 11:13:43', '55', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4389', '4', '2018-05-17 11:50:28', '99', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=4nbg&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4390', '4', '2018-05-17 11:50:28', '30', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4391', '4', '2018-05-17 11:50:33', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4392', '4', '2018-05-17 11:50:34', '25', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4393', '4', '2018-05-17 11:50:43', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4394', '4', '2018-05-17 11:50:43', '40', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4395', '4', '2018-05-17 11:50:44', '36', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4396', '4', '2018-05-17 11:57:19', '25', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4397', '4', '2018-05-17 11:57:29', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4398', '4', '2018-05-17 11:57:29', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4399', '4', '2018-05-17 11:57:33', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4400', '4', '2018-05-17 14:42:05', '278', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=gydw&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4401', '4', '2018-05-17 14:42:06', '92', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4402', '4', '2018-05-17 14:42:15', '25', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:null', '/JCExpress/user/info/showInfo');
+INSERT INTO `sys_log` VALUES ('4403', '4', '2018-05-17 14:42:16', '45', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4404', '4', '2018-05-17 14:42:27', '24', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=100&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4405', '4', '2018-05-17 14:42:31', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4406', '4', '2018-05-17 14:42:31', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4407', '4', '2018-05-17 14:43:53', '124', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=dynm&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4408', '4', '2018-05-17 14:43:53', '91', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4409', '4', '2018-05-17 14:43:59', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4410', '4', '2018-05-17 14:44:01', '28', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4411', '4', '2018-05-17 14:44:14', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1/updateUser');
+INSERT INTO `sys_log` VALUES ('4412', '4', '2018-05-17 14:44:37', '127', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1');
+INSERT INTO `sys_log` VALUES ('4413', '4', '2018-05-17 14:44:49', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4414', '4', '2018-05-17 14:45:01', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1/updateUser');
+INSERT INTO `sys_log` VALUES ('4415', '4', '2018-05-17 14:46:35', '40', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1');
+INSERT INTO `sys_log` VALUES ('4416', '4', '2018-05-17 14:46:49', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4417', '4', '2018-05-17 14:46:49', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4418', '4', '2018-05-17 14:46:54', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4419', '4', '2018-05-17 14:46:55', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4420', '4', '2018-05-17 14:46:55', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4421', '4', '2018-05-17 14:46:55', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4422', '4', '2018-05-17 14:46:55', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4423', '4', '2018-05-17 14:46:57', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4424', '4', '2018-05-17 14:46:57', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4425', '4', '2018-05-17 14:46:57', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4426', '4', '2018-05-17 14:47:03', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4427', '4', '2018-05-17 14:48:17', '87', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:login_name=miaomiao&password=123123&user_name=小西瓜&email=123123@qq.com&telephone=13512312322&sex=2&status=1&roleId=5&organization_id=1&', '/JCExpress/user/list');
+INSERT INTO `sys_log` VALUES ('4428', '4', '2018-05-17 14:48:25', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4429', '4', '2018-05-17 14:48:39', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1/updateUser');
+INSERT INTO `sys_log` VALUES ('4430', '4', '2018-05-17 14:49:21', '59', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/1');
+INSERT INTO `sys_log` VALUES ('4431', '4', '2018-05-17 14:49:30', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4432', '4', '2018-05-17 14:49:31', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4433', '4', '2018-05-17 14:49:33', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4434', '4', '2018-05-17 14:49:48', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4435', '4', '2018-05-17 14:49:53', '-4945', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/1/frozenUser');
+INSERT INTO `sys_log` VALUES ('4436', '4', '2018-05-17 14:49:57', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4437', '4', '2018-05-17 14:49:58', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4438', '4', '2018-05-17 14:50:02', '33', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/2/frozenUser');
+INSERT INTO `sys_log` VALUES ('4439', '4', '2018-05-17 14:50:05', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4440', '4', '2018-05-17 14:50:11', '75', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:deleteUser,[参数]:null', '/JCExpress/user/list/1');
+INSERT INTO `sys_log` VALUES ('4441', '4', '2018-05-17 14:50:13', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4442', '4', '2018-05-17 14:50:16', '117', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/2/frozenUser');
+INSERT INTO `sys_log` VALUES ('4443', '4', '2018-05-17 14:50:18', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4444', '4', '2018-05-17 14:50:25', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/2/updateUser');
+INSERT INTO `sys_log` VALUES ('4445', '4', '2018-05-17 14:50:34', '74', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/2');
+INSERT INTO `sys_log` VALUES ('4446', '4', '2018-05-17 14:50:38', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4447', '4', '2018-05-17 14:51:02', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleList,[参数]:null', '/JCExpress/role/list/roleList');
+INSERT INTO `sys_log` VALUES ('4448', '4', '2018-05-17 14:51:03', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4449', '4', '2018-05-17 14:51:19', '41', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/1/frozenRole');
+INSERT INTO `sys_log` VALUES ('4450', '4', '2018-05-17 14:51:22', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4451', '4', '2018-05-17 14:51:25', '207', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/1/updateRole');
+INSERT INTO `sys_log` VALUES ('4452', '4', '2018-05-17 14:51:36', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4453', '4', '2018-05-17 14:51:40', '30', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/1/updateRole');
+INSERT INTO `sys_log` VALUES ('4454', '4', '2018-05-17 14:51:44', '-3889', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/1');
+INSERT INTO `sys_log` VALUES ('4455', '4', '2018-05-17 14:51:46', '-5968', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/1');
+INSERT INTO `sys_log` VALUES ('4456', '4', '2018-05-17 14:51:52', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4457', '4', '2018-05-17 14:51:53', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4458', '4', '2018-05-17 14:51:54', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4459', '4', '2018-05-17 14:52:07', '49', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/1/frozenRole');
+INSERT INTO `sys_log` VALUES ('4460', '4', '2018-05-17 14:52:09', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUser,[参数]:null', '/JCExpress/role/list/1/roleUser');
+INSERT INTO `sys_log` VALUES ('4461', '4', '2018-05-17 14:52:10', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4462', '4', '2018-05-17 14:52:45', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&offset=0&limit=20&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4463', '4', '2018-05-17 14:52:54', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&offset=0&limit=20&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4464', '4', '2018-05-17 14:52:55', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4465', '4', '2018-05-17 14:52:55', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&offset=0&limit=20&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4466', '4', '2018-05-17 14:52:57', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4467', '4', '2018-05-17 14:52:59', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleUsers,[参数]:sort=user_name&order=desc&offset=0&limit=20&', '/JCExpress/role/list/1/roleUsers');
+INSERT INTO `sys_log` VALUES ('4468', '4', '2018-05-17 14:53:14', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:null', '/JCExpress/role/list/createRole');
+INSERT INTO `sys_log` VALUES ('4469', '4', '2018-05-17 14:54:34', '108', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:role_name=区域管理员&role_sign=region&status=0&remarks=业务员&menuIds=1,16,17,18,19,20,21,70,22,23,24,25,26,&', '/JCExpress/role/list');
+INSERT INTO `sys_log` VALUES ('4470', '4', '2018-05-17 14:54:43', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4471', '4', '2018-05-17 14:54:51', '58', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/6/frozenRole');
+INSERT INTO `sys_log` VALUES ('4472', '4', '2018-05-17 14:54:55', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4473', '4', '2018-05-17 14:54:59', '48', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/6/frozenRole');
+INSERT INTO `sys_log` VALUES ('4474', '4', '2018-05-17 14:55:02', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4475', '4', '2018-05-17 14:55:05', '26', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/6/frozenRole');
+INSERT INTO `sys_log` VALUES ('4476', '4', '2018-05-17 14:55:09', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4477', '4', '2018-05-17 14:55:23', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:OrganizationList,[参数]:null', '/JCExpress/organization/list/organizationList');
+INSERT INTO `sys_log` VALUES ('4478', '4', '2018-05-17 14:55:24', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4479', '4', '2018-05-17 14:55:29', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6/updateRole');
+INSERT INTO `sys_log` VALUES ('4480', '4', '2018-05-17 14:55:36', '-7319', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6');
+INSERT INTO `sys_log` VALUES ('4481', '4', '2018-05-17 14:55:37', '-8866', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6');
+INSERT INTO `sys_log` VALUES ('4482', '4', '2018-05-17 14:55:44', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4483', '4', '2018-05-17 14:55:50', '26', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6/updateRole');
+INSERT INTO `sys_log` VALUES ('4484', '4', '2018-05-17 14:55:58', '-8124', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6');
+INSERT INTO `sys_log` VALUES ('4485', '4', '2018-05-17 14:55:59', '-9503', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6');
+INSERT INTO `sys_log` VALUES ('4486', '4', '2018-05-17 14:56:05', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4487', '4', '2018-05-17 14:56:09', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4488', '4', '2018-05-17 14:56:31', '46', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:frozenOrganization,[参数]:null', '/JCExpress/organization/list/18/frozenOrganization');
+INSERT INTO `sys_log` VALUES ('4489', '4', '2018-05-17 14:56:34', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4490', '4', '2018-05-17 14:56:51', '2', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:updateOrganization,[参数]:null', '/JCExpress/organization/list/1/updateOrganization');
+INSERT INTO `sys_log` VALUES ('4491', '4', '2018-05-17 14:57:00', '49', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:updateOrganization,[参数]:null', '/JCExpress/organization/list/1');
+INSERT INTO `sys_log` VALUES ('4492', '4', '2018-05-17 14:57:05', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4493', '4', '2018-05-17 14:57:13', '65', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:deleteOrganization,[参数]:null', '/JCExpress/organization/list/1');
+INSERT INTO `sys_log` VALUES ('4494', '4', '2018-05-17 14:57:16', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4495', '4', '2018-05-17 14:57:20', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:createOrganization,[参数]:null', '/JCExpress/organization/list/createOrganization');
+INSERT INTO `sys_log` VALUES ('4496', '4', '2018-05-17 14:57:43', '80', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:createOrganization,[参数]:org_name=售后服务&status=0&remarks=售后&', '/JCExpress/organization/list');
+INSERT INTO `sys_log` VALUES ('4497', '4', '2018-05-17 14:57:48', '19', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4498', '4', '2018-05-17 14:57:54', '36', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:frozenOrganization,[参数]:null', '/JCExpress/organization/list/19/frozenOrganization');
+INSERT INTO `sys_log` VALUES ('4499', '4', '2018-05-17 14:57:59', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4500', '4', '2018-05-17 14:58:08', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:regionList,[参数]:null', '/JCExpress/region/list/regionList');
+INSERT INTO `sys_log` VALUES ('4501', '4', '2018-05-17 14:58:09', '59', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=20&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4502', '4', '2018-05-17 14:58:09', '88', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:null', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4503', '4', '2018-05-17 14:58:12', '23', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=100&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4504', '4', '2018-05-17 14:58:15', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=10&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4505', '4', '2018-05-17 14:58:20', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=25&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4506', '4', '2018-05-17 14:58:22', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=50&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4507', '4', '2018-05-17 14:58:24', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=100&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4508', '4', '2018-05-17 14:58:47', '2', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:updateRegion,[参数]:null', '/JCExpress/region/list/3506/updateRegion');
+INSERT INTO `sys_log` VALUES ('4509', '4', '2018-05-17 14:59:18', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:partitionList,[参数]:null', '/JCExpress/partition/list/partitionList');
+INSERT INTO `sys_log` VALUES ('4510', '4', '2018-05-17 14:59:18', '51', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:partitionList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/partition/list/');
+INSERT INTO `sys_log` VALUES ('4511', '4', '2018-05-17 14:59:22', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:createPartition,[参数]:null', '/JCExpress/partition/list/createPartition');
+INSERT INTO `sys_log` VALUES ('4512', '4', '2018-05-17 14:59:22', '10', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:regionSelect,[参数]:parentCode=0&', '/JCExpress/partition/list/regionSelect');
+INSERT INTO `sys_log` VALUES ('4513', '4', '2018-05-17 14:59:31', '9', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:regionSelect,[参数]:parentCode=510000&', '/JCExpress/partition/list/regionSelect');
+INSERT INTO `sys_log` VALUES ('4514', '4', '2018-05-17 14:59:32', '14', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:regionSelect,[参数]:parentCode=510100&', '/JCExpress/partition/list/regionSelect');
+INSERT INTO `sys_log` VALUES ('4515', '4', '2018-05-17 15:00:02', '87', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:createPartition,[参数]:partition_code=FQ003&province=510000&city=510100&village=510104&addresskey=坏滴&address=123123&single=1&status=1&', '/JCExpress/partition/list');
+INSERT INTO `sys_log` VALUES ('4516', '4', '2018-05-17 15:00:37', '44', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:partitionList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/partition/list/');
+INSERT INTO `sys_log` VALUES ('4517', '4', '2018-05-17 15:00:42', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:updatePartition,[参数]:null', '/JCExpress/partition/list/5/updatePartition');
+INSERT INTO `sys_log` VALUES ('4518', '4', '2018-05-17 15:00:57', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:updatePartition,[参数]:null', '/JCExpress/partition/list/5/updatePartition');
+INSERT INTO `sys_log` VALUES ('4519', '4', '2018-05-17 15:02:01', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:null', '/JCExpress/fixed/list/fixedList');
+INSERT INTO `sys_log` VALUES ('4520', '4', '2018-05-17 15:02:02', '29', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4521', '4', '2018-05-17 15:02:05', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:createFixed,[参数]:null', '/JCExpress/fixed/list/createFixed');
+INSERT INTO `sys_log` VALUES ('4522', '4', '2018-05-17 15:03:35', '102', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:createFixed,[参数]:fixed_code=DQ110&fixed_name=华南大区&staff_id=2&status=1&', '/JCExpress/fixed/list');
+INSERT INTO `sys_log` VALUES ('4523', '4', '2018-05-17 15:06:44', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:updateFixed,[参数]:null', '/JCExpress/fixed/list/1/updateFixed');
+INSERT INTO `sys_log` VALUES ('4524', '4', '2018-05-17 15:06:52', '25', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:updateFixed,[参数]:null', '/JCExpress/fixed/list/1');
+INSERT INTO `sys_log` VALUES ('4525', '4', '2018-05-17 15:06:59', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4526', '4', '2018-05-17 15:07:00', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4527', '4', '2018-05-17 15:07:02', '1', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:realPartition,[参数]:null', '/JCExpress/fixed/list/3/realPartition');
+INSERT INTO `sys_log` VALUES ('4528', '4', '2018-05-17 15:07:03', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:realPartition,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/realPartition/3');
+INSERT INTO `sys_log` VALUES ('4529', '4', '2018-05-17 15:07:11', '36', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:frozenFixed,[参数]:null', '/JCExpress/fixed/list/3/frozenFixed');
+INSERT INTO `sys_log` VALUES ('4530', '4', '2018-05-17 15:07:14', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4531', '4', '2018-05-17 15:07:21', '28', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:frozenFixed,[参数]:null', '/JCExpress/fixed/list/3/frozenFixed');
+INSERT INTO `sys_log` VALUES ('4532', '4', '2018-05-17 15:07:23', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4533', '4', '2018-05-17 15:07:40', '40', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:deleteFixed,[参数]:null', '/JCExpress/fixed/list/1');
+INSERT INTO `sys_log` VALUES ('4534', '4', '2018-05-17 15:07:43', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4535', '4', '2018-05-17 15:07:47', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:null', '/JCExpress/staff/list/staffList');
+INSERT INTO `sys_log` VALUES ('4536', '4', '2018-05-17 15:07:48', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/staff/list/');
+INSERT INTO `sys_log` VALUES ('4537', '4', '2018-05-17 15:07:53', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:createStaff,[参数]:null', '/JCExpress/staff/list/createStaff');
+INSERT INTO `sys_log` VALUES ('4538', '4', '2018-05-17 15:08:47', '47', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:createStaff,[参数]:name=橄榄&telephone=13600002222&status=1&', '/JCExpress/staff/list');
+INSERT INTO `sys_log` VALUES ('4539', '4', '2018-05-17 15:08:52', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/staff/list/');
+INSERT INTO `sys_log` VALUES ('4540', '4', '2018-05-17 15:09:03', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4541', '4', '2018-05-17 15:09:04', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4542', '4', '2018-05-17 15:10:14', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:grade,[参数]:null', '/JCExpress/system/user/grade/view');
+INSERT INTO `sys_log` VALUES ('4543', '4', '2018-05-17 15:10:14', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4544', '4', '2018-05-17 15:14:18', '87', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:deleteUser,[参数]:null', '/JCExpress/user/list/2');
+INSERT INTO `sys_log` VALUES ('4545', '4', '2018-05-17 15:14:21', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4546', '4', '2018-05-17 15:14:32', '29', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/3/frozenUser');
+INSERT INTO `sys_log` VALUES ('4547', '4', '2018-05-17 15:14:34', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4548', '4', '2018-05-17 15:14:42', '1', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:record,[参数]:null', '/JCExpress/system/user/record/view');
+INSERT INTO `sys_log` VALUES ('4549', '4', '2018-05-17 15:14:43', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4550', '4', '2018-05-17 15:15:08', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4551', '4', '2018-05-17 15:15:17', '43', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/3/frozenUser');
+INSERT INTO `sys_log` VALUES ('4552', '4', '2018-05-17 15:15:19', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4553', '4', '2018-05-17 15:15:48', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4554', '4', '2018-05-17 15:15:49', '24', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4555', '4', '2018-05-17 15:16:00', '50', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980614/2/detail');
+INSERT INTO `sys_log` VALUES ('4556', '4', '2018-05-17 15:16:40', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4557', '4', '2018-05-17 15:16:41', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4558', '4', '2018-05-17 15:17:23', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysGoodscontroller,[方法]:query,[参数]:null', '/JCExpress/system/goods/query');
+INSERT INTO `sys_log` VALUES ('4559', '4', '2018-05-17 15:17:23', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4560', '4', '2018-05-17 15:18:45', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysGoodscontroller,[方法]:order,[参数]:null', '/JCExpress/system/goods/order');
+INSERT INTO `sys_log` VALUES ('4561', '4', '2018-05-17 15:18:48', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:null', '/JCExpress/car/list/carList');
+INSERT INTO `sys_log` VALUES ('4562', '4', '2018-05-17 15:18:49', '68', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4563', '4', '2018-05-17 15:18:54', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:null', '/JCExpress/driver/list/driverList');
+INSERT INTO `sys_log` VALUES ('4564', '4', '2018-05-17 15:18:54', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4565', '4', '2018-05-17 15:18:59', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4566', '4', '2018-05-17 15:20:20', '38', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:car_number=川A11111&car_type=大型挂车&car_model=HQ&car_load=1000&driver_id=2&status=1&', '/JCExpress/car/list');
+INSERT INTO `sys_log` VALUES ('4567', '4', '2018-05-17 15:20:25', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4568', '4', '2018-05-17 15:20:38', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4569', '4', '2018-05-17 15:21:17', '35', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:name=二狗子&telephone=13712341111&address=桥洞&status=1&', '/JCExpress/driver/list');
+INSERT INTO `sys_log` VALUES ('4570', '4', '2018-05-17 15:21:20', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4571', '4', '2018-05-17 15:21:30', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:druid,[参数]:null', '/JCExpress/system/version/druid');
+INSERT INTO `sys_log` VALUES ('4572', '4', '2018-05-17 15:21:31', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:show,[参数]:null', '/JCExpress/system/log/show');
+INSERT INTO `sys_log` VALUES ('4573', '4', '2018-05-17 15:21:32', '258', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=0&limit=20&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4574', '4', '2018-05-17 15:21:38', '30', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=0&limit=100&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4575', '4', '2018-05-17 15:21:58', '32', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=4500&limit=100&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4576', '4', '2018-05-17 15:22:05', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:swagger,[参数]:null', '/JCExpress/system/version/swagger-ui');
+INSERT INTO `sys_log` VALUES ('4577', '4', '2018-05-17 15:22:08', '1', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:view,[参数]:null', '/JCExpress/system/version/view');
+INSERT INTO `sys_log` VALUES ('4578', '4', '2018-05-17 15:22:11', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.menu.MenuController,[方法]:menuList,[参数]:null', '/JCExpress/system/menu/view');
+INSERT INTO `sys_log` VALUES ('4579', '4', '2018-05-17 15:22:17', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.menu.MenuController,[方法]:menuList,[参数]:null', '/JCExpress/system/menu/view');
+INSERT INTO `sys_log` VALUES ('4580', '4', '2018-05-17 15:22:21', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.menu.MenuController,[方法]:createMenu,[参数]:null', '/JCExpress/system/menu/1/createMenu');
+INSERT INTO `sys_log` VALUES ('4581', '4', '2018-05-17 15:23:51', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:updateFixed,[参数]:null', '/JCExpress/fixed/list/6/updateFixed');
+INSERT INTO `sys_log` VALUES ('4582', '4', '2018-05-17 15:23:59', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:updateRegion,[参数]:null', '/JCExpress/region/list/3301/updateRegion');
+INSERT INTO `sys_log` VALUES ('4583', '4', '2018-05-17 15:24:14', '2', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:updateOrganization,[参数]:null', '/JCExpress/organization/list/4/updateOrganization');
+INSERT INTO `sys_log` VALUES ('4584', '4', '2018-05-17 15:24:21', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:updatePartition,[参数]:null', '/JCExpress/partition/list/1/updatePartition');
+INSERT INTO `sys_log` VALUES ('4585', '4', '2018-05-17 15:24:29', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:updateRegion,[参数]:null', '/JCExpress/region/list/3301/updateRegion');
+INSERT INTO `sys_log` VALUES ('4586', '4', '2018-05-17 15:24:32', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=100&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4587', '4', '2018-05-17 15:24:34', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=100&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4588', '4', '2018-05-17 15:24:42', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:updateFixed,[参数]:null', '/JCExpress/fixed/list/8/updateFixed');
+INSERT INTO `sys_log` VALUES ('4589', '4', '2018-05-17 15:26:03', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:updateRegion,[参数]:null', '/JCExpress/region/list/1/updateRegion');
+INSERT INTO `sys_log` VALUES ('4590', '4', '2018-05-17 15:29:58', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4591', '4', '2018-05-17 15:30:07', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:null', '/JCExpress/driver/list/driverList');
+INSERT INTO `sys_log` VALUES ('4592', '4', '2018-05-17 15:30:07', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4593', '4', '2018-05-17 15:30:10', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4594', '4', '2018-05-17 15:32:51', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:createFixed,[参数]:null', '/JCExpress/fixed/list/createFixed');
+INSERT INTO `sys_log` VALUES ('4595', '4', '2018-05-17 15:32:55', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:updateFixed,[参数]:null', '/JCExpress/fixed/list/3/updateFixed');
+INSERT INTO `sys_log` VALUES ('4596', '4', '2018-05-17 15:33:08', '2', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:updateRegion,[参数]:null', '/JCExpress/region/list/1/updateRegion');
+INSERT INTO `sys_log` VALUES ('4597', '4', '2018-05-17 15:39:34', '200', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=5ann&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4598', '4', '2018-05-17 15:39:34', '127', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4599', '4', '2018-05-17 15:39:37', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:null', '/JCExpress/driver/list/driverList');
+INSERT INTO `sys_log` VALUES ('4600', '4', '2018-05-17 15:39:39', '42', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4601', '4', '2018-05-17 15:39:41', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4602', '4', '2018-05-17 15:39:55', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:updatedriver,[参数]:null', '/JCExpress/driver/list/1/updateDriver');
+INSERT INTO `sys_log` VALUES ('4603', '4', '2018-05-17 15:40:10', '89', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:updatedriver,[参数]:null', '/JCExpress/driver/list/1');
+INSERT INTO `sys_log` VALUES ('4604', '4', '2018-05-17 15:40:19', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4605', '4', '2018-05-17 15:40:32', '65', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:deletedriver,[参数]:null', '/JCExpress/driver/list/1');
+INSERT INTO `sys_log` VALUES ('4606', '4', '2018-05-17 15:56:41', '258', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=8654&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4607', '4', '2018-05-17 15:56:41', '93', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4608', '4', '2018-05-17 15:56:47', '25', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4609', '4', '2018-05-17 15:56:49', '31', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4610', '4', '2018-05-17 15:57:04', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4611', '4', '2018-05-17 15:58:36', '116', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:login_name=qiuchacha&password=123123&user_name=王叉叉&email=789789@qq.com&telephone=13622228888&sex=1&status=1&roleId=6&organization_id=4&', '/JCExpress/user/list');
+INSERT INTO `sys_log` VALUES ('4612', '4', '2018-05-17 15:58:50', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4613', '4', '2018-05-17 15:59:18', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4614', '4', '2018-05-17 15:59:22', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/5/updateUser');
+INSERT INTO `sys_log` VALUES ('4615', '4', '2018-05-17 15:59:31', '73', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/5');
+INSERT INTO `sys_log` VALUES ('4616', '4', '2018-05-17 15:59:45', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4617', '4', '2018-05-17 16:00:57', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleList,[参数]:null', '/JCExpress/role/list/roleList');
+INSERT INTO `sys_log` VALUES ('4618', '4', '2018-05-17 16:00:57', '26', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4619', '4', '2018-05-17 16:01:02', '143', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:null', '/JCExpress/role/list/createRole');
+INSERT INTO `sys_log` VALUES ('4620', '4', '2018-05-17 16:02:42', '219', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:role_name=车辆管理员&role_sign=caradmin&status=1&remarks=守车的大爷&menuIds=1,2,8,9,10,94,95,101,&', '/JCExpress/role/list');
+INSERT INTO `sys_log` VALUES ('4621', '4', '2018-05-17 16:02:49', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4622', '4', '2018-05-17 16:03:18', '23', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4623', '4', '2018-05-17 16:03:18', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4624', '4', '2018-05-17 16:04:00', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4625', '4', '2018-05-17 16:04:01', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4626', '4', '2018-05-17 16:04:21', '23', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980616/2/detail');
+INSERT INTO `sys_log` VALUES ('4627', '4', '2018-05-17 16:04:48', '19', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980616/2/detail');
+INSERT INTO `sys_log` VALUES ('4628', '4', '2018-05-17 16:11:57', '133', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=gcey&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4629', '4', '2018-05-17 16:11:57', '94', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4630', '4', '2018-05-17 16:12:04', '27', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4631', '4', '2018-05-17 16:12:06', '50', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4632', '4', '2018-05-17 16:12:23', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4633', '4', '2018-05-17 16:12:24', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4634', '4', '2018-05-17 16:12:55', '145', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980661/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4635', '4', '2018-05-17 16:14:26', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/Ex19980661/updateOrder');
+INSERT INTO `sys_log` VALUES ('4636', '4', '2018-05-17 16:15:08', '116', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/updateOrder/Ex19980661');
+INSERT INTO `sys_log` VALUES ('4637', '4', '2018-05-17 16:15:15', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4638', '4', '2018-05-17 16:15:29', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4639', '4', '2018-05-17 16:15:42', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980614/2/detail');
+INSERT INTO `sys_log` VALUES ('4640', '4', '2018-05-17 16:16:05', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980619/1/detail');
+INSERT INTO `sys_log` VALUES ('4641', '4', '2018-05-17 16:16:25', '61', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980667/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4642', '4', '2018-05-17 16:16:30', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4643', '4', '2018-05-17 16:16:33', '81', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980619/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4644', '4', '2018-05-17 16:16:35', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4645', '4', '2018-05-17 16:16:59', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980619/1/detail');
+INSERT INTO `sys_log` VALUES ('4646', '4', '2018-05-17 16:17:10', '80', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980668/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4647', '4', '2018-05-17 16:17:15', '63', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980669/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4648', '4', '2018-05-17 16:17:18', '53', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980668/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4649', '4', '2018-05-17 16:17:20', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4650', '4', '2018-05-17 16:17:23', '60', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980662/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4651', '4', '2018-05-17 16:17:26', '65', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980663/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4652', '4', '2018-05-17 16:17:29', '61', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980664/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4653', '4', '2018-05-17 16:17:31', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4654', '4', '2018-05-17 16:17:34', '48', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980665/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4655', '4', '2018-05-17 16:17:37', '65', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980666/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4656', '4', '2018-05-17 16:17:39', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4657', '4', '2018-05-17 16:17:45', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4658', '4', '2018-05-17 16:23:38', '75', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=y46d&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4659', '4', '2018-05-17 16:23:39', '67', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4660', '4', '2018-05-17 16:23:45', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4661', '4', '2018-05-17 16:23:45', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4662', '4', '2018-05-17 16:23:50', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/Ex19980628/updateOrder');
+INSERT INTO `sys_log` VALUES ('4663', '4', '2018-05-17 16:24:06', '59', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/updateOrder/Ex19980628');
+INSERT INTO `sys_log` VALUES ('4664', '4', '2018-05-17 16:24:10', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4665', '4', '2018-05-17 16:24:21', '45', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980628/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4666', '4', '2018-05-17 16:24:26', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4667', '4', '2018-05-17 16:24:29', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4668', '4', '2018-05-17 16:24:29', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4669', '4', '2018-05-17 16:37:53', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980663/2/detail');
+INSERT INTO `sys_log` VALUES ('4670', '4', '2018-05-17 16:38:08', '40', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4671', '4', '2018-05-17 16:44:05', '147', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=2x6x&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4672', '4', '2018-05-17 16:44:05', '107', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4673', '4', '2018-05-17 16:45:13', '27', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4674', '4', '2018-05-17 16:45:15', '52', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4675', '4', '2018-05-17 16:48:13', '116', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=em5e&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4676', '4', '2018-05-17 16:48:13', '110', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4677', '4', '2018-05-17 16:48:21', '28', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4678', '4', '2018-05-17 16:48:23', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4679', '4', '2018-05-17 16:48:29', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4680', '4', '2018-05-17 16:48:32', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4681', '4', '2018-05-17 16:48:32', '47', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4682', '4', '2018-05-17 17:02:06', '180', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=wce3&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4683', '4', '2018-05-17 17:02:06', '98', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4684', '4', '2018-05-17 17:03:50', '27', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4685', '4', '2018-05-17 17:03:52', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4686', '4', '2018-05-17 17:03:57', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4687', '4', '2018-05-17 17:03:57', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4688', '4', '2018-05-17 17:04:00', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4689', '4', '2018-05-17 17:04:01', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4690', '4', '2018-05-17 17:04:12', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4691', '4', '2018-05-17 17:05:18', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4692', '4', '2018-05-17 17:05:18', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4693', '4', '2018-05-17 17:11:46', '198', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=g67m&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4694', '4', '2018-05-17 17:11:47', '123', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4695', '4', '2018-05-17 17:11:53', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4696', '4', '2018-05-17 17:11:55', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4697', '4', '2018-05-17 17:12:31', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:null', '/JCExpress/user/info/showInfo');
+INSERT INTO `sys_log` VALUES ('4698', '4', '2018-05-17 17:12:32', '123', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4699', '4', '2018-05-17 17:12:50', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4700', '4', '2018-05-17 17:12:51', '71', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4701', '4', '2018-05-17 18:05:13', '216', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=nd52&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4702', '4', '2018-05-17 18:05:13', '93', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4703', '4', '2018-05-17 18:05:18', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4704', '4', '2018-05-17 18:05:19', '69', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4705', '4', '2018-05-17 18:05:26', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/5/updateUser');
+INSERT INTO `sys_log` VALUES ('4706', '4', '2018-05-17 18:06:31', '139', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:_method=put&login_name=testput&user_name=小圈圈&email=123123@qq.com&telephone=13858585858&sex=2&roleId=7&organization_id=3&', '/JCExpress/user/list/5');
+INSERT INTO `sys_log` VALUES ('4707', '4', '2018-05-17 18:06:37', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4708', '4', '2018-05-17 18:37:24', '88', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=nnnp&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4709', '4', '2018-05-17 18:37:24', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4710', '4', '2018-05-17 18:37:27', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:null', '/JCExpress/driver/list/driverList');
+INSERT INTO `sys_log` VALUES ('4711', '4', '2018-05-17 18:37:28', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4712', '4', '2018-05-17 18:37:30', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4713', '4', '2018-05-17 18:37:57', '75', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:name=翔哥&telephone=13999999999&address=河边&status=1&', '/JCExpress/driver/list');
+INSERT INTO `sys_log` VALUES ('4714', '4', '2018-05-17 18:38:32', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4715', '4', '2018-05-17 18:47:11', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4716', '4', '2018-05-17 18:47:11', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4717', '4', '2018-05-17 18:47:13', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4718', '4', '2018-05-17 18:48:12', '97', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:login_name=aaaaa&password=123123&user_name=啊啊啊啊啊&email=123123@qq.com&telephone=13500000000&sex=0&status=1&roleId=7&organization_id=2&', '/JCExpress/user/list');
+INSERT INTO `sys_log` VALUES ('4719', '4', '2018-05-17 18:48:19', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4720', '4', '2018-05-17 18:48:32', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4721', '4', '2018-05-17 18:49:33', '21', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/4/updateUser');
+INSERT INTO `sys_log` VALUES ('4722', '4', '2018-05-17 18:49:40', '135', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:_method=put&login_name=admin&user_name=qsj&email=13103779727@163.com&telephone=13293889545&sex=2&status=1&roleId=1&organization_id=2&', '/JCExpress/user/list/4');
+INSERT INTO `sys_log` VALUES ('4723', '4', '2018-05-17 18:49:45', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4724', '4', '2018-05-17 19:00:21', '132', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=edwx&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4725', '4', '2018-05-17 19:00:21', '117', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4726', '4', '2018-05-17 19:00:33', '24', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleList,[参数]:null', '/JCExpress/role/list/roleList');
+INSERT INTO `sys_log` VALUES ('4727', '4', '2018-05-17 19:00:34', '31', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4728', '4', '2018-05-17 19:00:43', '251', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/1/updateRole');
+INSERT INTO `sys_log` VALUES ('4729', '4', '2018-05-17 19:01:03', '263', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:_method=put&role_name=超级管理员&role_sign=admin&status=1&remarks=你啥都能干&menuIds=1,2,8,9,10,3,4,5,6,7,69,11,12,13,14,15,83,86,87,88,89,91,90,115,116,117,118,16,17,18,19,20,21,70,22,23,24,25,26,27,28,29,30,31,32,72,33,34,35,36,37,107,38,39,40,41,42,111,94,95,101,112,113,114,65,66,74,75,76,77,78,108,109,110,93,84,85,&', '/JCExpress/role/list/1');
+INSERT INTO `sys_log` VALUES ('4730', '4', '2018-05-17 19:01:08', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4731', '4', '2018-05-17 19:01:17', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:null', '/JCExpress/user/info/showInfo');
+INSERT INTO `sys_log` VALUES ('4732', '4', '2018-05-17 19:01:18', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4733', '4', '2018-05-17 19:01:18', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4734', '4', '2018-05-17 19:01:19', '29', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4735', '4', '2018-05-17 19:01:27', '32', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=100&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4736', '4', '2018-05-17 19:01:39', '19', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4737', '4', '2018-05-17 19:01:52', '34', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=100&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4738', '4', '2018-05-17 19:02:14', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4739', '4', '2018-05-17 19:02:19', '33', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/5/updateRole');
+INSERT INTO `sys_log` VALUES ('4740', '4', '2018-05-17 19:02:41', '215', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:_method=put&role_name=街道管理员&role_sign=gaiadmin&status=1&remarks=我是测试的&menuIds=1,2,8,9,10,3,4,5,6,7,69,11,12,13,14,15,83,86,87,88,89,91,90,16,17,18,19,20,21,70,22,23,24,25,26,27,28,29,30,31,32,72,33,34,35,36,37,107,38,39,40,41,42,&', '/JCExpress/role/list/5');
+INSERT INTO `sys_log` VALUES ('4741', '4', '2018-05-17 19:02:45', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4742', '4', '2018-05-17 19:02:51', '26', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:OrganizationList,[参数]:null', '/JCExpress/organization/list/organizationList');
+INSERT INTO `sys_log` VALUES ('4743', '4', '2018-05-17 19:02:52', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4744', '4', '2018-05-17 19:02:54', '22', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:regionList,[参数]:null', '/JCExpress/region/list/regionList');
+INSERT INTO `sys_log` VALUES ('4745', '4', '2018-05-17 19:02:55', '60', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:null', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4746', '4', '2018-05-17 19:02:55', '97', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=20&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4747', '4', '2018-05-17 19:03:02', '39', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=100&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4748', '4', '2018-05-17 19:08:26', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4749', '4', '2018-05-17 19:08:29', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:regionList,[参数]:null', '/JCExpress/region/list/regionList');
+INSERT INTO `sys_log` VALUES ('4750', '4', '2018-05-17 19:08:29', '12', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:null', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4751', '4', '2018-05-17 19:08:29', '29', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=20&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4752', '4', '2018-05-17 19:15:10', '153', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=6575&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4753', '4', '2018-05-17 19:15:11', '158', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4754', '4', '2018-05-17 19:15:16', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4755', '4', '2018-05-17 19:15:16', '48', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4756', '4', '2018-05-17 19:15:40', '58', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=fwwe&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4757', '4', '2018-05-17 19:15:40', '28', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4758', '4', '2018-05-17 19:15:44', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4759', '4', '2018-05-17 19:15:45', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4760', '4', '2018-05-17 19:15:56', '24', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleList,[参数]:null', '/JCExpress/role/list/roleList');
+INSERT INTO `sys_log` VALUES ('4761', '4', '2018-05-17 19:15:56', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4762', '4', '2018-05-17 19:16:07', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:druid,[参数]:null', '/JCExpress/system/version/druid');
+INSERT INTO `sys_log` VALUES ('4763', '4', '2018-05-17 19:16:10', '64', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.menu.MenuController,[方法]:menuList,[参数]:null', '/JCExpress/system/menu/view');
+INSERT INTO `sys_log` VALUES ('4764', '4', '2018-05-17 19:16:11', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:show,[参数]:null', '/JCExpress/system/log/show');
+INSERT INTO `sys_log` VALUES ('4765', '4', '2018-05-17 19:16:13', '311', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=0&limit=20&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4766', '4', '2018-05-17 19:16:29', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4767', '4', '2018-05-17 19:16:29', '38', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4768', '4', '2018-05-17 19:16:48', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:grade,[参数]:null', '/JCExpress/system/user/grade/view');
+INSERT INTO `sys_log` VALUES ('4769', '4', '2018-05-17 19:16:48', '23', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4770', '4', '2018-05-17 19:16:51', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:record,[参数]:null', '/JCExpress/system/user/record/view');
+INSERT INTO `sys_log` VALUES ('4771', '4', '2018-05-17 19:16:51', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4772', '4', '2018-05-17 19:17:27', '15', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:sort=last_login_ip&order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4773', '4', '2018-05-17 19:17:31', '23', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:null', '/JCExpress/user/info/showInfo');
+INSERT INTO `sys_log` VALUES ('4774', '4', '2018-05-17 19:17:31', '35', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4775', '4', '2018-05-17 19:43:00', '106', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:login,[参数]:userName=admin&Password=admin&jcaptchaCode=yf27&', '/JCExpress/loginh');
+INSERT INTO `sys_log` VALUES ('4776', '4', '2018-05-17 19:43:00', '55', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.login.LoginController,[方法]:menuList,[参数]:null', '/JCExpress/indexh');
+INSERT INTO `sys_log` VALUES ('4777', '4', '2018-05-17 19:44:18', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:null', '/JCExpress/user/info/showInfo');
+INSERT INTO `sys_log` VALUES ('4778', '4', '2018-05-17 19:44:19', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:showUserInfo,[参数]:sort=login_time&order=desc&offset=0&limit=20&', '/JCExpress/user/info/showLoginLog');
+INSERT INTO `sys_log` VALUES ('4779', '4', '2018-05-17 19:45:10', '95', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:modifyPassword,[参数]:newPassword=123123123&confirmPwd=123123123&nowPassword=admin&', '/JCExpress/user/info/modifyPassword');
+INSERT INTO `sys_log` VALUES ('4780', '4', '2018-05-17 19:45:40', '4', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:modifyPassword,[参数]:newPassword=1111&confirmPwd=1111&nowPassword=12312312&', '/JCExpress/user/info/modifyPassword');
+INSERT INTO `sys_log` VALUES ('4781', '4', '2018-05-17 19:46:01', '56', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:modifyPassword,[参数]:newPassword=admin&confirmPwd=admin&nowPassword=123123123&', '/JCExpress/user/info/modifyPassword');
+INSERT INTO `sys_log` VALUES ('4782', '4', '2018-05-17 19:46:33', '48', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserInfoController,[方法]:infoEdit,[参数]:login_name=admin&user_name=23333333&sex=1&age=18&telephone=13400002222&email=13103779727@163.com&', '/JCExpress/user/info/infoEdit');
+INSERT INTO `sys_log` VALUES ('4783', '4', '2018-05-17 19:46:42', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:userList,[参数]:null', '/JCExpress/user/list/userList');
+INSERT INTO `sys_log` VALUES ('4784', '4', '2018-05-17 19:46:43', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4785', '4', '2018-05-17 19:47:10', '90', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:null', '/JCExpress/user/list/5/updateUser');
+INSERT INTO `sys_log` VALUES ('4786', '4', '2018-05-17 19:47:56', '144', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:updateUser,[参数]:_method=put&login_name=testput1&user_name=小圈圈1&email=111111@qq.com&telephone=13800002222&sex=2&status=1&roleId=1&organization_id=2&', '/JCExpress/user/list/5');
+INSERT INTO `sys_log` VALUES ('4787', '4', '2018-05-17 19:48:04', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4788', '4', '2018-05-17 19:48:06', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4789', '4', '2018-05-17 19:48:21', '52', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/5/frozenUser');
+INSERT INTO `sys_log` VALUES ('4790', '4', '2018-05-17 19:48:26', '10', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4791', '4', '2018-05-17 19:48:49', '98', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:deleteUser,[参数]:null', '/JCExpress/user/list/3');
+INSERT INTO `sys_log` VALUES ('4792', '4', '2018-05-17 19:48:53', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4793', '4', '2018-05-17 19:48:57', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:roleList,[参数]:null', '/JCExpress/role/list/roleList');
+INSERT INTO `sys_log` VALUES ('4794', '4', '2018-05-17 19:48:58', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4795', '4', '2018-05-17 19:49:13', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:null', '/JCExpress/user/list/createUser');
+INSERT INTO `sys_log` VALUES ('4796', '4', '2018-05-17 19:50:40', '143', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:createUser,[参数]:login_name=xiaozhuzh2&password=123123&user_name=小猪佩奇&email=qwe@qwe.com&telephone=13800002222&sex=2&status=0&roleId=7&organization_id=19&', '/JCExpress/user/list');
+INSERT INTO `sys_log` VALUES ('4797', '4', '2018-05-17 19:50:44', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4798', '4', '2018-05-17 19:50:53', '29', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:frozenUser,[参数]:null', '/JCExpress/user/list/8/frozenUser');
+INSERT INTO `sys_log` VALUES ('4799', '4', '2018-05-17 19:50:56', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4800', '4', '2018-05-17 19:51:33', '41', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/6/updateRole');
+INSERT INTO `sys_log` VALUES ('4801', '4', '2018-05-17 19:52:56', '195', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:_method=put&role_name=订单管理员&role_sign=orderadmin&status=1&remarks=普通订单管理&menuIds=1,27,28,29,30,31,32,72,33,34,35,36,37,107,38,39,40,41,42,111,&', '/JCExpress/role/list/6');
+INSERT INTO `sys_log` VALUES ('4802', '4', '2018-05-17 19:53:02', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4803', '4', '2018-05-17 19:53:11', '46', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:frozenRole,[参数]:null', '/JCExpress/role/list/6/frozenRole');
+INSERT INTO `sys_log` VALUES ('4804', '4', '2018-05-17 19:53:20', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4805', '4', '2018-05-17 19:53:21', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4806', '4', '2018-05-17 19:53:23', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4807', '4', '2018-05-17 19:53:33', '33', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:null', '/JCExpress/role/list/createRole');
+INSERT INTO `sys_log` VALUES ('4808', '4', '2018-05-17 19:53:59', '102', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:createRole,[参数]:role_name=123123&role_sign=123123&status=0&remarks=马上删除&menuIds=1,2,8,9,10,3,4,5,6,7,69,11,12,13,14,15,83,86,87,88,89,91,90,115,116,117,118,112,113,114,&', '/JCExpress/role/list');
+INSERT INTO `sys_log` VALUES ('4809', '4', '2018-05-17 19:54:04', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4810', '4', '2018-05-17 19:54:13', '82', 'DELETE', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:updateRole,[参数]:null', '/JCExpress/role/list/8');
+INSERT INTO `sys_log` VALUES ('4811', '4', '2018-05-17 19:54:15', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.role.RoleListController,[方法]:allRoles,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/role/list/');
+INSERT INTO `sys_log` VALUES ('4812', '4', '2018-05-17 19:54:18', '13', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:OrganizationList,[参数]:null', '/JCExpress/organization/list/organizationList');
+INSERT INTO `sys_log` VALUES ('4813', '4', '2018-05-17 19:54:18', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.organization.OrganizationController,[方法]:organizations,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/organization/list/');
+INSERT INTO `sys_log` VALUES ('4814', '4', '2018-05-17 19:54:25', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:regionList,[参数]:null', '/JCExpress/region/list/regionList');
+INSERT INTO `sys_log` VALUES ('4815', '4', '2018-05-17 19:54:26', '95', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:null', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4816', '4', '2018-05-17 19:54:26', '42', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=20&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4817', '4', '2018-05-17 19:54:29', '17', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=110000&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4818', '4', '2018-05-17 19:54:30', '44', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=110100&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4819', '4', '2018-05-17 19:54:34', '10', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=120000&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4820', '4', '2018-05-17 19:54:37', '43', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=120100&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4821', '4', '2018-05-17 19:54:40', '30', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=350000&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4822', '4', '2018-05-17 19:54:41', '40', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:select,[参数]:areaCode=350100&', '/JCExpress/region/list/select');
+INSERT INTO `sys_log` VALUES ('4823', '4', '2018-05-17 19:54:56', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=10&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4824', '4', '2018-05-17 19:54:58', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=25&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4825', '4', '2018-05-17 19:55:00', '19', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=50&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4826', '4', '2018-05-17 19:55:14', '62', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:FrozenRegin,[参数]:null', '/JCExpress/region/list/1/frozenRegin');
+INSERT INTO `sys_log` VALUES ('4827', '4', '2018-05-17 19:55:18', '18', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.region.RegionListController,[方法]:selectList,[参数]:sort=order_num&order=asc&offset=0&limit=50&', '/JCExpress/region/list/0');
+INSERT INTO `sys_log` VALUES ('4828', '4', '2018-05-17 19:55:28', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:partitionList,[参数]:null', '/JCExpress/partition/list/partitionList');
+INSERT INTO `sys_log` VALUES ('4829', '4', '2018-05-17 19:55:29', '73', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.partition.PartitionListController,[方法]:partitionList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/partition/list/');
+INSERT INTO `sys_log` VALUES ('4830', '4', '2018-05-17 19:56:55', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:null', '/JCExpress/fixed/list/fixedList');
+INSERT INTO `sys_log` VALUES ('4831', '4', '2018-05-17 19:56:55', '25', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4832', '4', '2018-05-17 19:57:07', '20', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:frozenFixed,[参数]:null', '/JCExpress/fixed/list/4/frozenFixed');
+INSERT INTO `sys_log` VALUES ('4833', '4', '2018-05-17 19:57:10', '14', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.fixed.FixedController,[方法]:fixedList,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/fixed/list/');
+INSERT INTO `sys_log` VALUES ('4834', '4', '2018-05-17 19:57:19', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:null', '/JCExpress/staff/list/staffList');
+INSERT INTO `sys_log` VALUES ('4835', '4', '2018-05-17 19:57:19', '7', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/staff/list/');
+INSERT INTO `sys_log` VALUES ('4836', '4', '2018-05-17 19:57:29', '51', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:frozenStaff,[参数]:null', '/JCExpress/staff/list/3/frozenStaff');
+INSERT INTO `sys_log` VALUES ('4837', '4', '2018-05-17 19:57:32', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/staff/list/');
+INSERT INTO `sys_log` VALUES ('4838', '4', '2018-05-17 19:57:36', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:createStaff,[参数]:null', '/JCExpress/staff/list/createStaff');
+INSERT INTO `sys_log` VALUES ('4839', '4', '2018-05-17 19:57:56', '103', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:createStaff,[参数]:name=小李子&telephone=13777778888&status=1&', '/JCExpress/staff/list');
+INSERT INTO `sys_log` VALUES ('4840', '4', '2018-05-17 19:58:01', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.staff.StaffListController,[方法]:staffList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/staff/list/');
+INSERT INTO `sys_log` VALUES ('4841', '4', '2018-05-17 19:58:09', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:userList,[参数]:null', '/JCExpress/customer/list/customerList');
+INSERT INTO `sys_log` VALUES ('4842', '4', '2018-05-17 19:58:09', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.customer.CustomerListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/customer/list/');
+INSERT INTO `sys_log` VALUES ('4843', '4', '2018-05-17 19:58:52', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:grade,[参数]:null', '/JCExpress/system/user/grade/view');
+INSERT INTO `sys_log` VALUES ('4844', '4', '2018-05-17 19:58:52', '17', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4845', '4', '2018-05-17 19:59:19', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysUserController,[方法]:record,[参数]:null', '/JCExpress/system/user/record/view');
+INSERT INTO `sys_log` VALUES ('4846', '4', '2018-05-17 19:59:19', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4847', '4', '2018-05-17 19:59:31', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4848', '4', '2018-05-17 19:59:31', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4849', '4', '2018-05-17 20:00:08', '39', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980629/1/detail');
+INSERT INTO `sys_log` VALUES ('4850', '4', '2018-05-17 20:00:27', '41', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderDetail,[参数]:null', '/JCExpress/order/Ex19980667/2/detail');
+INSERT INTO `sys_log` VALUES ('4851', '4', '2018-05-17 20:00:39', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/audit');
+INSERT INTO `sys_log` VALUES ('4852', '4', '2018-05-17 20:00:39', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4853', '4', '2018-05-17 20:00:55', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:sort=9&order=desc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4854', '4', '2018-05-17 20:00:57', '11', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/Ex19980629/updateOrder');
+INSERT INTO `sys_log` VALUES ('4855', '4', '2018-05-17 20:01:31', '81', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:_method=put&send_name=小猪猪&send_telephone=13400002222&send_area=浙江省嘉兴市嘉善县&send_address=一条大路&receive_name=小喵喵&receive_telephone=17822223333&receive_area=福建省三明市清流县&receive_address=一条小路&order_weight=2kg&order_type=服饰&remarks=没得问题，通过&', '/JCExpress/order/updateOrder/Ex19980629');
+INSERT INTO `sys_log` VALUES ('4856', '4', '2018-05-17 20:01:37', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:sort=9&order=desc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4857', '4', '2018-05-17 20:01:41', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:updateOrder,[参数]:null', '/JCExpress/order/Ex19980629/updateOrder');
+INSERT INTO `sys_log` VALUES ('4858', '4', '2018-05-17 20:01:53', '61', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:null', '/JCExpress/order/Ex19980629/adoptOrder');
+INSERT INTO `sys_log` VALUES ('4859', '4', '2018-05-17 20:01:57', '4', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderAudit,[参数]:sort=9&order=desc&offset=0&limit=20&', '/JCExpress/order/auditOrder');
+INSERT INTO `sys_log` VALUES ('4860', '4', '2018-05-17 20:02:03', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:null', '/JCExpress/order/list');
+INSERT INTO `sys_log` VALUES ('4861', '4', '2018-05-17 20:02:03', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.order.OrderController,[方法]:orderList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/order/allOrder');
+INSERT INTO `sys_log` VALUES ('4862', '4', '2018-05-17 20:02:17', '8', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysGoodscontroller,[方法]:query,[参数]:null', '/JCExpress/system/goods/query');
+INSERT INTO `sys_log` VALUES ('4863', '4', '2018-05-17 20:02:17', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.user.UserListController,[方法]:findAllUser,[参数]:order=desc&offset=0&limit=20&', '/JCExpress/user/list/');
+INSERT INTO `sys_log` VALUES ('4864', '4', '2018-05-17 20:02:35', '1', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysGoodscontroller,[方法]:order,[参数]:null', '/JCExpress/system/goods/order');
+INSERT INTO `sys_log` VALUES ('4865', '4', '2018-05-17 20:02:38', '19', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:null', '/JCExpress/car/list/carList');
+INSERT INTO `sys_log` VALUES ('4866', '4', '2018-05-17 20:02:39', '37', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4867', '4', '2018-05-17 20:02:48', '3', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:null', '/JCExpress/car/list/createCar');
+INSERT INTO `sys_log` VALUES ('4868', '4', '2018-05-17 20:03:50', '93', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:createcar,[参数]:car_number=粤B12345&car_type=面包车&car_model=五菱之光&car_load=2&driver_id=4&status=1&', '/JCExpress/car/list');
+INSERT INTO `sys_log` VALUES ('4869', '4', '2018-05-17 20:03:55', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4870', '4', '2018-05-17 20:04:16', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:null', '/JCExpress/driver/list/driverList');
+INSERT INTO `sys_log` VALUES ('4871', '4', '2018-05-17 20:04:16', '6', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4872', '4', '2018-05-17 20:04:22', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:null', '/JCExpress/driver/list/createDriver');
+INSERT INTO `sys_log` VALUES ('4873', '4', '2018-05-17 20:04:50', '80', 'POST', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:createdriver,[参数]:name=老司机&telephone=13666666666&address=乡下&status=1&', '/JCExpress/driver/list');
+INSERT INTO `sys_log` VALUES ('4874', '4', '2018-05-17 20:04:55', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.driver.DriverListController,[方法]:driverList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/driver/list/');
+INSERT INTO `sys_log` VALUES ('4875', '4', '2018-05-17 20:05:16', '5', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:updatecar,[参数]:null', '/JCExpress/car/list/1/updateCar');
+INSERT INTO `sys_log` VALUES ('4876', '4', '2018-05-17 20:05:22', '41', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:updatecar,[参数]:_method=put&car_number=豫R88888&car_type=轻型货车&car_model=HQ&car_load=12&driver_id=5&status=1&', '/JCExpress/car/list/1');
+INSERT INTO `sys_log` VALUES ('4877', '4', '2018-05-17 20:05:26', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4878', '4', '2018-05-17 20:05:38', '29', 'PUT', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:frozencar,[参数]:null', '/JCExpress/car/list/2/frozenCar');
+INSERT INTO `sys_log` VALUES ('4879', '4', '2018-05-17 20:05:40', '9', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.car.CarListController,[方法]:carList,[参数]:order=asc&offset=0&limit=20&', '/JCExpress/car/list/');
+INSERT INTO `sys_log` VALUES ('4880', '4', '2018-05-17 20:05:46', '12', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysInfoController,[方法]:punish,[参数]:null', '/JCExpress/system/info/punish');
+INSERT INTO `sys_log` VALUES ('4881', '4', '2018-05-17 20:05:49', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysInfoController,[方法]:complaint,[参数]:null', '/JCExpress/system/info/complaint');
+INSERT INTO `sys_log` VALUES ('4882', '4', '2018-05-17 20:05:51', '16', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.menu.MenuController,[方法]:menuList,[参数]:null', '/JCExpress/system/menu/view');
+INSERT INTO `sys_log` VALUES ('4883', '4', '2018-05-17 20:06:52', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:druid,[参数]:null', '/JCExpress/system/version/druid');
+INSERT INTO `sys_log` VALUES ('4884', '4', '2018-05-17 20:06:55', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:show,[参数]:null', '/JCExpress/system/log/show');
+INSERT INTO `sys_log` VALUES ('4885', '4', '2018-05-17 20:06:55', '212', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=0&limit=20&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4886', '4', '2018-05-17 20:07:06', '20', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.log.LogController,[方法]:logList,[参数]:sort=log_id&order=desc&offset=0&limit=100&', '/JCExpress/system/log/');
+INSERT INTO `sys_log` VALUES ('4887', '4', '2018-05-17 20:07:57', '0', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:swagger,[参数]:null', '/JCExpress/system/version/swagger-ui');
+INSERT INTO `sys_log` VALUES ('4888', '4', '2018-05-17 20:07:59', '1', 'GET', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', '192.168.5.100', '[类名]:com.qsj.controller.sysUserController.sysVersionController,[方法]:view,[参数]:null', '/JCExpress/system/version/view');
 
 -- ----------------------------
 -- Table structure for `sys_notice`
@@ -8194,13 +8737,14 @@ CREATE TABLE `sys_partition` (
   `village` varchar(30) DEFAULT NULL COMMENT '区',
   `fixed_id` int(11) DEFAULT NULL COMMENT '定区id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_partition
 -- ----------------------------
 INSERT INTO `sys_partition` VALUES ('1', 'FQ001', '城关镇', '0', '凤瑞路110号', '1', '410000', '411300', '411322', '1');
 INSERT INTO `sys_partition` VALUES ('4', 'FQ002', '城关镇', '1', '人民路110号', '1', '410000', '411300', '411322', '1');
+INSERT INTO `sys_partition` VALUES ('5', 'FQ003', '坏滴', '1', '123123', '1', '510000', '510100', '510104', null);
 
 -- ----------------------------
 -- Table structure for `t_driver`
@@ -8213,13 +8757,15 @@ CREATE TABLE `t_driver` (
   `address` varchar(30) DEFAULT NULL COMMENT '司机住址',
   `status` varchar(1) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_driver
 -- ----------------------------
-INSERT INTO `t_driver` VALUES ('1', '王永兴', '13103779727', '河南省南阳市方城县公安局', '1');
 INSERT INTO `t_driver` VALUES ('2', '王子', '13103779727', '河南省南阳市方城县西关医院', '1');
+INSERT INTO `t_driver` VALUES ('3', '二狗子', '13712341111', '桥洞', '1');
+INSERT INTO `t_driver` VALUES ('4', '翔哥', '13999999999', '河边', '1');
+INSERT INTO `t_driver` VALUES ('5', '老司机', '13666666666', '乡下', '1');
 
 -- ----------------------------
 -- Table structure for `t_menu`
@@ -8343,16 +8889,16 @@ CREATE TABLE `t_organization` (
   `update_by` varchar(20) DEFAULT NULL COMMENT '更新者',
   `remarks` varchar(50) DEFAULT NULL COMMENT '描述',
   PRIMARY KEY (`org_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_organization
 -- ----------------------------
-INSERT INTO `t_organization` VALUES ('1', '付林的公司', '1', '2018-01-25 13:57:00', '付林', '2018-01-25 13:58:15', '付林', '付林的公司');
 INSERT INTO `t_organization` VALUES ('2', '产品研发小组', '1', '2018-01-25 13:57:00', '付林', '2018-01-25 21:35:36', '付林', '研发小组');
 INSERT INTO `t_organization` VALUES ('3', '产品人事部', '1', '2018-01-25 13:57:00', '付林', '2018-01-25 21:35:48', '付林', '人事部');
 INSERT INTO `t_organization` VALUES ('4', '售后服务', '1', '2018-01-25 13:57:00', '付林', '2018-01-25 13:58:15', '付林', '售后服务');
-INSERT INTO `t_organization` VALUES ('18', '软件测试部', '1', '2018-01-25 21:36:21', '付林', '2018-01-25 21:36:21', '付林', '付林也是个测试');
+INSERT INTO `t_organization` VALUES ('18', '软件测试部', '0', '2018-01-25 21:36:21', '付林', '2018-01-25 21:36:21', '付林', '付林也是个测试');
+INSERT INTO `t_organization` VALUES ('19', '售后服务', '1', '2018-05-17 14:57:43', 'qsj', '2018-05-17 14:57:43', 'qsj', '售后');
 
 -- ----------------------------
 -- Table structure for `t_role`
@@ -8369,13 +8915,15 @@ CREATE TABLE `t_role` (
   `update_by` varchar(50) DEFAULT NULL COMMENT '更新者',
   `remarks` varchar(50) DEFAULT NULL COMMENT '角色描述',
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_role
 -- ----------------------------
-INSERT INTO `t_role` VALUES ('1', '超级管理员', 'admin', '1', '2018-01-08 20:21:39', 'admin', '2018-03-05 09:08:58', 'admin', 'admin创建的啥都能干');
-INSERT INTO `t_role` VALUES ('5', '区域管理员', 'region', '1', '2018-01-24 21:16:31', '付林', '2018-01-27 15:39:24', '付林', '我是测试的');
+INSERT INTO `t_role` VALUES ('1', '超级管理员', 'admin', '1', '2018-01-08 20:21:39', 'admin', '2018-05-17 19:01:02', 'qsj', '你啥都能干');
+INSERT INTO `t_role` VALUES ('5', '街道管理员', 'gaiadmin', '1', '2018-01-24 21:16:31', '付林', '2018-05-17 19:02:40', 'qsj', '我是测试的');
+INSERT INTO `t_role` VALUES ('6', '订单管理员', 'orderadmin', '0', '2018-05-17 14:54:34', 'qsj', '2018-05-17 19:52:56', 'qsj', '普通订单管理');
+INSERT INTO `t_role` VALUES ('7', '车辆管理员', 'caradmin', '1', '2018-05-17 16:02:42', 'qsj', '2018-05-17 16:02:42', 'qsj', '守车的大爷');
 
 -- ----------------------------
 -- Table structure for `t_role_menu`
@@ -8388,141 +8936,169 @@ CREATE TABLE `t_role_menu` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `create_by` varchar(50) DEFAULT NULL COMMENT '创建者',
   PRIMARY KEY (`role_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5672 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5843 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_role_menu
 -- ----------------------------
-INSERT INTO `t_role_menu` VALUES ('5052', '5', '1', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5053', '5', '2', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5054', '5', '3', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5055', '5', '4', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5056', '5', '5', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5057', '5', '6', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5058', '5', '7', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5059', '5', '69', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5060', '5', '8', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5061', '5', '9', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5062', '5', '10', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5063', '5', '11', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5064', '5', '12', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5065', '5', '13', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5066', '5', '14', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5067', '5', '15', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5068', '5', '83', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5069', '5', '86', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5070', '5', '87', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5071', '5', '88', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5072', '5', '89', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5073', '5', '90', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5074', '5', '91', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5075', '5', '16', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5076', '5', '17', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5077', '5', '18', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5078', '5', '19', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5079', '5', '20', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5080', '5', '21', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5081', '5', '70', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5082', '5', '22', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5083', '5', '23', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5084', '5', '24', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5085', '5', '25', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5086', '5', '26', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5087', '5', '27', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5088', '5', '28', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5089', '5', '29', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5090', '5', '30', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5091', '5', '31', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5092', '5', '32', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5093', '5', '72', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5094', '5', '33', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5095', '5', '34', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5096', '5', '35', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5097', '5', '36', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5098', '5', '37', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5099', '5', '107', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5100', '5', '38', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5101', '5', '39', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5102', '5', '40', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5103', '5', '41', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5104', '5', '42', '2018-01-27 15:39:24', '付林');
-INSERT INTO `t_role_menu` VALUES ('5595', '1', '1', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5596', '1', '2', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5597', '1', '8', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5598', '1', '9', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5599', '1', '10', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5600', '1', '3', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5601', '1', '4', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5602', '1', '5', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5603', '1', '6', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5604', '1', '7', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5605', '1', '69', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5606', '1', '11', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5607', '1', '12', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5608', '1', '13', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5609', '1', '14', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5610', '1', '15', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5611', '1', '83', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5612', '1', '86', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5613', '1', '87', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5614', '1', '88', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5615', '1', '89', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5616', '1', '91', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5617', '1', '90', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5618', '1', '115', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5619', '1', '116', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5620', '1', '117', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5621', '1', '118', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5622', '1', '16', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5623', '1', '17', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5624', '1', '18', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5625', '1', '19', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5626', '1', '20', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5627', '1', '21', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5628', '1', '70', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5629', '1', '22', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5630', '1', '23', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5631', '1', '24', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5632', '1', '25', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5633', '1', '26', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5634', '1', '27', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5635', '1', '28', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5636', '1', '29', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5637', '1', '30', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5638', '1', '31', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5639', '1', '32', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5640', '1', '72', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5641', '1', '33', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5642', '1', '34', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5643', '1', '35', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5644', '1', '36', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5645', '1', '37', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5646', '1', '107', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5647', '1', '38', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5648', '1', '39', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5649', '1', '40', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5650', '1', '41', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5651', '1', '42', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5652', '1', '111', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5653', '1', '94', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5654', '1', '95', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5655', '1', '101', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5656', '1', '112', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5657', '1', '113', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5658', '1', '114', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5659', '1', '65', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5660', '1', '66', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5661', '1', '74', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5662', '1', '75', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5663', '1', '76', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5664', '1', '77', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5665', '1', '78', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5666', '1', '108', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5667', '1', '109', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5668', '1', '110', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5669', '1', '93', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5670', '1', '84', '2018-03-05 09:08:58', '付林');
-INSERT INTO `t_role_menu` VALUES ('5671', '1', '85', '2018-03-05 09:08:58', '付林');
+INSERT INTO `t_role_menu` VALUES ('5685', '7', '1', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5686', '7', '2', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5687', '7', '8', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5688', '7', '9', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5689', '7', '10', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5690', '7', '94', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5691', '7', '95', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5692', '7', '101', '2018-05-17 16:02:42', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5693', '1', '1', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5694', '1', '2', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5695', '1', '8', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5696', '1', '9', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5697', '1', '10', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5698', '1', '3', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5699', '1', '4', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5700', '1', '5', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5701', '1', '6', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5702', '1', '7', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5703', '1', '69', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5704', '1', '11', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5705', '1', '12', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5706', '1', '13', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5707', '1', '14', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5708', '1', '15', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5709', '1', '83', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5710', '1', '86', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5711', '1', '87', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5712', '1', '88', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5713', '1', '89', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5714', '1', '91', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5715', '1', '90', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5716', '1', '115', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5717', '1', '116', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5718', '1', '117', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5719', '1', '118', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5720', '1', '16', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5721', '1', '17', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5722', '1', '18', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5723', '1', '19', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5724', '1', '20', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5725', '1', '21', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5726', '1', '70', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5727', '1', '22', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5728', '1', '23', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5729', '1', '24', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5730', '1', '25', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5731', '1', '26', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5732', '1', '27', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5733', '1', '28', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5734', '1', '29', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5735', '1', '30', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5736', '1', '31', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5737', '1', '32', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5738', '1', '72', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5739', '1', '33', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5740', '1', '34', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5741', '1', '35', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5742', '1', '36', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5743', '1', '37', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5744', '1', '107', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5745', '1', '38', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5746', '1', '39', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5747', '1', '40', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5748', '1', '41', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5749', '1', '42', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5750', '1', '111', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5751', '1', '94', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5752', '1', '95', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5753', '1', '101', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5754', '1', '112', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5755', '1', '113', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5756', '1', '114', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5757', '1', '65', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5758', '1', '66', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5759', '1', '74', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5760', '1', '75', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5761', '1', '76', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5762', '1', '77', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5763', '1', '78', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5764', '1', '108', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5765', '1', '109', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5766', '1', '110', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5767', '1', '93', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5768', '1', '84', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5769', '1', '85', '2018-05-17 19:01:02', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5770', '5', '1', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5771', '5', '2', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5772', '5', '8', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5773', '5', '9', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5774', '5', '10', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5775', '5', '3', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5776', '5', '4', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5777', '5', '5', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5778', '5', '6', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5779', '5', '7', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5780', '5', '69', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5781', '5', '11', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5782', '5', '12', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5783', '5', '13', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5784', '5', '14', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5785', '5', '15', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5786', '5', '83', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5787', '5', '86', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5788', '5', '87', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5789', '5', '88', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5790', '5', '89', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5791', '5', '91', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5792', '5', '90', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5793', '5', '16', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5794', '5', '17', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5795', '5', '18', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5796', '5', '19', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5797', '5', '20', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5798', '5', '21', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5799', '5', '70', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5800', '5', '22', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5801', '5', '23', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5802', '5', '24', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5803', '5', '25', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5804', '5', '26', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5805', '5', '27', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5806', '5', '28', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5807', '5', '29', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5808', '5', '30', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5809', '5', '31', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5810', '5', '32', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5811', '5', '72', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5812', '5', '33', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5813', '5', '34', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5814', '5', '35', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5815', '5', '36', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5816', '5', '37', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5817', '5', '107', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5818', '5', '38', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5819', '5', '39', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5820', '5', '40', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5821', '5', '41', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5822', '5', '42', '2018-05-17 19:02:41', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5823', '6', '1', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5824', '6', '27', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5825', '6', '28', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5826', '6', '29', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5827', '6', '30', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5828', '6', '31', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5829', '6', '32', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5830', '6', '72', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5831', '6', '33', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5832', '6', '34', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5833', '6', '35', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5834', '6', '36', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5835', '6', '37', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5836', '6', '107', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5837', '6', '38', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5838', '6', '39', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5839', '6', '40', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5840', '6', '41', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5841', '6', '42', '2018-05-17 19:52:56', 'qsj');
+INSERT INTO `t_role_menu` VALUES ('5842', '6', '111', '2018-05-17 19:52:56', 'qsj');
 
 -- ----------------------------
 -- Table structure for `t_staff`
@@ -8534,14 +9110,16 @@ CREATE TABLE `t_staff` (
   `telephone` varchar(20) DEFAULT NULL COMMENT '手机号',
   `status` varchar(1) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_staff
 -- ----------------------------
 INSERT INTO `t_staff` VALUES ('1', '比尔盖茨', '13103779727', '1');
 INSERT INTO `t_staff` VALUES ('2', '马云', '13103779727', '1');
-INSERT INTO `t_staff` VALUES ('3', '马化腾', '13103779727', '1');
+INSERT INTO `t_staff` VALUES ('3', '马化腾', '13103779727', '0');
+INSERT INTO `t_staff` VALUES ('4', '橄榄', '13600002222', '1');
+INSERT INTO `t_staff` VALUES ('5', '小李子', '13777778888', '1');
 
 -- ----------------------------
 -- Table structure for `t_user`
@@ -8565,15 +9143,16 @@ CREATE TABLE `t_user` (
   `create_by` varchar(50) DEFAULT NULL COMMENT '创建者',
   `update_by` varchar(50) DEFAULT NULL COMMENT '更新者',
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES ('1', 'fulin', '123', '1', '付林', '0', '20', 'images/avatar_3.jpg', '1', '13103779727@163.com', '13103779727', '2018-05-11 17:19:47', '192.168.5.100', '2018-01-08 09:50:40', '哈哈没有', '付林');
-INSERT INTO `t_user` VALUES ('2', 'mao', '123', '3', '陈雪晴', '2', '18', 'images/avatar_7.jpg', '1', '13103779727@163.com', '13293889545', '2018-01-27 15:39:47', '169.254.223.49', '2018-01-22 19:05:59', '付林', '付林');
-INSERT INTO `t_user` VALUES ('3', 'maoxs', '123', '2', '还是付林', '2', '12', 'images/avatar_1.jpg', '1', '13103779727@163.com', '13293889545', '2018-05-12 16:52:28', '192.168.5.105', '2018-01-22 19:07:58', '付林', '付林');
-INSERT INTO `t_user` VALUES ('4', 'admin', 'admin', '1', 'qsj', '2', '223', 'images/avatar_7.jpg', '1', '13103779727@163.com', '13293889545', '2018-05-14 20:16:26', '192.168.5.101', '2018-05-11 15:38:24', 'admin', 'admin');
+INSERT INTO `t_user` VALUES ('4', 'admin', 'admin', '2', '23333333', '1', '18', 'images/avatar_7.jpg', '1', '13103779727@163.com', '13400002222', '2018-05-17 19:43:00', '192.168.5.100', '2018-05-11 15:38:24', 'admin', 'qsj');
+INSERT INTO `t_user` VALUES ('5', 'testput1', '123123', '2', '小圈圈1', '2', null, 'images/avatar_4.jpg', '0', '111111@qq.com', '13800002222', null, null, '2018-05-17 14:48:16', 'qsj', 'qsj');
+INSERT INTO `t_user` VALUES ('6', 'qiuchacha', '123123', '4', '王叉叉', '1', null, 'images/avatar_1.jpg', '1', '789789@qq.com', '13622228888', null, null, '2018-05-17 15:58:36', 'qsj', 'qsj');
+INSERT INTO `t_user` VALUES ('7', 'aaaaa', '123123', '2', '啊啊啊啊啊', '0', null, 'images/avatar_7.jpg', '1', '123123@qq.com', '13500000000', null, null, '2018-05-17 18:48:12', 'qsj', 'qsj');
+INSERT INTO `t_user` VALUES ('8', 'xiaozhuzh2', '123123', '19', '小猪佩奇', '2', null, 'images/avatar_1.jpg', '1', 'qwe@qwe.com', '13800002222', null, null, '2018-05-17 19:50:39', 'qsj', 'qsj');
 
 -- ----------------------------
 -- Table structure for `t_user_login_log`
@@ -8587,7 +9166,7 @@ CREATE TABLE `t_user_login_log` (
   `operating_system` varchar(50) DEFAULT NULL COMMENT '操作系统',
   `browser` varchar(50) DEFAULT NULL COMMENT '浏览器',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=406 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=424 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user_login_log
@@ -8996,6 +9575,24 @@ INSERT INTO `t_user_login_log` VALUES ('402', '2018-05-14 18:53:44', '192.168.5.
 INSERT INTO `t_user_login_log` VALUES ('403', '2018-05-14 18:58:14', '192.168.5.101', '4', 'WINDOWS_7', 'CHROME');
 INSERT INTO `t_user_login_log` VALUES ('404', '2018-05-14 19:45:49', '192.168.5.101', '4', 'WINDOWS_7', 'CHROME');
 INSERT INTO `t_user_login_log` VALUES ('405', '2018-05-14 20:16:26', '192.168.5.101', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('406', '2018-05-17 11:13:43', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('407', '2018-05-17 11:50:28', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('408', '2018-05-17 14:42:05', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('409', '2018-05-17 14:43:52', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('410', '2018-05-17 15:39:33', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('411', '2018-05-17 15:56:41', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('412', '2018-05-17 16:11:57', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('413', '2018-05-17 16:23:38', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('414', '2018-05-17 16:44:05', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('415', '2018-05-17 16:48:13', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('416', '2018-05-17 17:02:06', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('417', '2018-05-17 17:11:46', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('418', '2018-05-17 18:05:13', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('419', '2018-05-17 18:37:24', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('420', '2018-05-17 19:00:21', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('421', '2018-05-17 19:15:10', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('422', '2018-05-17 19:15:40', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
+INSERT INTO `t_user_login_log` VALUES ('423', '2018-05-17 19:43:00', '192.168.5.100', '4', 'WINDOWS_7', 'CHROME');
 
 -- ----------------------------
 -- Table structure for `t_user_role`
@@ -9008,12 +9605,13 @@ CREATE TABLE `t_user_role` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `create_by` varchar(50) DEFAULT NULL COMMENT '创建者',
   PRIMARY KEY (`user_role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=189 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=196 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user_role
 -- ----------------------------
-INSERT INTO `t_user_role` VALUES ('127', '1', '1', '2018-01-24 21:20:16', '付林');
-INSERT INTO `t_user_role` VALUES ('145', '1', '3', '2018-01-25 21:33:49', '付林');
-INSERT INTO `t_user_role` VALUES ('152', '5', '2', '2018-01-30 14:26:43', '付林');
-INSERT INTO `t_user_role` VALUES ('188', '1', '4', '2018-05-11 17:21:40', 'admin');
+INSERT INTO `t_user_role` VALUES ('190', '6', '6', '2018-05-17 15:58:36', 'qsj');
+INSERT INTO `t_user_role` VALUES ('192', '7', '7', '2018-05-17 18:48:12', 'qsj');
+INSERT INTO `t_user_role` VALUES ('193', '1', '4', '2018-05-17 18:49:40', 'qsj');
+INSERT INTO `t_user_role` VALUES ('194', '1', '5', '2018-05-17 19:47:56', 'qsj');
+INSERT INTO `t_user_role` VALUES ('195', '7', '8', '2018-05-17 19:50:39', 'qsj');
